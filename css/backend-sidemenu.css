@@ -1,0 +1,48 @@
+.backend-sidemenumodal {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.544);
+    z-index: 30;
+    position: fixed;
+    display: none;
+}
+.backend-sidemenumodal .sidemenu-cont {
+    background: #fff;
+    width: 400px;
+    height: 100%;
+    overflow: auto;
+}
+.backend-sidemenumodal .sidemenu-cont .header {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.backend-sidemenumodal .sidemenu-cont .header h2 {
+    flex: 2;
+}
+.backend-sidemenumodal .sidemenu-cont .header h2 a {
+    text-decoration: none;
+    font-size: 25px;
+}
+.backend-sidemenumodal .sidemenu-cont .header button {
+    background: transparent;
+    border: 0;
+}
+.backend-sidemenumodal .sidemenu-cont .header button i{
+    color: #d33030;
+}
+.backend-sidemenumodal .sidemenu-cont .menu-controls {
+}
+.backend-sidemenumodal .sidemenu-cont .menu-controls ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.backend-sidemenumodal .sidemenu-cont .menu-controls ul  li {
+    /* background: #000; */
+}
+.backend-sidemenumodal .sidemenu-cont .menu-controls ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}

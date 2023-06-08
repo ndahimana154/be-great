@@ -1,0 +1,44 @@
+@media (max-width : 500px) {
+    * {
+        font-size: 13px;
+    }
+    .main-header {
+        /* display: none; */
+    }
+    .main-header .m-hSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main-header .m-hSection .logo a {
+        font-size: 18px;
+    }
+    .main-header .m-hSection .search input {
+        flex: 1;
+    }
+    .remaining .topsoldnshops {
+        display: flex;
+        flex-direction: column;
+    }
+    .product-box {
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .signupform-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .signupform-box .signup-cont {
+        width: 80vw;
+    }
+    .sub-nav {
+        margin: 0;
+    }
+    .sub-nav .menu-nav {
+        width: 90%;
+    }
+    .sub-nav .menu-nav  .nav-links ul li .search input {
+        width: 10px;
+    }
+}

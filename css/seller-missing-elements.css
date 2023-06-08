@@ -1,0 +1,29 @@
+.initial-btn {
+    padding: 20px;
+}
+.missing-location {
+    padding: 10px;
+    background: var(--simple-grayBG);
+    display: none;
+}
+.missing-location .missing-conts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.missing-location .missing-conts .field-conts {
+    padding: 10px;
+    width: 300px;
+}
+.missing-location .btnz {
+    display: none;
+}
+.missing-location .missing-conts .seconds {
+    display: none;
+}
+.missing-location .missing-conts .third {
+    display: none;
+}
+.missing-location .missing-conts .field-conts p input {
+    /* width: 300px; */
+}
