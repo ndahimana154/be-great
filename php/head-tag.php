@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="css\member-delete-payment-method.css">
     <link rel="stylesheet" href="css\seller-view-ordernotifications.css">
     <link rel="stylesheet" href="css\seller-missing-elements.css">
+    <link rel="stylesheet" href="css\member-stop-shop.css">
+    <link rel="stylesheet" href="css\member-unstop-shop.css">
 
     <!-- Responsiveness regulator -->
     <link rel="stylesheet" href="css\responsiveness-regulator.css">
@@ -52,6 +54,8 @@
     <script src="js\member-confirm-seller-withdraw.js"></script>
     <script src="js\seller-orders-notifications.js"></script>
     <script src="js\seller-save-shops-location.js"></script>
+    <script src="js\member-delete-shop.js"></script>
+    <script src="js\member-play-shop.js"></script>
     
     <title>
         BeGreat

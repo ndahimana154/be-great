@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2023 at 10:09 PM
+-- Generation Time: Jun 09, 2023 at 11:29 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -66,7 +66,7 @@ CREATE TABLE `buyers_accounts` (
 --
 
 INSERT INTO `buyers_accounts` (`buyer`, `balance`, `acc_id`) VALUES
-(4, 5345200, 1),
+(4, 5349250, 1),
 (3, 0, 2),
 (5, 0, 3),
 (6, 30000, 4);
@@ -143,7 +143,9 @@ INSERT INTO `buyer_money_txns` (`id`, `buyer`, `txndate`, `txntime`, `txntype`, 
 (49, 4, '2023-06-06', '13:09:39', 'Shopping', 5413900, 5379900),
 (50, 4, '2023-06-06', '13:09:40', 'Shopping', 5379900, 5345900),
 (51, 4, '2023-06-06', '13:09:49', 'Shopping', 5345900, 5345550),
-(52, 4, '2023-06-06', '13:09:49', 'Shopping', 5345550, 5345200);
+(52, 4, '2023-06-06', '13:09:49', 'Shopping', 5345550, 5345200),
+(53, 4, '2023-06-09', '23:09:54', 'Cancel Shopping', 5345200, 5345550),
+(54, 4, '2023-06-09', '23:10:01', 'Cancel Shopping', 5345550, 5349250);
 
 -- --------------------------------------------------------
 
@@ -367,7 +369,9 @@ INSERT INTO `owner_account_txns` (`id`, `type`, `amount`, `timendate`) VALUES
 (55, 'IN', 34000, '2023-06-06 13:09:39'),
 (56, 'IN', 34000, '2023-06-06 13:09:40'),
 (57, 'IN', 350, '2023-06-06 13:09:48'),
-(58, 'IN', 350, '2023-06-06 13:09:49');
+(58, 'IN', 350, '2023-06-06 13:09:49'),
+(59, 'OUT', 350, '2023-06-09 23:09:54'),
+(60, 'OUT', 3700, '2023-06-09 23:10:01');
 
 -- --------------------------------------------------------
 
@@ -486,13 +490,13 @@ INSERT INTO `products_orders` (`order_id`, `product`, `client`, `product_price`,
 (36, 26, 4, 350000, 1, 350000, '2023-06-04', '06:51:38', 'Pending', 4),
 (37, 26, 4, 350000, 1, 350000, '2023-06-04', '06:51:57', 'Cancelled', 4),
 (38, 31, 6, 1000, 2, 2000, '2023-06-04', '09:05:56', 'Delivering', 14),
-(39, 27, 4, 3700, 1, 3700, '2023-06-06', '13:08:57', 'Pending', 12),
+(39, 27, 4, 3700, 1, 3700, '2023-06-06', '13:08:57', 'Cancelled', 12),
 (40, 27, 4, 3700, 1, 3700, '2023-06-06', '13:09:13', 'Pending', 12),
 (41, 29, 4, 45000, 1, 45000, '2023-06-06', '13:09:29', 'Pending', 12),
 (42, 29, 4, 45000, 1, 45000, '2023-06-06', '13:09:30', 'Pending', 12),
 (43, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:39', 'Pending', 12),
 (44, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:40', 'Pending', 12),
-(45, 30, 4, 350, 1, 350, '2023-06-06', '13:09:48', 'Pending', 12),
+(45, 30, 4, 350, 1, 350, '2023-06-06', '13:09:48', 'Cancelled', 12),
 (46, 30, 4, 350, 1, 350, '2023-06-06', '13:09:49', 'Pending', 12);
 
 -- --------------------------------------------------------
@@ -615,11 +619,11 @@ CREATE TABLE `sellers` (
 
 INSERT INTO `sellers` (`id`, `firstname`, `lastname`, `email`, `phone`, `profilepicture`, `password`, `seller_status`) VALUES
 (3, 'Hiwa ', 'Pacifique', 'hirwapacifique@gmail.com', 2147483647, 'hirwapacifique@gmail.com - Profile image .png', '12345678', 'Selling'),
-(4, 'Marina', 'Deborah', 'marinadeborah@gmail.com', 738483828, 'marinadeborah@gmail.com - Profile image .png', '123456', 'Selling'),
-(5, 'Obote', 'Sam', 'obotesam@rezi.pb', 2147483647, 'obotesam@rezi.pb - Profile image .png', '123456', 'Selling'),
+(4, 'Marina', 'Deborah', 'marinadeborah@gmail.com', 738483828, 'marinadeborah@gmail.com - Profile image .png', '123456', 'Stopped'),
+(5, 'Obote', 'Sam', 'obotesam@rezi.pb', 2147483647, 'obotesam@rezi.pb - Profile image .png', '123456', 'Stopped'),
 (6, 'Ndahimana', 'Bonheur', 'bonher@gmail.com', 2147483647, 'bonher@gmail.com - Profile image .png', '123456', 'Selling'),
 (7, 'dfvciojio', 'jijfweiocjioj', 'iojdiowjdioj@ggf.d', 1223, 'iojdiowjdioj@ggf.d - Profile image .png', '123456', 'Selling'),
-(8, 'sdvcoij', 'ijciosjcioj', 'ijfdioj@gdf.ef', 4394389, 'ijfdioj@gdf.ef - Profile image .png', '123456', 'Selling'),
+(8, 'sdvcoij', 'ijciosjcioj', 'ijfdioj@gdf.ef', 4394389, 'ijfdioj@gdf.ef - Profile image .png', '123456', 'Stopped'),
 (9, 'sdfioj', 'ihduiehuihui', 'uivndndiN@drfgdf.regve', 2147483647, 'uivndndiN@drfgdf.regve - Profile image .png', '123456', 'Waiting list');
 
 -- --------------------------------------------------------
@@ -859,12 +863,12 @@ INSERT INTO `shops` (`shop_id`, `shop_logo`, `shop_name`, `shop_district`, `shop
 (7, 'Logo - CocaCola Shop Distribution.png', 'CocaCola Shop Distribution', 'Nyarugenge', 'Nyarugenge', 'Nyarugenge', '2023-05-06', '10:03:14', 'Trial period'),
 (8, 'Logo - A Sony Company Shop.png', 'A Sony Company Shop', 'Musanze', 'Nkotsi', 'Bikara', '2023-05-06', '10:04:10', 'Trial period'),
 (9, 'Logo - Animal Products SH.png', 'Animal Products SH', 'Karongi', 'Mubuga', 'Ku mubuga', '2023-02-01', '10:06:11', 'Trial period'),
-(10, 'null', 'Hirwa Shoes Shop', 'null', 'null', 'null', '2023-05-25', '12:12:46', 'Trial period'),
-(12, 'null', 'Marina Rama Shop', 'Musanze', 'Nkotsi', 'Nyakinama mu midugudu', '2023-05-25', '17:36:43', 'Trial period'),
-(13, 'null', 'Obote Store', 'null', 'null', 'null', '2023-06-03', '16:45:11', 'Trial period'),
+(10, 'null', 'Hirwa Shoes Shop', 'Gasabo', 'Batsinda', 'Nduba, hafi yibiyede', '2023-05-25', '12:12:46', 'Running'),
+(12, 'null', 'Marina Rama Shop', 'Musanze', 'Nkotsi', 'Nyakinama mu midugudu', '2023-05-25', '17:36:43', 'Stopped'),
+(13, 'null', 'Obote Store', 'null', 'null', 'null', '2023-06-03', '16:45:11', 'Stopped'),
 (14, 'null', 'Bonheur Shop', 'null', 'null', 'null', '2023-06-04', '08:52:31', 'Trial period'),
 (15, 'null', 'jiojweiodjiojio', 'null', 'null', 'null', '2023-06-06', '20:25:01', 'Trial period'),
-(16, 'null', 'efionjiujui', 'null', 'null', 'null', '2023-06-06', '20:45:37', 'Trial period');
+(16, 'null', 'efionjiujui', 'null', 'null', 'null', '2023-06-06', '20:45:37', 'Stopped');
 
 -- --------------------------------------------------------
 
@@ -1091,7 +1095,7 @@ ALTER TABLE `buyers_accounts`
 -- AUTO_INCREMENT for table `buyer_money_txns`
 --
 ALTER TABLE `buyer_money_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `buyer_money_txns_complaints`
@@ -1121,7 +1125,7 @@ ALTER TABLE `co_members`
 -- AUTO_INCREMENT for table `owner_account_txns`
 --
 ALTER TABLE `owner_account_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `payment_methods`

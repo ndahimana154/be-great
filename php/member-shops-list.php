@@ -9,6 +9,7 @@
         </h2>
         <div class="ctrls" style="padding: 10px">
             <a href="member-shops-waiting-list.php" class="btn btn-success">
+                <i class="fa fa-th-list"></i> &nbsp;
                 Waiting list
             </a>
         </div>
@@ -82,7 +83,7 @@
                                     <?php
                                         echo $data_txns['shop_district'].","; 
                                         echo $data_txns['shop_sector'].","; 
-                                        echo $data_txns['shop_location'].","; 
+                                        echo $data_txns['shop_location']; 
                                     ?>
                                 </td>
                                 <td>
@@ -92,12 +93,24 @@
                                     <?php echo $data_txns['shop_status'] ?>
                                 </td>
                                 <td>
-                                    <button class="btn btn-danger">
-                                        <i class="fa fa-trash"></i>
-                                    </button>
-                                    <button class="btn btn-warning">
-                                        <i class="fa fa-stop-circle"></i>
-                                    </button>
+                                    <?php
+                                        if($data_txns['shop_status'] == 'Running' || $data_txns['shop_status'] == 'Trial period') {
+                                            ?>
+                                            <button class="btn btn-danger deleteshopBTN" 
+                                                value="<?php echo $data_txns['shop_id']; ?>">
+                                                <i class="fa fa-pause"></i>
+                                            </button>
+                                            <?php
+                                        }
+                                        else {
+                                            ?>
+                                            <button class="btn btn-warning playshopBTN"
+                                                value="<?php echo $data_txns['shop_id']; ?>">
+                                                <i class="fa fa-play"></i>
+                                            </button>
+                                            <?php
+                                        }
+                                    ?>
                                 </td>
                             </tr>
                             <?php

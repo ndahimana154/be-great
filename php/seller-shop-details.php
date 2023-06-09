@@ -4,37 +4,43 @@
         Shop details
     </h1>
     <div class="details-cont">
-        <div class="line">
-            <p>
+        <div class="line" style="display: flex; flex-direction: row;">
+            <div style="flex: 1">
                 Shop name :
-            </p>
-            <div class="contents">
+            </div>
+            <div style="flex: 1">
                 <?php
                     echo $seller_acting_shop_name
                 ?>
             </div>
-            <p>
-                Shop name :
-            </p>
-            <div class="contents">
+        </div>
+        <div class="line" style="display: flex; flex-direction: row;">
+            <div style="flex: 1">
+                Shop district :
+            </div>
+            <div style="flex: 1">
                 <?php
-                    echo $seller_acting_shop_name
+                    echo $seller_acting_district;
                 ?>
             </div>
-            <p>
-                Shop name :
-            </p>
-            <div class="contents">
+        </div>
+        <div class="line" style="display: flex; flex-direction: row;">
+            <div style="flex: 1">
+                Shop sector :
+            </div>
+            <div style="flex: 1">
                 <?php
-                    echo $seller_acting_shop_name
+                    echo $seller_acting_sector
                 ?>
             </div>
-            <p>
-                Shop name :
-            </p>
-            <div class="contents">
+        </div>
+        <div class="line" style="display: flex; flex-direction: row;">
+            <div style="flex: 1">
+                Shop location :
+            </div>
+            <div style="flex: 1">
                 <?php
-                    echo $seller_acting_shop_name
+                    echo $seller_acting_location
                 ?>
             </div>
         </div>

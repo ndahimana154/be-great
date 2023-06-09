@@ -71,13 +71,15 @@
                                             $sellerstatus = $sellersinfos['seller_status'];
                                             if ($sellerstatus != 'Selling') {
                                                 ?>
-                                                Error! The sellers status can't allow You
-                                                to work. Contact system support if there is some 
-                                                misunderstandings.
+                                                <div class="failed">
+                                                    Error! The sellers status '<b><?php echo $sellerstatus; ?></b>' 
+                                                    can't allow You
+                                                    to work. Contact system support if there is some 
+                                                    misunderstandings.
+                                                </div>
                                                 <?php
                                             }
                                             else {
-                                                
                                                 // Check if the seller have account else create it
                                                 $checkaccount = mysqli_query($server, "SELECT * from seller_accounts
                                                     WHERE seller = $sellerid;

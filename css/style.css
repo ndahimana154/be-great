@@ -23,6 +23,7 @@
     margin: 10px;
     color: var(--main-actingcolor);
     font-size: 20px;
+    text-transform: uppercase;
 }
 .deliverout {
     width: 100%;

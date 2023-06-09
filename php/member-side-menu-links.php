@@ -1,15 +1,4 @@
 <ul>
-    <li>
-        <a href="member-recent-orders.php">
-            Recent orders
-        </a>
-    </li>
-    <hr>
-    <li>
-        <a href="member-shops-list.php">
-            Shops list
-        </a>
-    </li>
     <hr>
     <li>
         <a href="member-deposit-drafts.php">
@@ -26,9 +15,28 @@
     </li>
     <hr>
     <li>
+        <a href="member-recent-orders.php">
+            Recent orders
+        </a>
+    </li>
+    <hr>
+    <li>
+        <a href="member-shops-list.php">
+            Shops list
+        </a>
+    </li>
+    <hr>
+    <li>
         <a href="member-sellers-withdraws.php">
             <!-- <i class="fa fa-plus-circle"></i> -->
             Sellers Withdraws
+        </a>
+    </li>
+    <hr>
+    <li>
+        <a href="member-sellers-payment-methods.php">
+            <i class="fa fa-money-check"></i>
+            Sellers payment methods
         </a>
     </li>
     <hr>

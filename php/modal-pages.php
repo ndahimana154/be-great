@@ -439,3 +439,41 @@
         </div>
     </div>
 </div>
+
+<!-- Member stop shop -->
+<div class="shop-stop-modal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                    Shop delete
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="deleteresultshop">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Member unstop the shop -->
+<div class="shop-unstop-modal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                    Shop delete
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="playshopresult">
+            </div>
+        </div>
+    </div>
+</div>
