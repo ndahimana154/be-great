@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2023 at 11:29 PM
+-- Generation Time: Jun 10, 2023 at 01:12 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -195,7 +195,7 @@ INSERT INTO `buyer_payment_methods` (`id`, `buyer`, `method`, `method_digits`, `
 (2, 4, 2, '4rewio4389ufdiof', '2023-06-04', '06:40:05', 'Deleted'),
 (3, 4, 3, 'gbgffdreregdfgdfgafd', '2023-06-04', '07:19:43', 'Deleted'),
 (4, 4, 5, 'csffdfdfddfbfdv ', '2023-06-04', '07:20:19', 'Unverfied'),
-(5, 6, 1, '078839283', '2023-06-04', '09:04:58', 'Unverfied');
+(5, 6, 1, '078839283', '2023-06-04', '09:04:58', 'Verified');
 
 -- --------------------------------------------------------
 
@@ -371,7 +371,8 @@ INSERT INTO `owner_account_txns` (`id`, `type`, `amount`, `timendate`) VALUES
 (57, 'IN', 350, '2023-06-06 13:09:48'),
 (58, 'IN', 350, '2023-06-06 13:09:49'),
 (59, 'OUT', 350, '2023-06-09 23:09:54'),
-(60, 'OUT', 3700, '2023-06-09 23:10:01');
+(60, 'OUT', 3700, '2023-06-09 23:10:01'),
+(61, 'OUT', 32300, '2023-06-10 12:36:07');
 
 -- --------------------------------------------------------
 
@@ -422,7 +423,7 @@ INSERT INTO `products` (`product_id`, `product_name`, `product_image`, `product_
 (25, 'CoCa Bottle SODA', 'Kick SIde SHop - CoCa Bottle SODA - FRONTIMAGE.png', 1500, '2023-05-06', 5, 5, 100, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (26, 'SONY D70 Photo & Video Camera', 'Gabby Shop - Canon D70 Photo & Video Camera - FRONTIMAGE.png', 350000, '2023-05-06', 1, 4, 100, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (27, 'Igihwagari Golden Cooking oil', 'Marina Rama Shop - Igihwagari Golden Cooking oil - FRONTIMAGE.png', 3700, '2023-05-25', 7, 12, 999580, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
-(28, 'SanDisk Memory Card 32GB', 'Marina Rama Shop - SanDisk Memory Card 32GB - FRONTIMAGE.png', 34000, '2023-05-25', 1, 12, 113, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
+(28, 'SanDisk Memory Card 32GB', 'Marina Rama Shop - SanDisk Memory Card 32GB - FRONTIMAGE.png', 34000, '2023-05-25', 1, 12, 112, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (29, 'Ice Watch - PTC 2023 Version American', 'Marina Rama Shop - Ice Watch - PTC 2023 Version American - FRONTIMAGE.png', 45000, '2023-05-28', 1, 12, 82, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (30, 'Anana - Brugali SMJ1 Juice', 'Marina Rama Shop - Anana - Brugali SMJ1 Juice - FRONTIMAGE.png', 350, '2023-06-03', 5, 12, 47, 'Juice made from Anana with 80% Sugar and contains many Vitamins and minerals to be consumed by the human body. This juice is especially made for Children and Pregnant woman as it increaes the concentration of Crbohydrates.'),
 (31, 'Chocolate', 'Bonheur Shop - Chocolate - FRONTIMAGE.png', 1000, '2023-06-04', 5, 14, 88, 'Black Chocolate Made of Sugar'),
@@ -494,7 +495,7 @@ INSERT INTO `products_orders` (`order_id`, `product`, `client`, `product_price`,
 (40, 27, 4, 3700, 1, 3700, '2023-06-06', '13:09:13', 'Pending', 12),
 (41, 29, 4, 45000, 1, 45000, '2023-06-06', '13:09:29', 'Pending', 12),
 (42, 29, 4, 45000, 1, 45000, '2023-06-06', '13:09:30', 'Pending', 12),
-(43, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:39', 'Pending', 12),
+(43, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:39', 'Delivering', 12),
 (44, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:40', 'Pending', 12),
 (45, 30, 4, 350, 1, 350, '2023-06-06', '13:09:48', 'Cancelled', 12),
 (46, 30, 4, 350, 1, 350, '2023-06-06', '13:09:49', 'Pending', 12);
@@ -594,7 +595,8 @@ INSERT INTO `product_quantity_txns` (`id`, `product`, `txn_type`, `txn_quantity`
 (50, 31, 'IN', 30, '2023-06-04', '08:55:05'),
 (51, 31, 'OUT', 2, '2023-06-04', '09:06:45'),
 (52, 31, 'IN', 60, '2023-06-04', '10:53:13'),
-(53, 32, 'IN', 90, '2023-06-04', '10:53:59');
+(53, 32, 'IN', 90, '2023-06-04', '10:53:59'),
+(54, 28, 'OUT', 1, '2023-06-10', '12:36:07');
 
 -- --------------------------------------------------------
 
@@ -619,7 +621,7 @@ CREATE TABLE `sellers` (
 
 INSERT INTO `sellers` (`id`, `firstname`, `lastname`, `email`, `phone`, `profilepicture`, `password`, `seller_status`) VALUES
 (3, 'Hiwa ', 'Pacifique', 'hirwapacifique@gmail.com', 2147483647, 'hirwapacifique@gmail.com - Profile image .png', '12345678', 'Selling'),
-(4, 'Marina', 'Deborah', 'marinadeborah@gmail.com', 738483828, 'marinadeborah@gmail.com - Profile image .png', '123456', 'Stopped'),
+(4, 'Marina', 'Deborah', 'marinadeborah@gmail.com', 738483828, 'marinadeborah@gmail.com - Profile image .png', '123456', 'Selling'),
 (5, 'Obote', 'Sam', 'obotesam@rezi.pb', 2147483647, 'obotesam@rezi.pb - Profile image .png', '123456', 'Stopped'),
 (6, 'Ndahimana', 'Bonheur', 'bonher@gmail.com', 2147483647, 'bonher@gmail.com - Profile image .png', '123456', 'Selling'),
 (7, 'dfvciojio', 'jijfweiocjioj', 'iojdiowjdioj@ggf.d', 1223, 'iojdiowjdioj@ggf.d - Profile image .png', '123456', 'Selling'),
@@ -655,7 +657,7 @@ INSERT INTO `sellers_orders_notifier` (`id`, `sender`, `shop`, `notifier_msg`, `
 (6, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:09:49 but it is\r\n                        still Pending. Thanks\r\n                    ', 46, '2023-06-06 13:12:22', 'Viewed'),
 (7, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:09:40 but it is\r\n                        still Pending. Thanks\r\n                    ', 44, '2023-06-06 13:12:26', 'Viewed'),
 (8, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:09:39 but it is\r\n                        still Pending. Thanks\r\n                    ', 43, '2023-06-06 13:12:31', 'Not viewed'),
-(9, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:09:29 but it is\r\n                        still Pending. Thanks\r\n                    ', 41, '2023-06-06 13:12:33', 'Not viewed'),
+(9, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:09:29 but it is\r\n                        still Pending. Thanks\r\n                    ', 41, '2023-06-06 13:12:33', 'Viewed'),
 (10, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:08:57 but it is\r\n                        still Pending. Thanks\r\n                    ', 39, '2023-06-06 13:12:35', 'Not viewed');
 
 -- --------------------------------------------------------
@@ -680,7 +682,7 @@ CREATE TABLE `sellers_payment_methods` (
 
 INSERT INTO `sellers_payment_methods` (`id`, `seller`, `method`, `method_digits`, `add_date`, `add_time`, `status`) VALUES
 (1, 4, 2, '722893974', '2023-05-31', '21:45:22', 'Verified'),
-(2, 3, 1, '782855114', '2023-05-31', '22:04:43', 'Verified'),
+(2, 3, 1, '782855114', '2023-05-31', '22:04:43', 'Unverfied'),
 (4, 4, 3, '2147483647', '2023-06-01', '10:05:22', 'Deleted'),
 (5, 4, 4, '2147483647', '2023-06-01', '10:06:41', 'Deleted'),
 (6, 4, 2, '2147483647', '2023-06-01', '10:08:11', 'Deleted'),
@@ -689,8 +691,10 @@ INSERT INTO `sellers_payment_methods` (`id`, `seller`, `method`, `method_digits`
 (9, 4, 3, '2147483647', '2023-06-01', '10:10:25', 'Deleted'),
 (10, 4, 4, 'Erridk', '2023-06-01', '10:11:01', 'Deleted'),
 (11, 4, 3, '401010029483', '2023-06-01', '10:11:15', 'Deleted'),
-(12, 4, 3, '10238326', '2023-06-01', '10:13:33', 'Unverfied'),
-(13, 6, 4, '536544377658', '2023-06-04', '09:29:55', 'Verfied');
+(12, 4, 3, '10238326', '2023-06-01', '10:13:33', 'Verified'),
+(13, 6, 4, '536544377658', '2023-06-04', '09:29:55', 'Verified'),
+(14, 4, 1, '68438747389', '2023-06-10', '11:18:20', 'Verified'),
+(15, 4, 4, '438953358930595', '2023-06-10', '13:02:32', 'Verified');
 
 -- --------------------------------------------------------
 
@@ -737,15 +741,15 @@ CREATE TABLE `sellers_withdraws` (
 --
 
 INSERT INTO `sellers_withdraws` (`id`, `seller`, `date`, `time`, `amount_withdrawed`, `amount_receivable`, `status`) VALUES
-(1, 4, '2023-05-31', '22:14:14', 40000, 40000, 'Pending'),
 (2, 4, '2023-05-31', '22:14:32', 40000, 40000, 'Withdrawed'),
-(3, 4, '2023-06-01', '08:37:00', 4000, 4000, 'Pending'),
 (9, 6, '2023-06-04', '09:39:18', 97, 97, 'Withdrawed'),
 (10, 6, '2023-06-04', '09:39:31', 97, 97, 'Withdrawed'),
 (11, 6, '2023-06-04', '09:42:12', 1000, 950, 'Withdrawed'),
 (12, 6, '2023-06-04', '10:32:50', 3, 3, 'Withdrawed'),
 (13, 6, '2023-06-04', '10:33:45', 30000, 28500, 'Withdrawed'),
-(14, 6, '2023-06-04', '10:41:39', 9000, 8550, 'Withdrawed');
+(14, 6, '2023-06-04', '10:41:39', 9000, 8550, 'Withdrawed'),
+(15, 4, '2023-06-10', '12:55:39', 10000, 10000, 'Cancelled'),
+(16, 4, '2023-06-10', '13:02:05', 50000, 50000, 'Withdrawed');
 
 -- --------------------------------------------------------
 
@@ -764,7 +768,7 @@ CREATE TABLE `seller_accounts` (
 --
 
 INSERT INTO `seller_accounts` (`id`, `seller`, `balance`) VALUES
-(1, 4, 142780),
+(1, 4, 125080),
 (2, 3, 0),
 (3, 6, 900);
 
@@ -808,7 +812,9 @@ INSERT INTO `seller_money_txns` (`id`, `seller`, `txn_type`, `oldacc`, `new_acc`
 (17, 6, 'OUT', 40000, 39903, '2023-06-04', '09:39:18'),
 (18, 6, 'OUT', 39903, 39900, '2023-06-04', '10:32:50'),
 (19, 6, 'OUT', 39900, 9900, '2023-06-04', '10:33:45'),
-(20, 6, 'OUT', 9900, 900, '2023-06-04', '10:41:39');
+(20, 6, 'OUT', 9900, 900, '2023-06-04', '10:41:39'),
+(21, 4, 'IN', 142780, 175080, '2023-06-10', '12:36:07'),
+(22, 4, 'OUT', 175080, 125080, '2023-06-10', '13:02:05');
 
 -- --------------------------------------------------------
 
@@ -830,7 +836,6 @@ CREATE TABLE `seller_withdraws_complaints` (
 --
 
 INSERT INTO `seller_withdraws_complaints` (`id`, `txnid`, `complaint`, `response`, `date`, `time`) VALUES
-(1, 1, 'Hello i have made my withdeaw and you are delaying to much to give me my money. Or you think am joking with the money i am making here??', 'Not yet responded', '2023-06-01', '10:48:50'),
 (2, 2, 'WTF is your problem? Where is my money. Am i working for your pocket??\r\n', 'Not yet responded', '2023-06-02', '23:29:44'),
 (3, 10, 'tgjodfvjois d oifv jdo jio noi ndio', 'Not yet responded', '2023-06-04', '09:44:38');
 
@@ -864,7 +869,7 @@ INSERT INTO `shops` (`shop_id`, `shop_logo`, `shop_name`, `shop_district`, `shop
 (8, 'Logo - A Sony Company Shop.png', 'A Sony Company Shop', 'Musanze', 'Nkotsi', 'Bikara', '2023-05-06', '10:04:10', 'Trial period'),
 (9, 'Logo - Animal Products SH.png', 'Animal Products SH', 'Karongi', 'Mubuga', 'Ku mubuga', '2023-02-01', '10:06:11', 'Trial period'),
 (10, 'null', 'Hirwa Shoes Shop', 'Gasabo', 'Batsinda', 'Nduba, hafi yibiyede', '2023-05-25', '12:12:46', 'Running'),
-(12, 'null', 'Marina Rama Shop', 'Musanze', 'Nkotsi', 'Nyakinama mu midugudu', '2023-05-25', '17:36:43', 'Stopped'),
+(12, 'null', 'Marina Rama Shop', 'Musanze', 'Nkotsi', 'Nyakinama mu midugudu', '2023-05-25', '17:36:43', 'Running'),
 (13, 'null', 'Obote Store', 'null', 'null', 'null', '2023-06-03', '16:45:11', 'Stopped'),
 (14, 'null', 'Bonheur Shop', 'null', 'null', 'null', '2023-06-04', '08:52:31', 'Trial period'),
 (15, 'null', 'jiojweiodjiojio', 'null', 'null', 'null', '2023-06-06', '20:25:01', 'Trial period'),
@@ -1125,7 +1130,7 @@ ALTER TABLE `co_members`
 -- AUTO_INCREMENT for table `owner_account_txns`
 --
 ALTER TABLE `owner_account_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `payment_methods`
@@ -1155,7 +1160,7 @@ ALTER TABLE `product_genres`
 -- AUTO_INCREMENT for table `product_quantity_txns`
 --
 ALTER TABLE `product_quantity_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `sellers`
@@ -1173,7 +1178,7 @@ ALTER TABLE `sellers_orders_notifier`
 -- AUTO_INCREMENT for table `sellers_payment_methods`
 --
 ALTER TABLE `sellers_payment_methods`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `sellers_to_shops`
@@ -1185,7 +1190,7 @@ ALTER TABLE `sellers_to_shops`
 -- AUTO_INCREMENT for table `sellers_withdraws`
 --
 ALTER TABLE `sellers_withdraws`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `seller_accounts`
@@ -1197,7 +1202,7 @@ ALTER TABLE `seller_accounts`
 -- AUTO_INCREMENT for table `seller_money_txns`
 --
 ALTER TABLE `seller_money_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `seller_withdraws_complaints`

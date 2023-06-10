@@ -41,6 +41,13 @@
     </li>
     <hr>
     <li>
+        <a href="member-buyers-payment-methods.php">
+            <i class="fa fa-money-check"></i>
+            Buyers payment methods
+        </a>
+    </li>
+    <hr>
+    <li>
         <a href="logout.php">
             Logout
         </a>

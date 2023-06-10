@@ -30,6 +30,11 @@
     <link rel="stylesheet" href="css\seller-missing-elements.css">
     <link rel="stylesheet" href="css\member-stop-shop.css">
     <link rel="stylesheet" href="css\member-unstop-shop.css">
+    <link rel="stylesheet" href="css\member-verify-seller-pyt-method.css">
+    <link rel="stylesheet" href="css\member-unverify-seller-pyt-method.css">
+    <link rel="stylesheet" href="css\member-verify-buyers-payment-method.css">
+    <link rel="stylesheet" href="css\member-Unverify-buyers-payment-method.css">
+    <link rel="stylesheet" href="css\seller-cancel-withdraw.css">
 
     <!-- Responsiveness regulator -->
     <link rel="stylesheet" href="css\responsiveness-regulator.css">
@@ -56,6 +61,11 @@
     <script src="js\seller-save-shops-location.js"></script>
     <script src="js\member-delete-shop.js"></script>
     <script src="js\member-play-shop.js"></script>
+    <script src="js\member-verify-seller-pyt-method.js"></script>
+    <script src="js\member-unverify-seller-pyt-method.js"></script>
+    <script src="js\member-verify-buyer-pyt-method.js"></script>
+    <script src="js\member-unverify-buyer-pyt-method.js"></script>
+    <script src="js\seller-cancel-withdraw.js"></script>
     
     <title>
         BeGreat

@@ -20,7 +20,7 @@
                 flex-direction:row;">
                 <?php
                     // include('php/product_category.php');
-                    include('php\home-sliding-images.php');
+                    // include('php\home-sliding-images.php');
                 ?>
             </div>
             <div class="topsoldnshops">

@@ -88,6 +88,16 @@
                                         class="btn btn-warning">
                                         <i class="fa fa-question"></i>
                                     </a>
+                                    <?php
+                                        if ($data_txns['status'] == 'Pending') {
+                                            ?>
+                                            <button class="btn btn-danger sellcancelwithdrawBTN"
+                                                value="<?php echo $data_txns['id'];?>">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                            <?php
+                                        }
+                                    ?>
                                 </td>
                             </tr>
                             <?php

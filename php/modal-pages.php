@@ -477,3 +477,105 @@
         </div>
     </div>
 </div>
+
+<!-- Member verify sellers payment method -->
+<div class="verfiy-seller-pytmodal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                    Verify seller's payment method
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="verifypytresults">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Member unverify sellers payment method -->
+<div class="unverfiy-seller-pytmodal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                    Unverify seller's payment method
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="unverifypytresults">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Member Verify buyers payment method -->
+<div class="vrify-buyer-pyt-methodmodal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                    Verify buyer's payment method
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="verifybuyerpYTresults">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Member UnVerify buyers payment method -->
+<div class="unverify-buyer-pyt-modal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                    Unverify buyer's payment method
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="Unverfy-byuer-methodresults">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Seller cancel withdraw -->
+<div class="cancel-withdraw-seller-modal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                    Cancel withdraw
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="seller-cancel-withdraw-results">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

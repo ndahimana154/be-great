@@ -1,14 +1,13 @@
 <div class="sub-nav">
     <div class="menu-nav">
-        <div class="nav-links">
+        <div class="nav-links" style="margin: 5px">
             <ul>
-                <li class="cart-li p-3 text-success" 
+                <li class="cart-li text-primary" 
                     style="font-size: 20px;
                     user-select: none;
                     font-wieght: 800;">
                     <?php
-                        echo $seller_acting_email." : ";
-                        echo $seller_acting_shop_name;
+                        echo $seller_acting_shop_name." <b>(".$acting_seller_account_balance."RWF)</b>";
                     ?>
                 </li>
             </ul>

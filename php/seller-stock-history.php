@@ -1,13 +1,13 @@
 <div class="orders-cont">
     <div class="orders-box">
         <h2>
-            Products list
+            Stock history
         </h2>
         <div class="ctrl-btns" style="padding: 10px;">
-            <a href="sellers-newproduct.php" class="btn btn-success">
+            <!-- <a href="sellers-newproduct.php" class="btn btn-success">
                 <i class="fa fa-plus-circle"></i>
                 new product
-            </a>
+            </a> -->
         </div>
         <div class="table" style="padding: 10px; overflow:auto;">
             <table class="table table-hover table-responsive">
@@ -17,35 +17,31 @@
                             #
                         </th>
                         <th>
+                            Date & time
+                        </th>
+                        <th>
                             Product id
                         </th>
                         <th>
                             Product name
                         </th>
                         <th>
-                            Price
+                            Txn type
                         </th>
                         <th>
-                            Add date
-                        </th>
-                        <th>
-                            Genre
-                        </th>
-                        <th>
-                            Remaining quantity
-                        </th>
-                        <th>
-                            actions
+                            Txn quantity
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                         $get_txns = mysqli_query($server,"SELECT * from
-                            products,shops,product_genres
-                            WHERE products.shop = shops.shop_id
-                            AND products.product_genre = product_genres.genre_id
-                            AND shops.shop_id = '$seller_acting_shop'
+                            products,product_quantity_txns
+                            WHERE products.product_id = product_quantity_txns.product
+                            AND products.shop = '$seller_acting_shop'
+                            ORDER BY 
+                            txn_date DESC
+                            ,txn_time DESC
                         ");
                         if (mysqli_num_rows($get_txns) < 1) {
                             ?>
@@ -66,6 +62,9 @@
                                     ?>
                                 </td>
                                 <td>
+                                    <?php echo $data_txns['txn_date']." ".$data_txns['txn_time']; ?>
+                                </td>
+                                <td>
                                     <?php 
                                         echo $data_txns['product_id']; 
                                     
@@ -75,29 +74,20 @@
                                     <?php echo $data_txns['product_name']; ?>
                                 </td>
                                 <td>
-                                    <?php echo $data_txns['product_price']."RWF"; ?>
+                                    <?php 
+                                        if($data_txns['txn_type'] == 'IN') {
+                                            echo "Import";
+                                        } 
+                                        elseif ($data_txns['txn_type'] == 'OUT') {
+                                            echo "Export";
+                                        }
+                                        else {
+                                            echo "Not defined";
+                                        }
+                                    ?>
                                 </td>
                                 <td>
-                                    <?php echo $data_txns['product_add_date']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data_txns['genre_name']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data_txns['quantity_remain']; ?>
-                                </td>
-                                <td>
-                                    <a href="images/products/Frontimages/<?php echo $data_txns['product_image'] ?>" 
-                                        title="View image <?php echo $data_txns['product_name']; ?>" 
-                                        target="_blank" 
-                                        style="text-decoration: none;" 
-                                        class="text-success">
-                                            <i class="fa fa-external-link-alt"></i>
-                                    </a>
-                                    <a href="seller-import-product.php?product=<?php echo $data_txns['product_id'] ?>" style="text-decoration: none;" 
-                                        class="text-dark">
-                                        <i class="fa fa-cart-arrow-down"></i>
-                                    </a>
+                                    <?php echo $data_txns['txn_quantity']; ?>
                                 </td>
                             </tr>
                             <?php

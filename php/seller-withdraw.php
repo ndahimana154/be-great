@@ -115,7 +115,7 @@
                             WHERE 
                             seller = '$seller_acting_userid'
                             AND payment_methods.id = sellers_payment_methods.method
-                            AND status = 'Verfied'
+                            AND status = 'Verified'
                         ");
                         if (mysqli_num_rows($get_methods) < 1) {
                             ?>
@@ -125,7 +125,6 @@
                             <?php
                         }
                         while ($datamethods = mysqli_fetch_array($get_methods)) {
-                           
                             ?>
                             <option value="<?php echo $datamethods['seller_method']; ?>">
                                 <?php

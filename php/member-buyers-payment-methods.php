@@ -5,7 +5,7 @@
 <div class="orders-cont">
     <div class="orders-box">
         <h2>
-            Sellers payment methods
+            Buyers payment methods
         </h2>
         <div class="table" style="padding: 10px; overflow:auto;">
             <table class="table table-hover table-responsive">
@@ -21,10 +21,10 @@
                             Method name
                         </th>
                         <th>
-                            Seller names
+                            Buyer names
                         </th>
                         <th>
-                            Seller Email
+                            Buyer Email
                         </th>
                         <th>
                             Account digits
@@ -44,17 +44,17 @@
                     <?php
                         $get_txns = mysqli_query($server,"SELECT *
                             ,
-                            sellers_payment_methods.status AS 'seller_pyt_status',
-                            sellers_payment_methods.id AS 'paymentid'
-                            FROM sellers_payment_methods
-                            ,sellers
+                            buyer_payment_methods.status AS 'buyer_pytstatus',
+                            buyer_payment_methods.id AS 'paymentid'
+                            FROM buyer_payment_methods
+                            ,buyers
                             ,payment_methods
                             WHERE 
-                            sellers_payment_methods.seller = sellers.id
-                            AND sellers_payment_methods.method = payment_methods.id
-                            AND sellers_payment_methods.status != 'Deleted'
+                            buyer_payment_methods.buyer = buyers.id
+                            AND buyer_payment_methods.method = payment_methods.id
+                            AND buyer_payment_methods.status != 'Deleted'
                             ORDER BY
-                            sellers_payment_methods.status ASC
+                            buyer_payment_methods.status ASC
                             ,method_type ASC
                             ,method_name ASC
                             ,firstname ASC
@@ -101,21 +101,21 @@
                                     <?php echo $data_txns['add_date']." ".$data_txns['add_time']; ?>
                                 </td>
                                 <td>
-                                    <?php echo $data_txns['seller_pyt_status']; ?>
+                                    <?php echo $data_txns['buyer_pytstatus']; ?>
                                 </td>
                                 <td>
                                     <?php
-                                        if ($data_txns['seller_pyt_status'] == 'Unverfied') {
+                                        if ($data_txns['buyer_pytstatus'] == 'Unverfied') {
                                             ?>
-                                            <button class="btn btn-success verifyPYTBTN"
+                                            <button class="btn btn-success BuyerverifyPYTBTN"
                                                 value="<?php echo $data_txns['paymentid']; ?>">
                                                 <i class="fa fa-check"></i>
                                             </button>
                                             <?php
                                         }
-                                        elseif ($data_txns['seller_pyt_status'] == 'Verified') {
+                                        elseif ($data_txns['buyer_pytstatus'] == 'Verified') {
                                             ?>
-                                            <button class="btn btn-danger UnverifyPYTBTN"
+                                            <button class="btn btn-danger BuyerUnverifyPYTBTN"
                                                 value="<?php echo $data_txns['paymentid']; ?>">
                                                 <i class="fa fa-window-close"></i>
                                             </button>

@@ -6,6 +6,12 @@
     </li>
     <hr>
     <li>
+        <a href="seller-stock-history.php">
+        Stock history
+        </a>
+    </li>
+    <hr>
+    <li>
         <a href="sellers-newproduct.php?back">
             New product
         </a>
@@ -23,12 +29,12 @@
         </a>
     </li>
     <hr>
-    <!-- <li>
+    <li>
         <a href="seller-withdraw.php">
-        Withdraw money
+        Withdraw
         </a>
     </li>
-    <hr> -->
+    <hr>
     <li>
         <a href="seller-withdraw-history.php">
         Withdrawing history
