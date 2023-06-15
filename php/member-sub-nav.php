@@ -30,18 +30,16 @@
             <?php 
                 if ($member_acting_profilepic == 'Not set yet') {
                     ?>
-                    <button class="btn" style="
-                        background: #007ff5;
-                        color: #fff;
-                        ">
+                    <a class="btn btn-primary"
+                        href="member-new-profile-picture.php">
                         <i class="fa fa-plus-circle"></i> new profile picture
-                    </button>
+                    </a>
                     <?php
                 }
                 else {
                     ?>
                     <button>
-                        <img src="images/members/profile_images/<?php echo $acting_profilePic; ?>" alt="">
+                        <img src="images/members/profile_images/<?php echo $member_acting_profilepic; ?>" alt="">
                     </button>
                     <?php
                 }

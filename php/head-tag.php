@@ -35,6 +35,9 @@
     <link rel="stylesheet" href="css\member-verify-buyers-payment-method.css">
     <link rel="stylesheet" href="css\member-Unverify-buyers-payment-method.css">
     <link rel="stylesheet" href="css\seller-cancel-withdraw.css">
+    <link rel="stylesheet" href="css\member-new-payment-method.css">
+    <link rel="stylesheet" href="css\member-view-courier-pyt-methods.css">
+    <link rel="stylesheet" href="css\member-delete-courier-modal.css">
 
     <!-- Responsiveness regulator -->
     <link rel="stylesheet" href="css\responsiveness-regulator.css">
@@ -66,6 +69,9 @@
     <script src="js\member-verify-buyer-pyt-method.js"></script>
     <script src="js\member-unverify-buyer-pyt-method.js"></script>
     <script src="js\seller-cancel-withdraw.js"></script>
+    <script src="js\member-new-courier-pytmethod.js"></script>
+    <script src="js\member-view-courier-pyt-methods.js"></script>
+    <script src="js\member-delete-courier.js"></script>
     
     <title>
         BeGreat

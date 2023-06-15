@@ -48,6 +48,20 @@
     </li>
     <hr>
     <li>
+        <a href="member-couriers.php">
+            <i class="fa fa-biking"></i>
+            Couriers
+        </a>
+    </li>
+    <hr>
+    <li>
+        <a href="member-home-sliding-shops.php">
+            <i class="fa fa-sliders-h"></i>
+            Home sliding shops
+        </a>
+    </li>
+    <hr>
+    <li>
         <a href="logout.php">
             Logout
         </a>

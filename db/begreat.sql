@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2023 at 01:12 PM
+-- Generation Time: Jun 15, 2023 at 11:56 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -223,6 +223,53 @@ INSERT INTO `cart_draft` (`id`, `buyer`, `product`, `quantity`, `unityprice`, `s
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `courier`
+--
+
+CREATE TABLE `courier` (
+  `courier_sn` int(12) UNSIGNED ZEROFILL NOT NULL,
+  `courier_fn` varchar(255) NOT NULL,
+  `courier_ln` varchar(255) DEFAULT NULL,
+  `courier_email` varchar(255) NOT NULL,
+  `courier_phone` varchar(255) NOT NULL,
+  `courier_phone2` varchar(255) DEFAULT NULL,
+  `courier_dob` varchar(255) NOT NULL,
+  `courier_nid` int(16) NOT NULL,
+  `courier_profile` text DEFAULT NULL,
+  `courier_status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `courier`
+--
+
+INSERT INTO `courier` (`courier_sn`, `courier_fn`, `courier_ln`, `courier_email`, `courier_phone`, `courier_phone2`, `courier_dob`, `courier_nid`, `courier_profile`, `courier_status`) VALUES
+(000000000001, 'Bizimana', 'Dunia', 'biziduni@gmail.com', '0788123432', '', '2122-12-12', 1233484738, 'biziduni@gmail.com - Profile image.png', 'Fired');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `courier_payment_methods`
+--
+
+CREATE TABLE `courier_payment_methods` (
+  `id` int(11) NOT NULL,
+  `courier` int(12) UNSIGNED ZEROFILL NOT NULL,
+  `method_type` int(11) NOT NULL,
+  `method_digits` varchar(255) NOT NULL,
+  `method_status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `courier_payment_methods`
+--
+
+INSERT INTO `courier_payment_methods` (`id`, `courier`, `method_type`, `method_digits`, `method_status`) VALUES
+(2, 000000000001, 5, 'e3r534443545', 'Verified');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `co_members`
 --
 
@@ -261,7 +308,7 @@ CREATE TABLE `co_members_auth` (
 --
 
 INSERT INTO `co_members_auth` (`id`, `username`, `password`, `profile_image`) VALUES
-(000001, 'ndahimana154', 'GitPASS', 'Not set yet');
+(000001, 'ndahimana154', 'GitPASS', 'ndahimana154 - Profile image.png');
 
 -- --------------------------------------------------------
 
@@ -293,6 +340,22 @@ INSERT INTO `deposit_draft` (`transaction_id`, `transaction_amount`, `transactio
 ('9', 0, 'Kwizera Byigore', 1, '3293292818', '2023-06-02', '09:24', '2023-06-03 18:23:13', 'Unreviewed', 000001),
 ('eriufhui 9383u290uvuih', 0, 'Tsindagiraaa Cyimana', 3, '4343928727217', '2023-05-28', '09:48', '2023-06-03 18:45:59', 'Unreviewed', 000001),
 ('M-Monydf BNMG', 12800, 'Tsinda Cyimana Kevin', 5, 'csffdfdfddfbfdv', '2023-05-30', '00:33', '2023-06-04 07:29:14', 'Matching', 000001);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home_sliding_shops`
+--
+
+CREATE TABLE `home_sliding_shops` (
+  `id` int(11) NOT NULL,
+  `shop` int(11) NOT NULL,
+  `sliding_message` text NOT NULL,
+  `sliding_image` text NOT NULL,
+  `sliding_form` varchar(255) NOT NULL,
+  `sliding_until` varchar(255) NOT NULL,
+  `sliding_status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -951,6 +1014,18 @@ ALTER TABLE `cart_draft`
   ADD KEY `dfo iojoi` (`product`);
 
 --
+-- Indexes for table `courier`
+--
+ALTER TABLE `courier`
+  ADD PRIMARY KEY (`courier_sn`);
+
+--
+-- Indexes for table `courier_payment_methods`
+--
+ALTER TABLE `courier_payment_methods`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `co_members`
 --
 ALTER TABLE `co_members`
@@ -969,6 +1044,12 @@ ALTER TABLE `deposit_draft`
   ADD PRIMARY KEY (`transaction_id`,`transaction_payment_method`),
   ADD KEY `dkodjiujhui` (`transaction_payment_method`),
   ADD KEY `sdfiojoiwjqio` (`transaction_recorder`);
+
+--
+-- Indexes for table `home_sliding_shops`
+--
+ALTER TABLE `home_sliding_shops`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `owner_account_txns`
@@ -1121,10 +1202,28 @@ ALTER TABLE `cart_draft`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `courier`
+--
+ALTER TABLE `courier`
+  MODIFY `courier_sn` int(12) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `courier_payment_methods`
+--
+ALTER TABLE `courier_payment_methods`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `co_members`
 --
 ALTER TABLE `co_members`
   MODIFY `id` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `home_sliding_shops`
+--
+ALTER TABLE `home_sliding_shops`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `owner_account_txns`

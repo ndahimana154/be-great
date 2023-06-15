@@ -578,4 +578,102 @@
 </div>
 
 
+<!-- Member new courier payment method -->
+<div class="newcourier-pytmodal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                    New Courier payment method
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="courier-contents" style="padding: 10px;">
+                <div class="new-cou-pyt-resu"></div>
+                <p>
+                    Method type
+                </p>
+                <p>
+                    <select name="" id="method-co-id" class="text-box">
+                        <option value="Select method type">
+                            Select method type
+                        </option>
+                        <?php 
+                            $getmethods = mysqli_query($server,"SELECT *
+                                FROM payment_methods
+                                ORDER BY method_name ASC
+                            ");
+                            while ($datamethods = mysqli_fetch_array($getmethods)) {
+                                ?>
+                                <option value="<?php echo $datamethods['id']; ?>">
+                                    <?php echo $datamethods['method_name']; ?>
+                                </option>
+                                <?php
+                            }
+                        ?>
+                    </select>
+                </p>
+                <p>
+                    Payment digits
+                </p>
+                <p>
+                    <input type="text" class="text-box" 
+                        id="pyt-co-digits"
+                        placeholder="Type...">
+                </p>
+                <p>
+                    <button class="btn btn-success" id="new-courier-pytm-BTN">
+                        <i class="fa fa-save"></i>
+                        Save
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Viewing the payment methods -->
+<div class="view-courier-pyts" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                    Courier payment methods
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="view-content"></div>
+        
+        </div>
+    </div>
+</div>
+
+
+<!-- Fire the courier -->
+<div class="fire-courier-modal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                    Delete courier
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="delete-courier-content"></div>
+        
+        </div>
+    </div>
+</div>
+
+
 

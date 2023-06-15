@@ -11,6 +11,9 @@
     <title></title>
 </head>
 <body>
+    <?php
+        echo md5(5);
+    ?>
     <form action="" method="POST"  enctype="multipart/form-data">
         <h1>
             New shop 

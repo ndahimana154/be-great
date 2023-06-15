@@ -16,5 +16,4 @@
     $member_acting_email = $data_member_allinfo['Email'];
     $member_acting_phone = $data_member_allinfo['Phone'];
     $member_acting_type = $data_member_allinfo['Type'];
-
 ?>

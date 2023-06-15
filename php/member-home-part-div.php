@@ -77,6 +77,25 @@
                     ?>
                 </div>
             </div>
+            <div class="dash-box">
+                <div class="left">
+                    <h2>
+                        Couriers
+                    </h2>
+                    <p>
+                        <i class="fa fa-biking"></i>
+                    </p>
+                </div>
+                <div class="right">
+                    <?php
+                        $getallcouriers = mysqli_query($server,"SELECT * from
+                            courier
+                            WHERE courier_sn != 'Fired'
+                        ");
+                        echo mysqli_num_rows($getallcouriers);
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 </div>
