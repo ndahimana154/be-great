@@ -1,0 +1,46 @@
+.view-courier-pyts {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.544);
+    z-index: 30;
+    position: fixed;
+    display: none;
+}
+.view-courier-pyts .pyt-cont {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    max-height: 80vh;
+    overflow: auto;
+    background: #fff;
+    border-radius: 10px;
+}
+.view-courier-pyts .yesnosdelete .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.view-courier-pyts .yesnosdelete .header h2 {
+    flex: 2;
+    color: #007ff5;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.view-courier-pyts .yesnosdelete .header button {
+    background: transparent;
+    border: 0;
+    padding: 5px;
+}
+.view-courier-pyts .yesnosdelete .header button i {
+    color: #d33030;
+}
+.view-courier-pyts .yesnosdelete .yesnobox {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.view-courier-pyts .yesnosdelete .yesnobox button {
+    margin: 7px;
+}

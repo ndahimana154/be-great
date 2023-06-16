@@ -1,0 +1,82 @@
+#deliver-modal {
+    display: none;
+}
+.yesnoshop {
+    display: none;
+}
+.deliver-cont,
+.yesnoshop {
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background: var(--main-white);
+    border-radius: 5px;
+}
+.deliver-cont .deliver-box .header,
+.yesnoshop .header {
+    display: flex;
+    padding: 5px;
+}
+.deliver-cont .deliver-box .header h2,
+.yesnoshop .header h2 {
+    flex: 1;
+    color: var(--main-actingcolor);
+}
+.deliver-cont .deliver-box .header button,
+.yesnoshop .header button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.deliver-cont .deliver-box .header button i,
+.yesnoshop .header button i {
+    color: var(--samplered);
+}
+.deliver-cont .deliver-box .content,
+.yesnoshop .yesnobox {
+    padding: 15px;
+}
+.deliver-cont .deliver-box .content .row {
+    display: flex;
+}
+.deliver-cont .deliver-box .content .row p {
+    flex: 1;
+}
+.deliver-cont .deliver-box .content .row input {
+    flex: 1;
+    padding: 4px;
+    outline: 0;
+    margin: 4px;
+}
+.deliver-cont .deliver-box .content .btn {
+    text-align: center;
+}
+.deliver-cont .deliver-box .content .btn button {
+    /* width: 70%; */
+    margin: auto;
+    border: 0;
+    /* background: var(--main-actingcolor); */
+    /* color: var(--main-white); */
+    padding: 4px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.yesnoshop .yesnobox {
+    text-align: center;
+}
+.yesnoshop .yesnobox button {
+    background: transparent;
+    border: 0;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.yesnoshop .yesnobox .yes {
+    background: var(--main-actingcolor);
+}
+.yesnoshop .yesnobox .no {
+    background: var(--sampledarkpurple);
+}

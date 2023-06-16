@@ -1,0 +1,48 @@
+.product-box {
+    width: 200px;
+    /* border: 1px solid var(--boxshadow-black); */
+    border-radius: 10px;
+    margin: 10px;
+    /* margin: auto; */
+    margin-bottom: 10px;
+    background: var(--simple-grayBG);
+}
+.product-box img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.product-box .details {
+    padding: 10px;
+}
+.product-box .details .name a{
+    color: var(--main-actingcolor);
+    font-weight: 900;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.product-box .details .prinshop {
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+}
+.product-box .details .prinshop .shop {
+    flex: 1;
+}
+.product-box .details .prinshop .shop a{
+    color: var(--sampledarkpurple);
+    text-decoration: none;
+}
+.product-box .details .prinshop .price {
+    /* color: var(--main-actingcolor); */
+}
+.product-box .details .shopBTN {
+    width: 100%;
+    background: var(--main-actingcolor);
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    color: var(--main-white);
+    cursor: pointer;
+    margin-top: 10px;
+}
