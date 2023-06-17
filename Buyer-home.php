@@ -23,25 +23,28 @@
             <?php
                 include('php/sub-nav.php');
             ?>
-            <div class="topsoldnshops">
-                <?php
-                    include('php/buyer-product_category.php');
-                    
-                ?>
-                <div class="topsold">
-                    <h1>
-                        Top sold products
-                    </h1>
-                    <div class="topsold-cont">
-                        <?php
-                            include('php/buyer-top-sold-products.php');
-                        ?>
-                    </div>
+            <div class="home-part1" style="
+                display: flex;flex-direction:row;
+                flex-wrap: wrap;
+                ">
+                <div class="left" style="flex:1">
+                    <?php
+                        include('php/buyer-product_category.php');
+                    ?>
+                </div>
+                <div class="center" style="flex:3;justify-contents:center;align-items:center;">
+                    <?php
+                        include('php\buyer-home-sliding-images.php');
+                        include('php/Buyer-in-latest-products.php');
+                    ?>
+                </div>
+                <div class="right" style="flex: 1;">
+                    <?php
+                        include('php/buyer-top-sold-products.php');
+                    ?>
                 </div>
             </div>
             <?php
-                include('php/buyer-top-shops.php');
-                include('php/Buyer-in-latest-products.php');
                 include('php/big-footer.php'); 
                 include('php/developer-footer.php');
             ?>

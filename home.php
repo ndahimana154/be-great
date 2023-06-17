@@ -23,24 +23,29 @@
                     // include('php\home-sliding-images.php');
                 ?>
             </div>
-            <div class="topsoldnshops">
-                <?php
-                    include('php/product_category.php');
-                ?>
-                  <div class="topsold">
-                    <h1>
-                        Top sold products
-                    </h1>
-                    <div class="topsold-cont">
-                        <?php
-                            include('php/top-sold-products.php');
-                        ?>
-                    </div>
+            <div class="home-part1" style="
+                display: flex;flex-direction:row;
+                flex-wrap: wrap;
+                ">
+                <div class="left" style="flex:1">
+                    <?php
+                        include('php/product_category.php');
+                    ?>
+                </div>
+                <div class="center" style="flex:3;justify-contents:center;align-items:center;">
+                    <?php
+                        include('php\home-sliding-images.php');
+                        include('php/Latest-products.php');
+                    ?>
+                </div>
+                <div class="right" style="flex: 1;">
+                    <?php
+                        include('php/home-top-shops.php');
+                    ?>
                 </div>
             </div>
             <?php
-                include('php/top-shops.php');
-                include('php/Latest-products.php');
+                // include('php/top-shops.php');
                 include('php/big-footer.php'); 
                 include('php/developer-footer.php');
             ?>

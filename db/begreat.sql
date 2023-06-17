@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2023 at 10:25 PM
+-- Generation Time: Jun 17, 2023 at 05:47 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -245,7 +245,7 @@ CREATE TABLE `courier` (
 
 INSERT INTO `courier` (`courier_sn`, `courier_fn`, `courier_ln`, `courier_email`, `courier_phone`, `courier_phone2`, `courier_dob`, `courier_nid`, `courier_profile`, `courier_status`) VALUES
 (000000000001, 'Bizimana', 'Dunia', 'biziduni@gmail.com', '0788123432', '', '2122-12-12', 1233484738, 'biziduni@gmail.com - Profile image.png', 'Fired'),
-(000000000004, 'Byiringiro', 'Bosco', 'boscobyiringiro@gmail.com', '04383272', '', '1996-06-10', 2147483647, 'boscobyiringiro@gmail.com - Profile image.png', 'Pending');
+(000000000004, 'Byiringiro', 'Bosco', 'boscobyiringiro@gmail.com', '04383272', '', '1996-06-10', 2147483647, 'boscobyiringiro@gmail.com - Profile image.png', 'Fired');
 
 -- --------------------------------------------------------
 
@@ -278,7 +278,8 @@ CREATE TABLE `courier_payment_methods` (
 --
 
 INSERT INTO `courier_payment_methods` (`id`, `courier`, `method_type`, `method_digits`, `method_status`) VALUES
-(2, 000000000001, 5, 'e3r534443545', 'Verified');
+(2, 000000000001, 5, 'e3r534443545', 'Verified'),
+(3, 000000000004, 4, '0787873516', 'Verified');
 
 -- --------------------------------------------------------
 
@@ -375,7 +376,9 @@ CREATE TABLE `home_sliding_shops` (
 --
 
 INSERT INTO `home_sliding_shops` (`id`, `shop`, `sliding_message`, `sliding_image`, `sliding_from`, `sliding_until`, `sliding_status`) VALUES
-(24, 7, 'Hub of soft drinkings. We seve you a huge amount of non-alcoholic drinks, Feel free to order yours.', '9aaa511fb48afae2d1f2fd28d5efd9fa.png', '2023-06-16 22:01:16', '2023-07-06 23:01', 'Sliding');
+(24, 7, 'Hub of soft drinkings. We serve you a huge amount of non-alcoholic drinks, Feel free to order yours.', '9aaa511fb48afae2d1f2fd28d5efd9fa.png', '2023-06-16 22:01:16', '2023-07-06 23:01', 'Sliding'),
+(25, 10, 'Gret shop, new ones only', 'e2bb5e6f86716969c19d0be69327c8e7.png', '2023-06-17 14:34:54', '2023-07-05 15:34', 'Sliding'),
+(26, 5, 'New products are available!', '384a815d55029a54b3ae7606aea7eab7.png', '2023-06-17 15:05:00', '2023-06-27 16:04', 'Sliding');
 
 -- --------------------------------------------------------
 
@@ -455,7 +458,8 @@ INSERT INTO `owner_account_txns` (`id`, `type`, `amount`, `timendate`) VALUES
 (58, 'IN', 350, '2023-06-06 13:09:49'),
 (59, 'OUT', 350, '2023-06-09 23:09:54'),
 (60, 'OUT', 3700, '2023-06-09 23:10:01'),
-(61, 'OUT', 32300, '2023-06-10 12:36:07');
+(61, 'OUT', 32300, '2023-06-10 12:36:07'),
+(62, 'OUT', 333, '2023-06-17 15:13:34');
 
 -- --------------------------------------------------------
 
@@ -508,7 +512,7 @@ INSERT INTO `products` (`product_id`, `product_name`, `product_image`, `product_
 (27, 'Igihwagari Golden Cooking oil', 'Marina Rama Shop - Igihwagari Golden Cooking oil - FRONTIMAGE.png', 3700, '2023-05-25', 7, 12, 999580, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (28, 'SanDisk Memory Card 32GB', 'Marina Rama Shop - SanDisk Memory Card 32GB - FRONTIMAGE.png', 34000, '2023-05-25', 1, 12, 112, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (29, 'Ice Watch - PTC 2023 Version American', 'Marina Rama Shop - Ice Watch - PTC 2023 Version American - FRONTIMAGE.png', 45000, '2023-05-28', 1, 12, 82, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
-(30, 'Anana - Brugali SMJ1 Juice', 'Marina Rama Shop - Anana - Brugali SMJ1 Juice - FRONTIMAGE.png', 350, '2023-06-03', 5, 12, 47, 'Juice made from Anana with 80% Sugar and contains many Vitamins and minerals to be consumed by the human body. This juice is especially made for Children and Pregnant woman as it increaes the concentration of Crbohydrates.'),
+(30, 'Anana - Brugali SMJ1 Juice', 'Marina Rama Shop - Anana - Brugali SMJ1 Juice - FRONTIMAGE.png', 350, '2023-06-03', 5, 12, 46, 'Juice made from Anana with 80% Sugar and contains many Vitamins and minerals to be consumed by the human body. This juice is especially made for Children and Pregnant woman as it increaes the concentration of Crbohydrates.'),
 (31, 'Chocolate', 'Bonheur Shop - Chocolate - FRONTIMAGE.png', 1000, '2023-06-04', 5, 14, 88, 'Black Chocolate Made of Sugar'),
 (32, 'coconut', 'Bonheur Shop - coconut - FRONTIMAGE.png', 970, '2023-06-04', 6, 14, 90, 'country:japan\r\nexpr:23/08/2023\r\nmanufacture:yokohama\r\n');
 
@@ -581,7 +585,7 @@ INSERT INTO `products_orders` (`order_id`, `product`, `client`, `product_price`,
 (43, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:39', 'Delivering', 12),
 (44, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:40', 'Pending', 12),
 (45, 30, 4, 350, 1, 350, '2023-06-06', '13:09:48', 'Cancelled', 12),
-(46, 30, 4, 350, 1, 350, '2023-06-06', '13:09:49', 'Pending', 12);
+(46, 30, 4, 350, 1, 350, '2023-06-06', '13:09:49', 'Delivering', 12);
 
 -- --------------------------------------------------------
 
@@ -679,7 +683,8 @@ INSERT INTO `product_quantity_txns` (`id`, `product`, `txn_type`, `txn_quantity`
 (51, 31, 'OUT', 2, '2023-06-04', '09:06:45'),
 (52, 31, 'IN', 60, '2023-06-04', '10:53:13'),
 (53, 32, 'IN', 90, '2023-06-04', '10:53:59'),
-(54, 28, 'OUT', 1, '2023-06-10', '12:36:07');
+(54, 28, 'OUT', 1, '2023-06-10', '12:36:07'),
+(55, 30, 'OUT', 1, '2023-06-17', '15:13:35');
 
 -- --------------------------------------------------------
 
@@ -709,7 +714,8 @@ INSERT INTO `sellers` (`id`, `firstname`, `lastname`, `email`, `phone`, `profile
 (6, 'Ndahimana', 'Bonheur', 'bonher@gmail.com', 2147483647, 'bonher@gmail.com - Profile image .png', '123456', 'Selling'),
 (7, 'dfvciojio', 'jijfweiocjioj', 'iojdiowjdioj@ggf.d', 1223, 'iojdiowjdioj@ggf.d - Profile image .png', '123456', 'Selling'),
 (8, 'sdvcoij', 'ijciosjcioj', 'ijfdioj@gdf.ef', 4394389, 'ijfdioj@gdf.ef - Profile image .png', '123456', 'Stopped'),
-(9, 'sdfioj', 'ihduiehuihui', 'uivndndiN@drfgdf.regve', 2147483647, 'uivndndiN@drfgdf.regve - Profile image .png', '123456', 'Waiting list');
+(9, 'sdfioj', 'ihduiehuihui', 'uivndndiN@drfgdf.regve', 2147483647, 'uivndndiN@drfgdf.regve - Profile image .png', '123456', 'Waiting list'),
+(10, 'dio', 'hdui', 'tsindacyimanakevin@gmail.com', 0, 'tsindacyimanakevin@gmail.com - Profile image .png', 'p', 'Waiting list');
 
 -- --------------------------------------------------------
 
@@ -851,7 +857,7 @@ CREATE TABLE `seller_accounts` (
 --
 
 INSERT INTO `seller_accounts` (`id`, `seller`, `balance`) VALUES
-(1, 4, 125080),
+(1, 4, 125413),
 (2, 3, 0),
 (3, 6, 900);
 
@@ -897,7 +903,8 @@ INSERT INTO `seller_money_txns` (`id`, `seller`, `txn_type`, `oldacc`, `new_acc`
 (19, 6, 'OUT', 39900, 9900, '2023-06-04', '10:33:45'),
 (20, 6, 'OUT', 9900, 900, '2023-06-04', '10:41:39'),
 (21, 4, 'IN', 142780, 175080, '2023-06-10', '12:36:07'),
-(22, 4, 'OUT', 175080, 125080, '2023-06-10', '13:02:05');
+(22, 4, 'OUT', 175080, 125080, '2023-06-10', '13:02:05'),
+(23, 4, 'IN', 125080, 125413, '2023-06-17', '15:13:35');
 
 -- --------------------------------------------------------
 
@@ -983,7 +990,8 @@ INSERT INTO `shops_waiting` (`id`, `seller_id`, `shop_name`, `wait_from`, `wait_
 (4, 6, 'Bonheur Shop', '2023-06-04 08:52:12', 'Running'),
 (5, 7, 'jiojweiodjiojio', '2023-06-06 20:13:51', 'Running'),
 (6, 8, 'efionjiujui', '2023-06-06 20:25:32', 'Running'),
-(7, 9, 'ksdcnjnj', '2023-06-06 20:46:45', 'Waiting');
+(7, 9, 'ksdcnjnj', '2023-06-06 20:46:45', 'Waiting'),
+(8, 10, 'kl', '2023-06-17 15:35:52', 'Waiting');
 
 --
 -- Indexes for dumped tables
@@ -1077,7 +1085,8 @@ ALTER TABLE `deposit_draft`
 -- Indexes for table `home_sliding_shops`
 --
 ALTER TABLE `home_sliding_shops`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `dfgfgfhgfhgfhgfs` (`shop`);
 
 --
 -- Indexes for table `owner_account_txns`
@@ -1245,7 +1254,7 @@ ALTER TABLE `courier_accounts`
 -- AUTO_INCREMENT for table `courier_payment_methods`
 --
 ALTER TABLE `courier_payment_methods`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `co_members`
@@ -1257,13 +1266,13 @@ ALTER TABLE `co_members`
 -- AUTO_INCREMENT for table `home_sliding_shops`
 --
 ALTER TABLE `home_sliding_shops`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `owner_account_txns`
 --
 ALTER TABLE `owner_account_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `payment_methods`
@@ -1293,13 +1302,13 @@ ALTER TABLE `product_genres`
 -- AUTO_INCREMENT for table `product_quantity_txns`
 --
 ALTER TABLE `product_quantity_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `sellers`
 --
 ALTER TABLE `sellers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `sellers_orders_notifier`
@@ -1335,7 +1344,7 @@ ALTER TABLE `seller_accounts`
 -- AUTO_INCREMENT for table `seller_money_txns`
 --
 ALTER TABLE `seller_money_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `seller_withdraws_complaints`
@@ -1353,7 +1362,7 @@ ALTER TABLE `shops`
 -- AUTO_INCREMENT for table `shops_waiting`
 --
 ALTER TABLE `shops_waiting`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
@@ -1416,6 +1425,12 @@ ALTER TABLE `co_members_auth`
 ALTER TABLE `deposit_draft`
   ADD CONSTRAINT `dkodjiujhui` FOREIGN KEY (`transaction_payment_method`) REFERENCES `payment_methods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `sdfiojoiwjqio` FOREIGN KEY (`transaction_recorder`) REFERENCES `co_members` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `home_sliding_shops`
+--
+ALTER TABLE `home_sliding_shops`
+  ADD CONSTRAINT `dfgfgfhgfhgfhgfs` FOREIGN KEY (`shop`) REFERENCES `shops` (`shop_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `products`

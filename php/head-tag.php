@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css\seller-backend-sidemenu.css">
     <link rel="stylesheet" href="css\buyer-backend-sidemenu.css">
     <link rel="stylesheet" href="css\buyer-delete-payment-method.css">
-    <link rel="stylesheet" href="css\home-sliding-images.css">
+    <link rel="stylesheet" href="css\home-sliding.css">
     <link rel="stylesheet" href="css\member-delete-payment-method.css">
     <link rel="stylesheet" href="css\seller-view-ordernotifications.css">
     <link rel="stylesheet" href="css\seller-missing-elements.css">

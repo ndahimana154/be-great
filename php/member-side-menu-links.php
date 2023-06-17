@@ -62,6 +62,13 @@
     </li>
     <hr>
     <li>
+        <a href="member-members-list.php">
+            <i class="fa fa-sliders-h"></i>
+            Members list
+        </a>
+    </li>
+    <hr>
+    <li>
         <a href="logout.php">
             Logout
         </a>

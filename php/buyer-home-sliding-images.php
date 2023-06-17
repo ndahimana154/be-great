@@ -26,7 +26,7 @@
                                     <p class="text-success">
                                         <?php echo $data_slidings['sliding_message']; ?>
                                     </p>
-                                    <a href="view-shops.php?shop=<?php echo $data_slidings['shop_id'] ?>" class="btn btn-primary">
+                                    <a href="Buyer-view-shops.php?shop=<?php echo $data_slidings['shop_id'] ?>" class="btn btn-primary">
                                         <i class="fa fa-external-link-alt"></i>
                                         Visit shop
                                     </a>

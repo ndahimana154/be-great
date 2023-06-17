@@ -28,8 +28,6 @@
         <div class="remaining">
             <?php
                 include('php/shop-by-category.php');
-                include('php/top-shops.php');
-                include('php/Latest-products.php');
                 include('php/big-footer.php'); 
                 include('php/developer-footer.php');
             ?>

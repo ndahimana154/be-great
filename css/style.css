@@ -19,7 +19,8 @@
 .orders-cont h2,
 .shop-cont h2,
 .dashboard-cont h1,
-.missing-location h1 {
+.missing-location h1,
+.sliding-header {
     margin: 10px;
     color: var(--main-actingcolor);
     font-size: 20px;
@@ -79,6 +80,7 @@ body {
     position: sticky;
     top: 0;
     background: var(--simple-headerBG);
+    z-index: 10;
 }
 .main-header .m-hSection {
     display: flex;
