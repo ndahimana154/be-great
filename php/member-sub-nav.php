@@ -2,7 +2,7 @@
     <div class="menu-nav">
         <div class="nav-links">
             <ul>
-                <li class="cart-li p-3 text-success" 
+                <li class="cart-li p-3 text-primary" 
                     style="font-size: 20px;
                     user-select: none;
                     font-wieght: 800;">

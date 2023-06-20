@@ -99,10 +99,17 @@
                                         value="<?php echo $data_txns['courier_sn']; ?>">
                                         <i class="fa fa-eye"></i>
                                     </button>
-                                    <button class="btn btn-danger firecourierBTN"
-                                        value="<?php echo $data_txns['courier_sn']; ?>">
-                                        <i class="fa fa-trash"></i>
-                                    </button>
+                                    <?php
+                                        if ($member_acting_type == 'Chief executive officer') {
+                                            ?>
+                                            <button class="btn btn-danger firecourierBTN"
+                                                value="<?php echo $data_txns['courier_sn']; ?>">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                            <?php
+                                        }
+                                    ?>
+                                    
                                 </td>
                             </tr>
                             <?php

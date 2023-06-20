@@ -13,14 +13,17 @@
     include('php/modal-pages.php');
 ?>
 <body>
-    <div class="main-gate" style="background: var(--simple-headerBG);">
-        <?php
+    <?php
+        include('php/modal-pages.php');
+    ?>
+    <div class="main-gate">
+    <?php
             include('php/member-in-header.php');
         ?>
         <div class="remaining">
             <?php
                 include('php/member-sub-nav.php');
-                include('php/member-home-part-div.php');
+                include('php\member-new-member.php');
                 include('php/developer-footer.php');
             ?>
         </div>

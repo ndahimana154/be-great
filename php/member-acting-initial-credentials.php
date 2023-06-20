@@ -15,5 +15,10 @@
     $member_acting_ln = $data_member_allinfo['Lname'];
     $member_acting_email = $data_member_allinfo['Email'];
     $member_acting_phone = $data_member_allinfo['Phone'];
-    $member_acting_type = $data_member_allinfo['Type'];
+    $member_acting_type_id = $data_member_allinfo['Type'];
+    // Get the ser type in the table
+    $getusertype = mysqli_fetch_array(mysqli_query($server,"SELECT * from co_members_types
+        WHERE id = '$member_acting_type_id'
+    "));
+    $member_acting_type = $getusertype['type']
 ?>

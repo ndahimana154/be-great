@@ -6,96 +6,89 @@
         <h1 class="text-primary" style="font-size: 20px">
             Dashboard
         </h1>
-        <div class="dash-center">
-            <div class="dash-box">
-                <div class="left">
-                    <h2>
-                        Shops
-                    </h2>
-                    <p>
-                        <?php
-                            $get_tp_shops = mysqli_query($server,"SELECT * from shops WHERE shop_status='Trial period'");
-                            echo"TP: ".mysqli_num_rows($get_tp_shops)."<br>";
-                            $get_workings_shop = mysqli_query($server,"SELECT * from shops_waiting WHERE 
-                                wait_status='Waiting'
-                            ");
-                            echo"WK: ".mysqli_num_rows($get_workings_shop)
-                        ?>
-                    </p>
+        <?php 
+            if ($member_acting_type == 'Chief executive officer') {
+                ?>
+                <div class="dash-center">
+                    <!-- Total members -->
+                    <div class="dash alert" style="
+                        display: flex;width: 300px;margin: 8px;">
+                        <div class="left" style="flex: 1;">
+                            <?php
+                                $getallmembers = mysqli_query($server,"SELECT * from co_members");
+                            ?>
+                            <h1 style="font-size: 30px;">
+                                <?php echo mysqli_num_rows($getallmembers); ?>
+                            </h1>
+                            <p class="h5" style="padding-left: 10px;">
+                                Members
+                            </p>
+                        </div>
+                        <div class="right" style="text-align:center;flex:1;">
+                            <i class="fa fa-eye" style="font-size: 30px;position: relative; top: 30%;left: 10%;"></i>
+                        </div>
+                    </div>
+                    <!-- Total shops -->
+                    <div class="dash alert bg-white" style="
+                        display: flex;width: 300px;margin: 8px;">
+                        <div class="left" style="flex: 1;">
+                            <h1 style="font-size: 30px;">
+                                <?php
+                                    $get_total_shops = mysqli_query($server,"SELECT * from shops");
+                                    echo mysqli_num_rows($get_total_shops);
+                                ?>
+                            </h1>
+                            <p class="h5" style="padding-left: 10px;">
+                                Shops
+                            </p>
+                        </div>
+                        <div class="right" style="text-align:center;flex:1;">
+                            <i class="fa fa-shopping-bag" style="font-size: 30px;position: relative; top: 30%;left: 10%;"></i>
+                        </div>
+                    </div>
+                    <!-- Total buyers -->
+                    <div class="dash alert bg-white" style="
+                        display: flex;width: 300px;margin: 8px;">
+                        <div class="left" style="flex: 1;">
+                            <h1 style="font-size: 30px;">
+                            <?php
+                                    $get_total_buyers = mysqli_query($server,"SELECT * from buyers");
+                                ?>
+                                <?php echo mysqli_num_rows($get_total_buyers) ?>
+                            </h1>
+                            <p class="h5" style="padding-left: 10px;">
+                                Buyers
+                            </p>
+                        </div>
+                        <div class="right" style="text-align:center;flex:1;">
+                            <i class="fa fa-user-friends" style="font-size: 30px;position: relative; top: 30%;left: 10%;"></i>
+                        </div>
+                    </div>
+                    <!-- Total couriers -->
+                    <div class="dash alert bg-white" style="
+                        display: flex;width: 300px;margin: 8px;">
+                        <div class="left" style="flex: 1;">
+                            <h1 style="font-size: 30px;">
+                                <?php
+                                    $getallcouriers = mysqli_query($server,"SELECT * from
+                                        courier
+                                        WHERE courier_status != 'Fired'
+                                    ");
+                                    echo mysqli_num_rows($getallcouriers);
+                                ?>
+                            </h1>
+                            <p class="h5" style="padding-left: 10px;">
+                                Couriers
+                            </p>
+                        </div>
+                        <div class="right" style="text-align:center;flex:1;">
+                            <i class="fa fa-biking" style="font-size: 30px;position: relative; top: 30%;left: 10%;"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="right">
-                    <?php
-                        $get_total_shops = mysqli_query($server,"SELECT * from shops");
-                        echo mysqli_num_rows($get_total_shops);
-                    ?>
-                </div>
-            </div>
-            <div class="dash-box">
-                <div class="left">
-                    <h2>
-                        Buyers
-                    </h2>
-                    <p>
-                        <?php
-                            $get_total_buyers = mysqli_query($server,"SELECT * from buyers");
-                        ?>
-                        TOT: <?php echo mysqli_num_rows($get_total_buyers) ?>
-                    </p>
-                </div>
-                <div class="right">
-                    <?php
-                        echo mysqli_num_rows($get_total_buyers);
-                    ?>
-                </div>
-            </div>
-            <div class="dash-box">
-                <div class="left">
-                    <h2>
-                        Earnings
-                    </h2>
-                    <p>
-                        Total earned money
-                    </p>
-                </div>
-                <div class="right">
-                    <?php
-                        $get_in_tot = mysqli_fetch_array(mysqli_query($server,"SELECT 
-                            sum(amount) 
-                            from 
-                            owner_account_txns 
-                            WHERE type='IN'
-                        "));
-                        $get_out_tot = mysqli_fetch_array(mysqli_query($server,"SELECT 
-                            sum(amount) 
-                            from 
-                            owner_account_txns 
-                            WHERE type='OUT'
-                        "));
-                        $total_ins =(int) $get_in_tot['sum(amount)'];
-                        $total_outs =(int) $get_out_tot['sum(amount)'];
-                        echo $total_ins - $total_outs."RWF";
-                    ?>
-                </div>
-            </div>
-            <div class="dash-box">
-                <div class="left">
-                    <h2>
-                        Couriers
-                    </h2>
-                    <p>
-                        <i class="fa fa-biking"></i>
-                    </p>
-                </div>
-                <div class="right">
-                    <?php
-                        $getallcouriers = mysqli_query($server,"SELECT * from
-                            courier
-                            WHERE courier_status != 'Fired'
-                        ");
-                        echo mysqli_num_rows($getallcouriers);
-                    ?>
-                </div>
-            </div>
-        </div>
+                <?php
+            }
+        ?>
+        
     </div>
 </div>

@@ -7,12 +7,19 @@
         <h2>
             MEMBERS LIST
         </h2>
-        <div class="ctrls" style="padding: 10px">
-            <a href="member-new-member.php" class="btn btn-success">
-                <i class="fa fa-plus"></i> &nbsp;
-                new member
-            </a>
-        </div>
+        <?php
+            if ($member_acting_type == 'Chief executive officer') {
+                ?>
+                <div class="ctrls" style="padding: 10px">
+                    <a href="member-new-member.php" class="btn btn-success">
+                        <i class="fa fa-plus"></i> &nbsp;
+                        new member
+                    </a>
+                </div>
+                <?php
+            }
+        ?>
+        
         <div class="table" style="padding: 10px; overflow:auto;">
             <table class="table table-hover table-responsive">
                 <thead class="bg-primary text-white">
@@ -41,9 +48,16 @@
                         <th>
                             Status
                         </th>
-                        <th>
-                            Actions
-                        </th>
+                        <?php
+                            if ($member_acting_type == 'Chief executive officer') {
+                                ?>
+                                <th>
+                                    Actions
+                                </th>
+                                <?php
+                            }
+                        ?>
+                       
                     </tr>
                 </thead>
                 <tbody>
@@ -106,8 +120,13 @@
                                 <td>
                                     <?php echo $data_txns['Status'] ?>
                                 </td>
-                                <td>
-                                </td>
+                                <?php
+                                    if ($member_acting_type == 'Chief executive officer') {
+                                        ?>
+                                        <td></td>
+                                        <?php
+                                    }
+                                ?>
                             </tr>
                             <?php
                         }

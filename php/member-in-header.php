@@ -1,4 +1,4 @@
-<div class="main-header">
+<div class="main-header " style="background: #fff;">
     <div class="m-hSection">
         <div class="menu-links">
             <button id="member_sidemenu">

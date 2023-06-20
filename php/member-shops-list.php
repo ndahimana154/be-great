@@ -7,12 +7,19 @@
         <h2>
             Shops list
         </h2>
-        <div class="ctrls" style="padding: 10px">
-            <a href="member-shops-waiting-list.php" class="btn btn-success">
-                <i class="fa fa-th-list"></i> &nbsp;
-                Waiting list
-            </a>
-        </div>
+        <?php
+            if ($member_acting_type == 'Chief executive officer') {
+                ?>
+                <div class="ctrls" style="padding: 10px">
+                    <a href="member-shops-waiting-list.php" class="btn btn-success">
+                        <i class="fa fa-th-list"></i> &nbsp;
+                        Waiting list
+                    </a>
+                </div>
+                <?php
+            }
+        ?>
+        
         <div class="table" style="padding: 10px; overflow:auto;">
             <table class="table table-hover table-responsive">
                 <thead class="bg-primary text-white">
@@ -35,9 +42,15 @@
                         <th>
                             Shop status
                         </th>
-                        <th>
-                            Actions
-                        </th>
+                        <?php
+                            if ($member_acting_type == 'Chief executive officer') {
+                                ?>
+                                <th>
+                                    Actions
+                                </th>
+                                <?php
+                            }
+                        ?>
                     </tr>
                 </thead>
                 <tbody>
@@ -92,26 +105,33 @@
                                 <td>
                                     <?php echo $data_txns['shop_status'] ?>
                                 </td>
-                                <td>
-                                    <?php
-                                        if($data_txns['shop_status'] == 'Running' || $data_txns['shop_status'] == 'Trial period') {
-                                            ?>
-                                            <button class="btn btn-danger deleteshopBTN" 
-                                                value="<?php echo $data_txns['shop_id']; ?>">
-                                                <i class="fa fa-pause"></i>
-                                            </button>
+                                <?php
+                                    if ($member_acting_type == 'Chief executive officer') {
+                                        ?>
+                                        <td>
                                             <?php
-                                        }
-                                        else {
+                                                if($data_txns['shop_status'] == 'Running' || $data_txns['shop_status'] == 'Trial period') {
+                                                    ?>
+                                                    <button class="btn btn-danger deleteshopBTN" 
+                                                        value="<?php echo $data_txns['shop_id']; ?>">
+                                                        <i class="fa fa-pause"></i>
+                                                    </button>
+                                                    <?php
+                                                }
+                                                else {
+                                                    ?>
+                                                    <button class="btn btn-warning playshopBTN"
+                                                        value="<?php echo $data_txns['shop_id']; ?>">
+                                                        <i class="fa fa-play"></i>
+                                                    </button>
+                                                    <?php
+                                                }
                                             ?>
-                                            <button class="btn btn-warning playshopBTN"
-                                                value="<?php echo $data_txns['shop_id']; ?>">
-                                                <i class="fa fa-play"></i>
-                                            </button>
-                                            <?php
-                                        }
-                                    ?>
-                                </td>
+                                        </td>
+                                        <?php
+                                    }
+                                ?>
+                             
                             </tr>
                             <?php
                         }

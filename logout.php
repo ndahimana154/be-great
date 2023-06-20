@@ -1,5 +1,10 @@
 <?php
     SESSION_START();
     SESSION_DESTROY();
-    header("location: home.php");
+    if (isset($_GET['member-out'])) {
+        header("location: member-signin.php");
+    }
+    else {
+        header("location: home.php");
+    }
 ?>

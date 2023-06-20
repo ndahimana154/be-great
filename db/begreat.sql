@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 17, 2023 at 05:47 PM
+-- Generation Time: Jun 18, 2023 at 03:23 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -245,7 +245,8 @@ CREATE TABLE `courier` (
 
 INSERT INTO `courier` (`courier_sn`, `courier_fn`, `courier_ln`, `courier_email`, `courier_phone`, `courier_phone2`, `courier_dob`, `courier_nid`, `courier_profile`, `courier_status`) VALUES
 (000000000001, 'Bizimana', 'Dunia', 'biziduni@gmail.com', '0788123432', '', '2122-12-12', 1233484738, 'biziduni@gmail.com - Profile image.png', 'Fired'),
-(000000000004, 'Byiringiro', 'Bosco', 'boscobyiringiro@gmail.com', '04383272', '', '1996-06-10', 2147483647, 'boscobyiringiro@gmail.com - Profile image.png', 'Fired');
+(000000000004, 'Byiringiro', 'Bosco', 'boscobyiringiro@gmail.com', '04383272', '', '1996-06-10', 2147483647, 'boscobyiringiro@gmail.com - Profile image.png', 'Fired'),
+(000000000005, 'Tuyizere', 'Etienee', 'tuyizereetie@gmail.com', '07837457276`', '', '2000-10-10', 2147483647, 'tuyizereetie@gmail.com - Profile image.png', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -293,7 +294,7 @@ CREATE TABLE `co_members` (
   `Lname` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Phone` int(10) UNSIGNED ZEROFILL NOT NULL,
-  `Type` varchar(255) NOT NULL,
+  `Type` int(11) NOT NULL,
   `Status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -302,7 +303,9 @@ CREATE TABLE `co_members` (
 --
 
 INSERT INTO `co_members` (`id`, `Fname`, `Lname`, `Email`, `Phone`, `Type`, `Status`) VALUES
-(000001, 'Ndahimana', 'Bonheur', 'ndahimana154@gmail.com', 0722893974, 'Chief executive officer', 'Active');
+(000001, 'Ndahimana', 'Bonheur', 'ndahimana154@gmail.com', 0722893974, 1, 'Active'),
+(000003, 'Tuyishime', 'Aimable', 'tuyishimeaimable@gmail.com', 0785073726, 2, 'Inactive'),
+(000004, 'Tsinda', 'Cyimana', 'tsinda@gmail.com', 0786142964, 3, 'Inactive');
 
 -- --------------------------------------------------------
 
@@ -322,7 +325,29 @@ CREATE TABLE `co_members_auth` (
 --
 
 INSERT INTO `co_members_auth` (`id`, `username`, `password`, `profile_image`) VALUES
-(000001, 'ndahimana154', 'GitPASS', 'ndahimana154 - Profile image.png');
+(000001, 'ndahimana154', 'GitPASS', 'ndahimana154 - Profile image.png'),
+(000003, 'tuyiaimable', '123456', 'tuyiaimable - Profile image.png'),
+(000004, 'tsinda', '123456', 'tsinda - Profile image.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `co_members_types`
+--
+
+CREATE TABLE `co_members_types` (
+  `id` int(11) NOT NULL,
+  `type` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `co_members_types`
+--
+
+INSERT INTO `co_members_types` (`id`, `type`) VALUES
+(1, 'Chief executive officer'),
+(2, 'Manager'),
+(3, 'Market analyzer');
 
 -- --------------------------------------------------------
 
@@ -1065,13 +1090,20 @@ ALTER TABLE `courier_payment_methods`
 -- Indexes for table `co_members`
 --
 ALTER TABLE `co_members`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `Type` (`Type`);
 
 --
 -- Indexes for table `co_members_auth`
 --
 ALTER TABLE `co_members_auth`
   ADD KEY `Coo` (`id`);
+
+--
+-- Indexes for table `co_members_types`
+--
+ALTER TABLE `co_members_types`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `deposit_draft`
@@ -1242,7 +1274,7 @@ ALTER TABLE `cart_draft`
 -- AUTO_INCREMENT for table `courier`
 --
 ALTER TABLE `courier`
-  MODIFY `courier_sn` int(12) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `courier_sn` int(12) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `courier_accounts`
@@ -1260,7 +1292,13 @@ ALTER TABLE `courier_payment_methods`
 -- AUTO_INCREMENT for table `co_members`
 --
 ALTER TABLE `co_members`
-  MODIFY `id` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `co_members_types`
+--
+ALTER TABLE `co_members_types`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `home_sliding_shops`
@@ -1412,6 +1450,12 @@ ALTER TABLE `courier_accounts`
 --
 ALTER TABLE `courier_payment_methods`
   ADD CONSTRAINT `dfsdfdgsdgfv` FOREIGN KEY (`courier`) REFERENCES `courier` (`courier_sn`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `co_members`
+--
+ALTER TABLE `co_members`
+  ADD CONSTRAINT `co_members_ibfk_1` FOREIGN KEY (`Type`) REFERENCES `co_members_types` (`id`);
 
 --
 -- Constraints for table `co_members_auth`

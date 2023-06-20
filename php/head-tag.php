@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="css\member-new-payment-method.css">
     <link rel="stylesheet" href="css\member-view-courier-pyt-methods.css">
     <link rel="stylesheet" href="css\member-delete-courier-modal.css">
+    <link rel="stylesheet" href="css\member-home-part-div.css">
 
     <!-- Responsiveness regulator -->
     <link rel="stylesheet" href="css\responsiveness-regulator.css">

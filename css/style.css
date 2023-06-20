@@ -66,9 +66,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    /* background: var(--simple-grayBG); */
     overflow: hidden;
-    /* display: none; */
 }
 .main-gate {
     width: 100%;
@@ -211,7 +209,6 @@ body {
 }
 .remaining {
     width: 100%;
-    background: var(--main-white);
 }
 .remaining .usercshow {
     display: flex;
