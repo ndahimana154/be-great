@@ -2,7 +2,7 @@
     <hr>
     <li>
         <a href="buyer-transactions.php">
-            Account transactions
+            Transactions
         </a>
     </li>
     <hr>

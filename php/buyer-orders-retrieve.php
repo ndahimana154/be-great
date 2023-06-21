@@ -17,7 +17,9 @@
                         <th>
                             date time
                         </th>
-                      
+                        <th>
+                            Order id
+                        </th>
                         <th>
                             product
                         </th>
@@ -37,7 +39,8 @@
                 </thead>
                 <tbody>
                     <?php
-                        $get_orders = mysqli_query($server,"SELECT *
+                        $get_orders = mysqli_query($server,"SELECT *,
+                            products_orders.order_id AS 'pro_order'
                             FROM products_orders 
                             JOIN products 
                             on products.product_id = products_orders.product
@@ -70,6 +73,11 @@
                                     ?>
                                 </td>
                                 <td>
+                                    <?php 
+                                        echo $data_orders['pro_order']; 
+                                    ?>
+                                </td>
+                                <td>
                                     <?php echo $data_orders['product_name'] ?>
                                 </td>
                                 <td>
@@ -87,6 +95,13 @@
                                             ?>
                                             <button class="btn btn-danger cancelorderBTN" value="<?php echo $data_orders['order_id']; ?>">
                                                 <i class="fa fa-window-close"></i>
+                                            </button>
+                                            <?php
+                                        }
+                                        if ($data_orders['order_status'] == 'Delivering') {
+                                            ?>
+                                            <button class="btn btn-primary endtheorderbtn" value="<?php echo $data_orders['order_id']; ?>">
+                                                <i class="fa fa-check"></i>
                                             </button>
                                             <?php
                                         }

@@ -89,7 +89,7 @@
                                                 class="btn btn-success widrw-confirmBTN"
                                                 title="COnfirm the withdraw"
                                                 >
-                                                <i class="fa fa-check text-warning" style=""></i>
+                                                <i class="fa fa-check" style=""></i>
                                             </button>
                                             <?php
                                         }

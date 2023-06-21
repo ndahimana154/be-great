@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2023 at 03:23 PM
+-- Generation Time: Jun 20, 2023 at 01:22 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -66,7 +66,7 @@ CREATE TABLE `buyers_accounts` (
 --
 
 INSERT INTO `buyers_accounts` (`buyer`, `balance`, `acc_id`) VALUES
-(4, 5349250, 1),
+(4, 5045590, 1),
 (3, 0, 2),
 (5, 0, 3),
 (6, 30000, 4);
@@ -84,68 +84,77 @@ CREATE TABLE `buyer_money_txns` (
   `txntime` varchar(255) NOT NULL,
   `txntype` varchar(255) NOT NULL,
   `oldacc` int(11) NOT NULL,
-  `newacc` int(11) NOT NULL
+  `newacc` int(11) NOT NULL,
+  `amount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `buyer_money_txns`
 --
 
-INSERT INTO `buyer_money_txns` (`id`, `buyer`, `txndate`, `txntime`, `txntype`, `oldacc`, `newacc`) VALUES
-(1, 4, '2023-05-24', '17:10:23', 'Shopping', 10000000, 9997000),
-(2, 4, '2023-05-24', '17:10:24', 'Shopping', 9997000, 9994000),
-(3, 4, '2023-05-24', '17:10:25', 'Shopping', 9994000, 9991000),
-(4, 4, '2023-05-25', '18:01:49', 'Shopping', 9991000, 9923000),
-(5, 4, '2023-05-25', '18:01:49', 'Shopping', 9923000, 9855000),
-(6, 4, '2023-05-25', '18:07:54', 'Shopping', 9855000, 9840200),
-(7, 4, '2023-05-26', '09:04:51', 'Shopping', 9840200, 9839200),
-(8, 4, '2023-05-26', '09:07:34', 'Cancel Shopping', 9839200, 9840200),
-(9, 4, '2023-05-26', '09:07:49', 'Cancel Shopping', 9840200, 9841200),
-(10, 4, '2023-05-28', '20:40:53', 'Shopping', 9841200, 9837500),
-(11, 4, '2023-05-28', '20:40:59', 'Shopping', 9837500, 9819000),
-(12, 4, '2023-05-28', '20:41:10', 'Shopping', 9819000, 9815300),
-(13, 4, '2023-05-28', '20:41:15', 'Shopping', 9815300, 9800500),
-(14, 4, '2023-05-28', '20:41:29', 'Shopping', 9800500, 9395500),
-(15, 4, '2023-05-28', '20:41:36', 'Shopping', 9395500, 8990500),
-(16, 4, '2023-05-28', '20:45:30', 'Shopping', 8990500, 8986800),
-(17, 4, '2023-05-28', '20:45:40', 'Shopping', 8986800, 8980800),
-(18, 4, '2023-05-29', '08:09:52', 'Shopping', 8980800, 7500800),
-(19, 4, '2023-05-29', '08:09:52', 'Shopping', 7500800, 6020800),
-(20, 4, '2023-05-29', '08:10:03', 'Shopping', 6020800, 5952800),
-(21, 4, '2023-05-29', '08:13:40', 'Cancel Shopping', 5952800, 7432800),
-(22, 4, '2023-05-29', '08:15:23', 'Shopping', 7432800, 7429100),
-(23, 4, '2023-05-29', '08:15:23', 'Shopping', 7429100, 7425400),
-(24, 4, '2023-05-29', '08:16:45', 'Shopping', 7425400, 7410600),
-(25, 4, '2023-05-29', '08:16:51', 'Shopping', 7410600, 7236700),
-(26, 4, '2023-06-04', '06:50:46', 'Shopping', 7236700, 7235700),
-(27, 4, '2023-06-04', '06:51:00', 'Shopping', 7235700, 6885700),
-(28, 4, '2023-06-04', '06:51:10', 'Shopping', 6885700, 6535700),
-(29, 4, '2023-06-04', '06:51:10', 'Shopping', 6535700, 6185700),
-(30, 4, '2023-06-04', '06:51:24', 'Shopping', 6185700, 5835700),
-(31, 4, '2023-06-04', '06:51:38', 'Shopping', 5835700, 5485700),
-(32, 4, '2023-06-04', '06:51:57', 'Shopping', 5485700, 5135700),
-(33, 4, '2023-05-30', '00:33', 'Deposit', 5135700, 5148500),
-(34, 6, '2023-06-03', '11:30', 'Deposit', 0, 4000),
-(35, 6, '2023-06-04', '09:05:56', 'Shopping', 4000, 2000),
-(36, 6, '2023-06-03', '11:30', 'Deposit', 2000, 6000),
-(37, 6, '2023-06-03', '11:30', 'Deposit', 6000, 10000),
-(38, 6, '2023-06-03', '11:30', 'Deposit', 10000, 14000),
-(39, 6, '2023-06-03', '11:30', 'Deposit', 14000, 18000),
-(40, 6, '2023-06-03', '11:30', 'Deposit', 18000, 22000),
-(41, 6, '2023-06-03', '11:30', 'Deposit', 22000, 26000),
-(42, 6, '2023-06-03', '11:30', 'Deposit', 26000, 30000),
-(43, 4, '2023-06-04', '11:04:12', 'Cancel Shopping', 5148500, 5498500),
-(44, 4, '2023-05-30', '00:33', 'Deposit', 5498500, 5511300),
-(45, 4, '2023-06-06', '13:08:57', 'Shopping', 5511300, 5507600),
-(46, 4, '2023-06-06', '13:09:13', 'Shopping', 5507600, 5503900),
-(47, 4, '2023-06-06', '13:09:30', 'Shopping', 5503900, 5458900),
-(48, 4, '2023-06-06', '13:09:30', 'Shopping', 5458900, 5413900),
-(49, 4, '2023-06-06', '13:09:39', 'Shopping', 5413900, 5379900),
-(50, 4, '2023-06-06', '13:09:40', 'Shopping', 5379900, 5345900),
-(51, 4, '2023-06-06', '13:09:49', 'Shopping', 5345900, 5345550),
-(52, 4, '2023-06-06', '13:09:49', 'Shopping', 5345550, 5345200),
-(53, 4, '2023-06-09', '23:09:54', 'Cancel Shopping', 5345200, 5345550),
-(54, 4, '2023-06-09', '23:10:01', 'Cancel Shopping', 5345550, 5349250);
+INSERT INTO `buyer_money_txns` (`id`, `buyer`, `txndate`, `txntime`, `txntype`, `oldacc`, `newacc`, `amount`) VALUES
+(1, 4, '2023-05-24', '17:10:23', 'Shopping', 10000000, 9997000, 0),
+(2, 4, '2023-05-24', '17:10:24', 'Shopping', 9997000, 9994000, 0),
+(3, 4, '2023-05-24', '17:10:25', 'Shopping', 9994000, 9991000, 0),
+(4, 4, '2023-05-25', '18:01:49', 'Shopping', 9991000, 9923000, 0),
+(5, 4, '2023-05-25', '18:01:49', 'Shopping', 9923000, 9855000, 0),
+(6, 4, '2023-05-25', '18:07:54', 'Shopping', 9855000, 9840200, 0),
+(7, 4, '2023-05-26', '09:04:51', 'Shopping', 9840200, 9839200, 0),
+(8, 4, '2023-05-26', '09:07:34', 'Cancel Shopping', 9839200, 9840200, 0),
+(9, 4, '2023-05-26', '09:07:49', 'Cancel Shopping', 9840200, 9841200, 0),
+(10, 4, '2023-05-28', '20:40:53', 'Shopping', 9841200, 9837500, 0),
+(11, 4, '2023-05-28', '20:40:59', 'Shopping', 9837500, 9819000, 0),
+(12, 4, '2023-05-28', '20:41:10', 'Shopping', 9819000, 9815300, 0),
+(13, 4, '2023-05-28', '20:41:15', 'Shopping', 9815300, 9800500, 0),
+(14, 4, '2023-05-28', '20:41:29', 'Shopping', 9800500, 9395500, 0),
+(15, 4, '2023-05-28', '20:41:36', 'Shopping', 9395500, 8990500, 0),
+(16, 4, '2023-05-28', '20:45:30', 'Shopping', 8990500, 8986800, 0),
+(17, 4, '2023-05-28', '20:45:40', 'Shopping', 8986800, 8980800, 0),
+(18, 4, '2023-05-29', '08:09:52', 'Shopping', 8980800, 7500800, 0),
+(19, 4, '2023-05-29', '08:09:52', 'Shopping', 7500800, 6020800, 0),
+(20, 4, '2023-05-29', '08:10:03', 'Shopping', 6020800, 5952800, 0),
+(21, 4, '2023-05-29', '08:13:40', 'Cancel Shopping', 5952800, 7432800, 0),
+(22, 4, '2023-05-29', '08:15:23', 'Shopping', 7432800, 7429100, 0),
+(23, 4, '2023-05-29', '08:15:23', 'Shopping', 7429100, 7425400, 0),
+(24, 4, '2023-05-29', '08:16:45', 'Shopping', 7425400, 7410600, 0),
+(25, 4, '2023-05-29', '08:16:51', 'Shopping', 7410600, 7236700, 0),
+(26, 4, '2023-06-04', '06:50:46', 'Shopping', 7236700, 7235700, 0),
+(27, 4, '2023-06-04', '06:51:00', 'Shopping', 7235700, 6885700, 0),
+(28, 4, '2023-06-04', '06:51:10', 'Shopping', 6885700, 6535700, 0),
+(29, 4, '2023-06-04', '06:51:10', 'Shopping', 6535700, 6185700, 0),
+(30, 4, '2023-06-04', '06:51:24', 'Shopping', 6185700, 5835700, 0),
+(31, 4, '2023-06-04', '06:51:38', 'Shopping', 5835700, 5485700, 0),
+(32, 4, '2023-06-04', '06:51:57', 'Shopping', 5485700, 5135700, 0),
+(33, 4, '2023-05-30', '00:33', 'Deposit', 5135700, 5148500, 0),
+(34, 6, '2023-06-03', '11:30', 'Deposit', 0, 4000, 0),
+(35, 6, '2023-06-04', '09:05:56', 'Shopping', 4000, 2000, 0),
+(36, 6, '2023-06-03', '11:30', 'Deposit', 2000, 6000, 0),
+(37, 6, '2023-06-03', '11:30', 'Deposit', 6000, 10000, 0),
+(38, 6, '2023-06-03', '11:30', 'Deposit', 10000, 14000, 0),
+(39, 6, '2023-06-03', '11:30', 'Deposit', 14000, 18000, 0),
+(40, 6, '2023-06-03', '11:30', 'Deposit', 18000, 22000, 0),
+(41, 6, '2023-06-03', '11:30', 'Deposit', 22000, 26000, 0),
+(42, 6, '2023-06-03', '11:30', 'Deposit', 26000, 30000, 0),
+(43, 4, '2023-06-04', '11:04:12', 'Cancel Shopping', 5148500, 5498500, 0),
+(44, 4, '2023-05-30', '00:33', 'Deposit', 5498500, 5511300, 0),
+(45, 4, '2023-06-06', '13:08:57', 'Shopping', 5511300, 5507600, 0),
+(46, 4, '2023-06-06', '13:09:13', 'Shopping', 5507600, 5503900, 0),
+(47, 4, '2023-06-06', '13:09:30', 'Shopping', 5503900, 5458900, 0),
+(48, 4, '2023-06-06', '13:09:30', 'Shopping', 5458900, 5413900, 0),
+(49, 4, '2023-06-06', '13:09:39', 'Shopping', 5413900, 5379900, 0),
+(50, 4, '2023-06-06', '13:09:40', 'Shopping', 5379900, 5345900, 0),
+(51, 4, '2023-06-06', '13:09:49', 'Shopping', 5345900, 5345550, 0),
+(52, 4, '2023-06-06', '13:09:49', 'Shopping', 5345550, 5345200, 0),
+(53, 4, '2023-06-09', '23:09:54', 'Cancel Shopping', 5345200, 5345550, 0),
+(54, 4, '2023-06-09', '23:10:01', 'Cancel Shopping', 5345550, 5349250, 0),
+(55, 4, '2023-06-20', '07:54:03', 'Shopping', 5349250, 5341490, 0),
+(56, 4, '2023-06-20', '07:54:30', 'Shopping', 5341490, 5206490, 0),
+(57, 4, '2023-06-20', '07:54:31', 'Shopping', 5206490, 5071490, 0),
+(58, 4, '2023-06-20', '08:07:07', 'Shopping', 5071490, 5052990, 18500),
+(59, 4, '2023-06-20', '08:09:10', 'Shopping', 5052990, 5047040, 5950),
+(60, 4, '2023-06-20', '08:09:34', 'Cancel Shopping', 5047040, 5052990, 5950),
+(61, 4, '2023-06-20', '09:24:40', 'Shopping', 5052990, 5049290, 3700),
+(62, 4, '2023-06-20', '09:49:54', 'Shopping', 5049290, 5045590, 3700);
 
 -- --------------------------------------------------------
 
@@ -260,6 +269,15 @@ CREATE TABLE `courier_accounts` (
   `balance` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `courier_accounts`
+--
+
+INSERT INTO `courier_accounts` (`id`, `courier`, `balance`) VALUES
+(1, 000000000004, 3450),
+(2, 000000000001, 37032),
+(3, 000000000005, 22333434);
+
 -- --------------------------------------------------------
 
 --
@@ -285,6 +303,61 @@ INSERT INTO `courier_payment_methods` (`id`, `courier`, `method_type`, `method_d
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `courier_txn_in`
+--
+
+CREATE TABLE `courier_txn_in` (
+  `id` int(11) NOT NULL,
+  `courier` int(12) UNSIGNED ZEROFILL NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `date` varchar(255) NOT NULL,
+  `time` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT 'Received'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `courier_txn_in`
+--
+
+INSERT INTO `courier_txn_in` (`id`, `courier`, `order_id`, `amount`, `date`, `time`, `status`) VALUES
+(1, 000000000005, 48, 2000, '2023-06-20', '09:12:57', 'Received'),
+(2, 000000000004, 49, 3450, '2023-06-20', '09:16:19', 'Received'),
+(3, 000000000001, 52, 12344, '2023-06-20', '09:28:13', 'Received'),
+(4, 000000000001, 52, 12344, '2023-06-20', '09:34:56', 'Received'),
+(5, 000000000001, 52, 12344, '2023-06-20', '09:35:00', 'Received'),
+(6, 000000000005, 53, 22333434, '2023-06-20', '09:51:58', 'Received');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `courier_work_proofs`
+--
+
+CREATE TABLE `courier_work_proofs` (
+  `id` int(11) NOT NULL,
+  `courier` int(12) UNSIGNED ZEROFILL NOT NULL,
+  `orders` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `date` varchar(255) NOT NULL,
+  `time` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `courier_work_proofs`
+--
+
+INSERT INTO `courier_work_proofs` (`id`, `courier`, `orders`, `amount`, `date`, `time`, `status`) VALUES
+(1, 000000000005, 48, 2000, '2023-06-20', '07:56:24', 'Delivered'),
+(2, 000000000004, 49, 3450, '2023-06-20', '07:59:10', 'Delivered'),
+(3, 000000000005, 50, 1506, '2023-06-20', '09:19:24', 'Delivering'),
+(4, 000000000001, 52, 12344, '2023-06-20', '09:27:57', 'Delivered'),
+(5, 000000000005, 53, 22333434, '2023-06-20', '09:50:07', 'Delivered');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `co_members`
 --
 
@@ -303,7 +376,7 @@ CREATE TABLE `co_members` (
 --
 
 INSERT INTO `co_members` (`id`, `Fname`, `Lname`, `Email`, `Phone`, `Type`, `Status`) VALUES
-(000001, 'Ndahimana', 'Bonheur', 'ndahimana154@gmail.com', 0722893974, 1, 'Active'),
+(000001, 'Ndahimana', 'Bonheur', 'ndahimana154@gmail.com', 0722893974, 1, 'Online'),
 (000003, 'Tuyishime', 'Aimable', 'tuyishimeaimable@gmail.com', 0785073726, 2, 'Inactive'),
 (000004, 'Tsinda', 'Cyimana', 'tsinda@gmail.com', 0786142964, 3, 'Inactive');
 
@@ -484,7 +557,24 @@ INSERT INTO `owner_account_txns` (`id`, `type`, `amount`, `timendate`) VALUES
 (59, 'OUT', 350, '2023-06-09 23:09:54'),
 (60, 'OUT', 3700, '2023-06-09 23:10:01'),
 (61, 'OUT', 32300, '2023-06-10 12:36:07'),
-(62, 'OUT', 333, '2023-06-17 15:13:34');
+(62, 'OUT', 333, '2023-06-17 15:13:34'),
+(63, 'OUT', 42750, '2023-06-20 06:56:24'),
+(64, 'OUT', 32300, '2023-06-20 06:57:24'),
+(65, 'OUT', 42750, '2023-06-20 06:57:43'),
+(66, 'OUT', 3515, '2023-06-20 07:51:21'),
+(67, 'IN', 7760, '2023-06-20 07:54:03'),
+(68, 'IN', 135000, '2023-06-20 07:54:30'),
+(69, 'IN', 135000, '2023-06-20 07:54:31'),
+(70, 'OUT', 128250, '2023-06-20 07:56:22'),
+(71, 'OUT', 128250, '2023-06-20 07:59:10'),
+(72, 'IN', 18500, '2023-06-20 08:07:07'),
+(73, 'IN', 5950, '2023-06-20 08:09:10'),
+(74, 'OUT', 5950, '2023-06-20 08:09:34'),
+(75, 'OUT', 17575, '2023-06-20 09:19:23'),
+(76, 'IN', 3700, '2023-06-20 09:24:40'),
+(77, 'OUT', 3515, '2023-06-20 09:27:57'),
+(78, 'IN', 3700, '2023-06-20 09:49:54'),
+(79, 'OUT', 3515, '2023-06-20 09:50:07');
 
 -- --------------------------------------------------------
 
@@ -534,9 +624,9 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`product_id`, `product_name`, `product_image`, `product_price`, `product_add_date`, `product_genre`, `shop`, `quantity_remain`, `product_descr`) VALUES
 (25, 'CoCa Bottle SODA', 'Kick SIde SHop - CoCa Bottle SODA - FRONTIMAGE.png', 1500, '2023-05-06', 5, 5, 100, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (26, 'SONY D70 Photo & Video Camera', 'Gabby Shop - Canon D70 Photo & Video Camera - FRONTIMAGE.png', 350000, '2023-05-06', 1, 4, 100, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
-(27, 'Igihwagari Golden Cooking oil', 'Marina Rama Shop - Igihwagari Golden Cooking oil - FRONTIMAGE.png', 3700, '2023-05-25', 7, 12, 999580, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
-(28, 'SanDisk Memory Card 32GB', 'Marina Rama Shop - SanDisk Memory Card 32GB - FRONTIMAGE.png', 34000, '2023-05-25', 1, 12, 112, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
-(29, 'Ice Watch - PTC 2023 Version American', 'Marina Rama Shop - Ice Watch - PTC 2023 Version American - FRONTIMAGE.png', 45000, '2023-05-28', 1, 12, 82, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
+(27, 'Igihwagari Golden Cooking oil', 'Marina Rama Shop - Igihwagari Golden Cooking oil - FRONTIMAGE.png', 3700, '2023-05-25', 7, 12, 999572, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
+(28, 'SanDisk Memory Card 32GB', 'Marina Rama Shop - SanDisk Memory Card 32GB - FRONTIMAGE.png', 34000, '2023-05-25', 1, 12, 111, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
+(29, 'Ice Watch - PTC 2023 Version American', 'Marina Rama Shop - Ice Watch - PTC 2023 Version American - FRONTIMAGE.png', 45000, '2023-05-28', 1, 12, 74, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (30, 'Anana - Brugali SMJ1 Juice', 'Marina Rama Shop - Anana - Brugali SMJ1 Juice - FRONTIMAGE.png', 350, '2023-06-03', 5, 12, 46, 'Juice made from Anana with 80% Sugar and contains many Vitamins and minerals to be consumed by the human body. This juice is especially made for Children and Pregnant woman as it increaes the concentration of Crbohydrates.'),
 (31, 'Chocolate', 'Bonheur Shop - Chocolate - FRONTIMAGE.png', 1000, '2023-06-04', 5, 14, 88, 'Black Chocolate Made of Sugar'),
 (32, 'coconut', 'Bonheur Shop - coconut - FRONTIMAGE.png', 970, '2023-06-04', 6, 14, 90, 'country:japan\r\nexpr:23/08/2023\r\nmanufacture:yokohama\r\n');
@@ -565,52 +655,20 @@ CREATE TABLE `products_orders` (
 --
 
 INSERT INTO `products_orders` (`order_id`, `product`, `client`, `product_price`, `quantity`, `total`, `order_date`, `order_time`, `order_status`, `shop`) VALUES
-(1, 26, 4, 350000, 1, 350000, '2023-05-24', '16:38:44', 'Delivering', 4),
-(2, 25, 4, 1500, 4, 6000, '2023-05-24', '16:38:56', 'Delivering', 5),
-(3, 24, 4, 1000, 3, 3000, '2023-05-24', '16:39:05', 'Delivering', 6),
-(4, 24, 4, 1000, 1, 1000, '2023-05-24', '16:39:21', 'Delivering', 6),
-(5, 24, 4, 1000, 1, 1000, '2023-05-24', '16:58:27', 'Delivering', 6),
-(6, 25, 4, 1500, 3, 4500, '2023-05-24', '17:07:21', 'Delivering', 5),
-(7, 24, 4, 1000, 3, 3000, '2023-05-24', '17:07:28', 'Delivering', 6),
-(8, 24, 4, 1000, 3, 3000, '2023-05-24', '17:07:29', 'Delivering', 6),
-(9, 24, 4, 1000, 3, 3000, '2023-05-24', '17:10:23', 'Delivering', 6),
-(10, 24, 4, 1000, 3, 3000, '2023-05-24', '17:10:24', 'Delivering', 6),
-(11, 24, 4, 1000, 3, 3000, '2023-05-24', '17:10:25', 'Delivering', 6),
-(12, 28, 4, 34000, 2, 68000, '2023-05-25', '18:01:48', 'Delivering', 12),
-(13, 28, 4, 34000, 2, 68000, '2023-05-25', '18:01:49', 'Delivering', 12),
-(14, 27, 4, 3700, 4, 14800, '2023-05-25', '18:07:54', 'Delivering', 12),
-(15, 24, 4, 1000, 1, 1000, '2023-05-26', '09:04:51', 'Delivering', 6),
-(16, 27, 4, 3700, 1, 3700, '2023-05-28', '20:40:53', 'Delivering', 12),
-(17, 27, 4, 3700, 5, 18500, '2023-05-28', '20:40:59', 'Delivering', 12),
-(18, 27, 4, 3700, 1, 3700, '2023-05-28', '20:41:10', 'Delivering', 12),
-(19, 27, 4, 3700, 4, 14800, '2023-05-28', '20:41:15', 'Delivering', 12),
-(20, 29, 4, 45000, 9, 405000, '2023-05-28', '20:41:29', 'Delivering', 12),
-(21, 29, 4, 45000, 9, 405000, '2023-05-28', '20:41:36', 'Delivering', 12),
-(22, 27, 4, 3700, 1, 3700, '2023-05-28', '20:45:30', 'Delivering', 12),
-(23, 25, 4, 1500, 4, 6000, '2023-05-28', '20:45:40', 'Pending', 5),
-(24, 27, 4, 3700, 400, 1480000, '2023-05-29', '08:09:51', 'Delivering', 12),
-(25, 27, 4, 3700, 400, 1480000, '2023-05-29', '08:09:52', 'Cancelled', 12),
-(26, 28, 4, 34000, 2, 68000, '2023-05-29', '08:10:03', 'Delivering', 12),
-(27, 27, 4, 3700, 1, 3700, '2023-05-29', '08:15:22', 'Delivering', 12),
-(28, 27, 4, 3700, 1, 3700, '2023-05-29', '08:15:23', 'Delivering', 12),
-(29, 27, 4, 3700, 4, 14800, '2023-05-29', '08:16:45', 'Delivering', 12),
-(30, 27, 4, 3700, 47, 173900, '2023-05-29', '08:16:51', 'Delivering', 12),
-(31, 24, 4, 1000, 1, 1000, '2023-06-04', '06:50:46', 'Pending', 6),
-(32, 26, 4, 350000, 1, 350000, '2023-06-04', '06:51:00', 'Pending', 4),
-(33, 26, 4, 350000, 1, 350000, '2023-06-04', '06:51:09', 'Pending', 4),
-(34, 26, 4, 350000, 1, 350000, '2023-06-04', '06:51:10', 'Pending', 4),
-(35, 26, 4, 350000, 1, 350000, '2023-06-04', '06:51:24', 'Pending', 4),
-(36, 26, 4, 350000, 1, 350000, '2023-06-04', '06:51:38', 'Pending', 4),
-(37, 26, 4, 350000, 1, 350000, '2023-06-04', '06:51:57', 'Cancelled', 4),
-(38, 31, 6, 1000, 2, 2000, '2023-06-04', '09:05:56', 'Delivering', 14),
-(39, 27, 4, 3700, 1, 3700, '2023-06-06', '13:08:57', 'Cancelled', 12),
-(40, 27, 4, 3700, 1, 3700, '2023-06-06', '13:09:13', 'Pending', 12),
-(41, 29, 4, 45000, 1, 45000, '2023-06-06', '13:09:29', 'Pending', 12),
-(42, 29, 4, 45000, 1, 45000, '2023-06-06', '13:09:30', 'Pending', 12),
+(40, 27, 4, 3700, 1, 3700, '2023-06-06', '13:09:13', 'Delivering', 12),
+(41, 29, 4, 45000, 1, 45000, '2023-06-06', '13:09:29', 'Delivering', 12),
+(42, 29, 4, 45000, 1, 45000, '2023-06-06', '13:09:30', 'Delivering', 12),
 (43, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:39', 'Delivering', 12),
-(44, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:40', 'Pending', 12),
+(44, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:40', 'Delivering', 12),
 (45, 30, 4, 350, 1, 350, '2023-06-06', '13:09:48', 'Cancelled', 12),
-(46, 30, 4, 350, 1, 350, '2023-06-06', '13:09:49', 'Delivering', 12);
+(46, 30, 4, 350, 1, 350, '2023-06-06', '13:09:49', 'Delivering', 12),
+(47, 32, 4, 970, 8, 7760, '2023-06-20', '07:54:03', 'Pending', 14),
+(48, 29, 4, 45000, 3, 135000, '2023-06-20', '07:54:30', 'Delivered', 12),
+(49, 29, 4, 45000, 3, 135000, '2023-06-20', '07:54:31', 'Delivered', 12),
+(50, 27, 4, 3700, 5, 18500, '2023-06-20', '08:07:07', 'Delivering', 12),
+(51, 30, 4, 350, 17, 5950, '2023-06-20', '08:09:10', 'Cancelled', 12),
+(52, 27, 4, 3700, 1, 3700, '2023-06-20', '09:24:40', 'Delivered', 12),
+(53, 27, 4, 3700, 1, 3700, '2023-06-20', '09:49:54', 'Delivered', 12);
 
 -- --------------------------------------------------------
 
@@ -709,7 +767,16 @@ INSERT INTO `product_quantity_txns` (`id`, `product`, `txn_type`, `txn_quantity`
 (52, 31, 'IN', 60, '2023-06-04', '10:53:13'),
 (53, 32, 'IN', 90, '2023-06-04', '10:53:59'),
 (54, 28, 'OUT', 1, '2023-06-10', '12:36:07'),
-(55, 30, 'OUT', 1, '2023-06-17', '15:13:35');
+(55, 30, 'OUT', 1, '2023-06-17', '15:13:35'),
+(56, 29, 'OUT', 1, '2023-06-20', '06:56:24'),
+(57, 28, 'OUT', 1, '2023-06-20', '06:57:24'),
+(58, 29, 'OUT', 1, '2023-06-20', '06:57:43'),
+(59, 27, 'OUT', 1, '2023-06-20', '07:51:21'),
+(60, 29, 'OUT', 3, '2023-06-20', '07:56:23'),
+(61, 29, 'OUT', 3, '2023-06-20', '07:59:10'),
+(62, 27, 'OUT', 5, '2023-06-20', '09:19:23'),
+(63, 27, 'OUT', 1, '2023-06-20', '09:27:57'),
+(64, 27, 'OUT', 1, '2023-06-20', '09:50:07');
 
 -- --------------------------------------------------------
 
@@ -763,16 +830,10 @@ CREATE TABLE `sellers_orders_notifier` (
 --
 
 INSERT INTO `sellers_orders_notifier` (`id`, `sender`, `shop`, `notifier_msg`, `order_id`, `datetime`, `status`) VALUES
-(1, 000001, 6, 'Hello The manager of `Vip Vip Vip`, We are happy to remind you that\r\n                        you have the order that was placed on `2023-05-24` at `17:10:25` but it is\r\n                        still `Pending`. Thanks\r\n                    ', 11, '2023-05-24 18:30:55', 'Not viewed'),
-(2, 000001, 6, 'Hello The manager of `Vip Vip Vip`, We are happy to remind you that\r\n                        you have the order that was placed on `2023-05-24` at `17:10:24` but it is\r\n                        still `Pending`. Thanks\r\n                    ', 10, '2023-05-24 18:33:00', 'Not viewed'),
-(3, 000001, 6, 'Hello The manager of Vip Vip Vip, We are happy to remind you that\r\n                        you have the order that was placed on 2023-05-24 at 16:39:21 but it is\r\n                        still Pending. Thanks\r\n                    ', 4, '2023-05-24 18:33:57', 'Not viewed'),
-(4, 000001, 5, 'Hello The manager of Kick SIde SHop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-05-28 at 20:45:40 but it is\r\n                        still Pending. Thanks\r\n                    ', 23, '2023-06-03 16:22:52', 'Not viewed'),
-(5, 000001, 4, 'Hello The manager of Gabby Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-04 at 06:51:10 but it is\r\n                        still Pending. Thanks\r\n                    ', 34, '2023-06-04 08:49:57', 'Not viewed'),
 (6, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:09:49 but it is\r\n                        still Pending. Thanks\r\n                    ', 46, '2023-06-06 13:12:22', 'Viewed'),
 (7, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:09:40 but it is\r\n                        still Pending. Thanks\r\n                    ', 44, '2023-06-06 13:12:26', 'Viewed'),
 (8, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:09:39 but it is\r\n                        still Pending. Thanks\r\n                    ', 43, '2023-06-06 13:12:31', 'Not viewed'),
-(9, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:09:29 but it is\r\n                        still Pending. Thanks\r\n                    ', 41, '2023-06-06 13:12:33', 'Viewed'),
-(10, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:08:57 but it is\r\n                        still Pending. Thanks\r\n                    ', 39, '2023-06-06 13:12:35', 'Not viewed');
+(9, 000001, 12, 'Hello The manager of Marina Rama Shop, We are happy to remind you that\r\n                        you have the order that was placed on 2023-06-06 at 13:09:29 but it is\r\n                        still Pending. Thanks\r\n                    ', 41, '2023-06-06 13:12:33', 'Viewed');
 
 -- --------------------------------------------------------
 
@@ -809,6 +870,39 @@ INSERT INTO `sellers_payment_methods` (`id`, `seller`, `method`, `method_digits`
 (13, 6, 4, '536544377658', '2023-06-04', '09:29:55', 'Verified'),
 (14, 4, 1, '68438747389', '2023-06-10', '11:18:20', 'Verified'),
 (15, 4, 4, '438953358930595', '2023-06-10', '13:02:32', 'Verified');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sellers_products_selling`
+--
+
+CREATE TABLE `sellers_products_selling` (
+  `id` int(11) NOT NULL,
+  `product` int(11) NOT NULL,
+  `seller` int(11) NOT NULL,
+  `buyer` int(11) NOT NULL,
+  `product_quantity` int(11) NOT NULL,
+  `unityprice` int(11) NOT NULL,
+  `totalprice` int(11) NOT NULL,
+  `receivedamount` int(11) NOT NULL,
+  `date` varchar(255) NOT NULL,
+  `time` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sellers_products_selling`
+--
+
+INSERT INTO `sellers_products_selling` (`id`, `product`, `seller`, `buyer`, `product_quantity`, `unityprice`, `totalprice`, `receivedamount`, `date`, `time`) VALUES
+(1, 28, 4, 4, 1, 34000, 34000, 32300, '2023-06-20', '06:57:24'),
+(2, 29, 4, 4, 1, 45000, 45000, 42750, '2023-06-20', '06:57:43'),
+(3, 27, 4, 4, 1, 3700, 3700, 3515, '2023-06-20', '07:51:21'),
+(4, 29, 4, 4, 3, 45000, 135000, 128250, '2023-06-20', '07:56:24'),
+(5, 29, 4, 4, 3, 45000, 135000, 128250, '2023-06-20', '07:59:10'),
+(6, 27, 4, 4, 5, 3700, 18500, 17575, '2023-06-20', '09:19:24'),
+(7, 27, 4, 4, 1, 3700, 3700, 3515, '2023-06-20', '09:27:57'),
+(8, 27, 4, 4, 1, 3700, 3700, 3515, '2023-06-20', '09:50:07');
 
 -- --------------------------------------------------------
 
@@ -863,7 +957,9 @@ INSERT INTO `sellers_withdraws` (`id`, `seller`, `date`, `time`, `amount_withdra
 (13, 6, '2023-06-04', '10:33:45', 30000, 28500, 'Withdrawed'),
 (14, 6, '2023-06-04', '10:41:39', 9000, 8550, 'Withdrawed'),
 (15, 4, '2023-06-10', '12:55:39', 10000, 10000, 'Cancelled'),
-(16, 4, '2023-06-10', '13:02:05', 50000, 50000, 'Withdrawed');
+(16, 4, '2023-06-10', '13:02:05', 50000, 50000, 'Withdrawed'),
+(17, 4, '2023-06-20', '12:10:54', 300, 300, 'Cancelled'),
+(18, 4, '2023-06-20', '12:12:53', 10000, 10000, 'Withdrawed');
 
 -- --------------------------------------------------------
 
@@ -882,7 +978,7 @@ CREATE TABLE `seller_accounts` (
 --
 
 INSERT INTO `seller_accounts` (`id`, `seller`, `balance`) VALUES
-(1, 4, 125413),
+(1, 4, 517833),
 (2, 3, 0),
 (3, 6, 900);
 
@@ -929,7 +1025,17 @@ INSERT INTO `seller_money_txns` (`id`, `seller`, `txn_type`, `oldacc`, `new_acc`
 (20, 6, 'OUT', 9900, 900, '2023-06-04', '10:41:39'),
 (21, 4, 'IN', 142780, 175080, '2023-06-10', '12:36:07'),
 (22, 4, 'OUT', 175080, 125080, '2023-06-10', '13:02:05'),
-(23, 4, 'IN', 125080, 125413, '2023-06-17', '15:13:35');
+(23, 4, 'IN', 125080, 125413, '2023-06-17', '15:13:35'),
+(24, 4, 'IN', 125413, 168163, '2023-06-20', '06:56:24'),
+(25, 4, 'IN', 168163, 200463, '2023-06-20', '06:57:24'),
+(26, 4, 'IN', 200463, 243213, '2023-06-20', '06:57:43'),
+(27, 4, 'IN', 243213, 246728, '2023-06-20', '07:51:21'),
+(28, 4, 'IN', 246728, 374978, '2023-06-20', '07:56:23'),
+(29, 4, 'IN', 374978, 503228, '2023-06-20', '07:59:10'),
+(30, 4, 'IN', 503228, 520803, '2023-06-20', '09:19:23'),
+(31, 4, 'IN', 520803, 524318, '2023-06-20', '09:27:57'),
+(32, 4, 'IN', 524318, 527833, '2023-06-20', '09:50:07'),
+(33, 4, 'OUT', 527833, 517833, '2023-06-20', '12:12:53');
 
 -- --------------------------------------------------------
 
@@ -1087,6 +1193,21 @@ ALTER TABLE `courier_payment_methods`
   ADD KEY `dfsdfdgsdgfv` (`courier`);
 
 --
+-- Indexes for table `courier_txn_in`
+--
+ALTER TABLE `courier_txn_in`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `ionjuihjui` (`courier`);
+
+--
+-- Indexes for table `courier_work_proofs`
+--
+ALTER TABLE `courier_work_proofs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `dsiofvjvdrfiosj` (`orders`),
+  ADD KEY `sadajdiewqo` (`courier`);
+
+--
 -- Indexes for table `co_members`
 --
 ALTER TABLE `co_members`
@@ -1182,6 +1303,15 @@ ALTER TABLE `sellers_payment_methods`
   ADD KEY `trgrttgtrwrg` (`seller`);
 
 --
+-- Indexes for table `sellers_products_selling`
+--
+ALTER TABLE `sellers_products_selling`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `dsfgvodfjviovfdioio` (`seller`),
+  ADD KEY `dsfmfioferioamioerm` (`product`),
+  ADD KEY `iuhuihuihuihu` (`buyer`);
+
+--
 -- Indexes for table `sellers_to_shops`
 --
 ALTER TABLE `sellers_to_shops`
@@ -1250,7 +1380,7 @@ ALTER TABLE `buyers_accounts`
 -- AUTO_INCREMENT for table `buyer_money_txns`
 --
 ALTER TABLE `buyer_money_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `buyer_money_txns_complaints`
@@ -1280,13 +1410,25 @@ ALTER TABLE `courier`
 -- AUTO_INCREMENT for table `courier_accounts`
 --
 ALTER TABLE `courier_accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `courier_payment_methods`
 --
 ALTER TABLE `courier_payment_methods`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `courier_txn_in`
+--
+ALTER TABLE `courier_txn_in`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `courier_work_proofs`
+--
+ALTER TABLE `courier_work_proofs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `co_members`
@@ -1310,7 +1452,7 @@ ALTER TABLE `home_sliding_shops`
 -- AUTO_INCREMENT for table `owner_account_txns`
 --
 ALTER TABLE `owner_account_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `payment_methods`
@@ -1328,7 +1470,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products_orders`
 --
 ALTER TABLE `products_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `product_genres`
@@ -1340,7 +1482,7 @@ ALTER TABLE `product_genres`
 -- AUTO_INCREMENT for table `product_quantity_txns`
 --
 ALTER TABLE `product_quantity_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `sellers`
@@ -1361,6 +1503,12 @@ ALTER TABLE `sellers_payment_methods`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
+-- AUTO_INCREMENT for table `sellers_products_selling`
+--
+ALTER TABLE `sellers_products_selling`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT for table `sellers_to_shops`
 --
 ALTER TABLE `sellers_to_shops`
@@ -1370,7 +1518,7 @@ ALTER TABLE `sellers_to_shops`
 -- AUTO_INCREMENT for table `sellers_withdraws`
 --
 ALTER TABLE `sellers_withdraws`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `seller_accounts`
@@ -1382,7 +1530,7 @@ ALTER TABLE `seller_accounts`
 -- AUTO_INCREMENT for table `seller_money_txns`
 --
 ALTER TABLE `seller_money_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `seller_withdraws_complaints`
@@ -1452,6 +1600,19 @@ ALTER TABLE `courier_payment_methods`
   ADD CONSTRAINT `dfsdfdgsdgfv` FOREIGN KEY (`courier`) REFERENCES `courier` (`courier_sn`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `courier_txn_in`
+--
+ALTER TABLE `courier_txn_in`
+  ADD CONSTRAINT `ionjuihjui` FOREIGN KEY (`courier`) REFERENCES `courier` (`courier_sn`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `courier_work_proofs`
+--
+ALTER TABLE `courier_work_proofs`
+  ADD CONSTRAINT `dsiofvjvdrfiosj` FOREIGN KEY (`orders`) REFERENCES `products_orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `sadajdiewqo` FOREIGN KEY (`courier`) REFERENCES `courier` (`courier_sn`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `co_members`
 --
 ALTER TABLE `co_members`
@@ -1502,6 +1663,14 @@ ALTER TABLE `sellers_orders_notifier`
 ALTER TABLE `sellers_payment_methods`
   ADD CONSTRAINT `rhgtrgrtgrtgtgtrg` FOREIGN KEY (`method`) REFERENCES `payment_methods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `trgrttgtrwrg` FOREIGN KEY (`seller`) REFERENCES `sellers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sellers_products_selling`
+--
+ALTER TABLE `sellers_products_selling`
+  ADD CONSTRAINT `dsfgvodfjviovfdioio` FOREIGN KEY (`seller`) REFERENCES `sellers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `dsfmfioferioamioerm` FOREIGN KEY (`product`) REFERENCES `products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `iuhuihuihuihu` FOREIGN KEY (`buyer`) REFERENCES `buyers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `sellers_to_shops`

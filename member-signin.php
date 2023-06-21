@@ -61,6 +61,11 @@
                                         $getdataid = mysqli_fetch_array($check_psw);
                                         $acting = $getdataid['id'];
                                         $_SESSION['acting_memberid'] = $acting;
+                                        // Update the status
+                                        $update = mysqli_query($server,"UPDATE co_members
+                                            SET Status = 'Online'
+                                            WHERE id = '$acting';
+                                        ");
                                         ?>
                                         <p class="succed">
                                             Congrats! Signin succed. Click 

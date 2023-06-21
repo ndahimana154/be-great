@@ -1,22 +1,15 @@
-<?php
-    include('connect.php');
-    include('buyer-acting_initial-credentials.php');
-?>
 <div class="orders-cont">
     <div class="orders-box">
         <h2>
-            Account transactions
+            products selling history
         </h2>
-        <div class="btn-ctrls" style="padding: 10px;">
-            <a href="buyer-deposit.php" class="btn btn-success">
-                Deposit money
+        <!-- <div class="ctrl-btns" style="padding: 10px;">
+            <a href="sellers-newproduct.php" class="btn btn-success">
+                <i class="fa fa-plus-circle"></i>
+                new product
             </a>
-            <button class="btn btn-success">
-                <i class="fa fa-eye"></i>
-                View complaints
-            </button>
-        </div>
-        <div class="table">
+        </div> -->
+        <div class="table" style="padding: 10px; overflow:auto;">
             <table class="table table-hover table-responsive">
                 <thead class="bg-primary text-white">
                     <tr>
@@ -24,35 +17,43 @@
                             #
                         </th>
                         <th>
-                            date time
-                        </th>
-                      
-                        <th>
-                            Txn type
+                            Date
                         </th>
                         <th>
-                            Txn amount
+                            Product id
                         </th>
                         <th>
-                            Old balance
+                            Product name
                         </th>
                         <th>
-                            New balance
+                            Buyer names
                         </th>
                         <th>
-                            actions
+                            Quantity
+                        </th>
+                        <th>
+                            unity price
+                        </th>
+                        <th>
+                            Total Price
+                        </th>
+                        <th>
+                            Received amount
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                        $get_txns = mysqli_query($server,"SELECT *
-                            FROM buyer_money_txns
-                            WHERE 
-                            buyer = '$acting_userid'
-                            ORDER BY 
-                            txndate DESC,
-                            txntime DESC                      
+                        $get_txns = mysqli_query($server,"SELECT * from
+                            products,shops,product_genres,sellers_products_selling
+                            ,buyers
+                            WHERE products.shop = shops.shop_id
+                            AND products.product_genre = product_genres.genre_id
+                            AND sellers_products_selling.product = products.product_id
+                            AND sellers_products_selling.buyer = buyers.id
+                            AND sellers_products_selling.seller = '$seller_acting_userid'
+                            ORDER BY date DESC
+                            ,time DESC
                         ");
                         if (mysqli_num_rows($get_txns) < 1) {
                             ?>
@@ -74,26 +75,30 @@
                                 </td>
                                 <td>
                                     <?php 
-                                        echo $data_txns['txndate']." ".$data_txns['txntime'] 
+                                        echo $data_txns['date']." ".$data_txns['time']; 
                                     
                                     ?>
                                 </td>
                                 <td>
-                                    <?php echo $data_txns['txntype'] ?>
+                                    <?php echo $data_txns['product_id']; ?>
                                 </td>
                                 <td>
-                                    <?php echo $data_txns['amount']."RWF" ?>
+                                    <?php echo $data_txns['product_name']; ?>
                                 </td>
                                 <td>
-                                    <?php echo $data_txns['oldacc']."RWF" ?>
+                                    <?php echo $data_txns['firstname']." ".$data_txns['lastname']; ?>
                                 </td>
                                 <td>
-                                    <?php echo $data_txns['newacc']."RWF" ?>
+                                    <?php echo $data_txns['product_quantity']; ?>
                                 </td>
                                 <td>
-                                    <a href="buyer-send-txn-complaint.php?txnid=<?php echo $data_txns['id'] ?>" class="btn btn-warning">
-                                        <i class="fa fa-question"></i>
-                                    </a>
+                                    <?php echo $data_txns['unityprice']."RWF"; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data_txns['totalprice']."RWF"; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data_txns['receivedamount']."RWF"; ?>
                                 </td>
                             </tr>
                             <?php

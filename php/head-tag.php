@@ -39,6 +39,8 @@
     <link rel="stylesheet" href="css\member-view-courier-pyt-methods.css">
     <link rel="stylesheet" href="css\member-delete-courier-modal.css">
     <link rel="stylesheet" href="css\member-home-part-div.css">
+    <link rel="stylesheet" href="css\seller-select-courier-first.css">
+    <link rel="stylesheet" href="css\buyer-end-delivery-modal.css">
 
     <!-- Responsiveness regulator -->
     <link rel="stylesheet" href="css\responsiveness-regulator.css">
@@ -73,6 +75,7 @@
     <script src="js\member-new-courier-pytmethod.js"></script>
     <script src="js\member-view-courier-pyt-methods.js"></script>
     <script src="js\member-delete-courier.js"></script>
+    <script src="js\buyer-end-delivery.js"></script>
     
     <title>
         BeGreat

@@ -10,12 +10,12 @@
         Stock history
         </a>
     </li>
-    <hr>
+    <!-- <hr>
     <li>
         <a href="sellers-newproduct.php?back">
             New product
         </a>
-    </li>
+    </li> -->
     <hr>
     <li>
         <a href="seller-product-orders.php">
@@ -30,19 +30,20 @@
     </li>
     <hr>
     <li>
-        <a href="seller-withdraw.php">
-        Withdraw
-        </a>
-    </li>
-    <hr>
-    <li>
         <a href="seller-withdraw-history.php">
         Withdrawing history
         </a>
     </li>
     <hr>
     <li>
-        <a href="logout.php">
+        <a href="seller-products-selling.php">
+        Selling history
+        </a>
+    </li>
+    <hr>
+    <li>
+        <a href="logout.php?seller_out=<?php echo $seller_acting_userid; ?>">
+            <i class="fa fa-sign-out-alt"></i>
             Logout
         </a>
     </li>

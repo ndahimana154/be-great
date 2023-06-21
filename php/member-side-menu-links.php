@@ -95,7 +95,7 @@
     ?>
     <hr>
     <li>
-        <a href="logout.php?member-out">
+        <a href="logout.php?member-out=<?php echo $member_acting_userid; ?>">
             <i class="fa fa-sign-out-alt"></i>
             Logout
         </a>

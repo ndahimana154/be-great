@@ -5,7 +5,7 @@
     padding: 10px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* height: 90vh; */
 }
 .home-dashboard .dash-center {
@@ -17,8 +17,9 @@
 .home-dashboard .dash-center .dash {
     user-select: none;
     background: #fff;
+    cursor: pointer;
 
 }
 .home-dashboard .dash-center .dash:hover {
-    background: black;
+    background: rgb(83, 83, 83);
 }

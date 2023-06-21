@@ -25,7 +25,7 @@
             else {
                 // INserting the order cancelled
                 $insert_cancellTXN = mysqli_query($server,"INSERT into buyer_money_txns 
-                    VALUES(null,$acting_userid,CURRENT_DATE(),CURRENT_TIME(),'Cancel Shopping',$actingbalance,$newbalance)
+                    VALUES(null,$acting_userid,CURRENT_DATE(),CURRENT_TIME(),'Cancel Shopping',$actingbalance,$newbalance,$ordertotalprice)
                 ");
                 // Withdrwall from owener accoutn
                 $insert_owner = mysqli_query($server,"INSERT into owner_account_txns 

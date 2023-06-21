@@ -1,4 +1,4 @@
-<div class="shop-details alert alert-success">
+<div class="shop-details alert alert-primary m-3">
     <!-- shop detailg -->
     <h1>
         Shop details

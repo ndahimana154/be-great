@@ -73,7 +73,7 @@
                         ");
                         // Saving the txn history
                         $savehistory = mysqli_query($server,"INSERT into buyer_money_txns
-                            values(null,'$acting_userid',CURRENT_DATE(),CURRENT_TIME(),'Shopping','$actingbalance','$newbalance')
+                            values(null,'$acting_userid',CURRENT_DATE(),CURRENT_TIME(),'Shopping','$actingbalance','$newbalance',$totalprice)
                         ");
                         // Updating the account balance
                         $update_the_balance = mysqli_query($server,"UPDATE buyers_accounts set

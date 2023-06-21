@@ -675,5 +675,96 @@
     </div>
 </div>
 
+<!-- Select the courier before confirming the order -->
+<div class="select_courier_first_modal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                   Select courier first
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="form-box" style="padding: 10px">
+                <p>
+                    Courier S/N
+                </p>
+                <p>
+                    <select name="" id="courier_textbox" class="text-box">
+                        <option value="Select courier S/N">
+                            Select courier S/N
+                        </option>
+                        <?php
+                            $get_couriers = mysqli_query($server,"SELECT * from courier
+                                ORDER BY courier_sn ASC 
+                            ");
+                            while ($datacourier = mysqli_fetch_array($get_couriers)) {
+                                ?>
+                                <option value="<?php echo $datacourier['courier_sn']; ?>">
+                                    <?php echo $datacourier['courier_sn']." - ".$datacourier['courier_email']; ?>
+                                </option>
+                                <?php
+                            }
+                        ?>
+                    </select>
+                </p>
+                <p>
+                    Amount to pay
+                </p>
+                <p>
+                    <input type="text" class="text-box" id="courier_amount" placeholder="type...">
+                </p>
+                <p>
+                    <button class="btn btn-success" id="procedd_courier">
+                        <i class="fa fa-arrow-right"></i>
+                        Procced
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Ending the transaction modal -->
+<div class="end_delivery_modal" id="">
+    <div class="pyt-cont">
+        <div class="yesnosdelete">
+            <div class="header">
+                <h2>
+                   Select courier
+                </h2>
+                <button class="closeconfribtn">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <hr>
+            <div class="form-box" style="padding: 10px">
+                <div class="ffrr"></div>
+                <p>
+                    Courier S/N
+                </p>
+                <p>
+                    <input type="text" class="text-box" 
+                        id="courier_fieldbox" placeholder="type...">
+                <p>
+                <p>
+                    <button class="btn btn-success" id="procedd_end_delivery">
+                        <i class="fa fa-arrow-right"></i>
+                        Procced
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 
 
