@@ -2,9 +2,9 @@
     <div class="m-hSection">
         <div class="left">
             <div class="menu-links" style="padding:10px">
-                <button id="menu-BTN">
+                <!-- <button id="menu-BTN">
                     <i class="fa fa-bars"></i>
-                </button>
+                </button> -->
             </div>
             <div class="logo">
                 <a href="home.php">
@@ -37,9 +37,9 @@
             <i class="fa fa-shopping-cart"></i>
         </button> -->
     </div>
-    <div id="menulinksBox">
+    <!-- <div id="menulinksBox">
         <div class="menu-box" id="menu-box">
-            <ul>
+            <ul> -->
                 <!-- <li>
                     <a href="">
                         Browse
@@ -60,10 +60,10 @@
                         Browse
                     </a>
                 </li> -->
-            </ul>
+            <!-- </ul>
             <button id="closeMenuBTN">
                 <i class="fa fa-window-close"></i>
             </button>
         </div>
-    </div>
+    </div> -->
 </div>

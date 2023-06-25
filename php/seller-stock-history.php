@@ -4,10 +4,8 @@
             Stock history
         </h2>
         <div class="ctrl-btns" style="padding: 10px;">
-            <!-- <a href="sellers-newproduct.php" class="btn btn-success">
-                <i class="fa fa-plus-circle"></i>
-                new product
-            </a> -->
+       
+            
         </div>
         <div class="table" style="padding: 10px; overflow:auto;">
             <table class="table table-hover table-responsive">

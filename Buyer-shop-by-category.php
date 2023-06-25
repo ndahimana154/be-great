@@ -32,8 +32,8 @@
             <?php
                 include('php/sub-nav.php');
                 include('php/buyer-shop-by-category.php');
-                include('php/buyer-top-shops.php');
-                include('php/Buyer-in-latest-products.php');
+                // include('php/buyer-top-shops.php');
+                // include('php/Buyer-in-latest-products.php');
                 include('php/big-footer.php'); 
                 include('php/developer-footer.php');
             ?>

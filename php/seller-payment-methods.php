@@ -46,6 +46,8 @@
                             sellers_payment_methods.method = payment_methods.id
                             AND sellers_payment_methods.seller = '$seller_acting_userid'
                             AND sellers_payment_methods.status != 'Deleted'
+                            ORDER BY method_type ASC,
+                            method_name asc
                         ");
                         if (mysqli_num_rows($get_txns) < 1) {
                             ?>

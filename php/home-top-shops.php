@@ -50,9 +50,9 @@
                                         echo $getshop['shop_name'];
                                     ?>
                                 </a>
-                                <p>
+                                <p style="font-weight: 600;">
                                     <?php
-                                        echo $data_latest['product_descr']
+                                        echo $data_latest['product_descr'];
                                     ?>
                                 </p>
                             </div>
