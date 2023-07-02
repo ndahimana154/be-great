@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2023 at 01:22 PM
+-- Generation Time: Jul 01, 2023 at 10:03 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -66,7 +66,7 @@ CREATE TABLE `buyers_accounts` (
 --
 
 INSERT INTO `buyers_accounts` (`buyer`, `balance`, `acc_id`) VALUES
-(4, 5045590, 1),
+(4, 4955590, 1),
 (3, 0, 2),
 (5, 0, 3),
 (6, 30000, 4);
@@ -154,7 +154,16 @@ INSERT INTO `buyer_money_txns` (`id`, `buyer`, `txndate`, `txntime`, `txntype`, 
 (59, 4, '2023-06-20', '08:09:10', 'Shopping', 5052990, 5047040, 5950),
 (60, 4, '2023-06-20', '08:09:34', 'Cancel Shopping', 5047040, 5052990, 5950),
 (61, 4, '2023-06-20', '09:24:40', 'Shopping', 5052990, 5049290, 3700),
-(62, 4, '2023-06-20', '09:49:54', 'Shopping', 5049290, 5045590, 3700);
+(62, 4, '2023-06-20', '09:49:54', 'Shopping', 5049290, 5045590, 3700),
+(63, 4, '2023-06-24', '15:58:21', 'Shopping', 5045590, 5035590, 10000),
+(64, 4, '2023-06-24', '15:58:22', 'Shopping', 5035590, 5025590, 10000),
+(65, 4, '2023-06-24', '15:58:43', 'Shopping', 5025590, 5015590, 10000),
+(66, 4, '2023-06-24', '15:58:56', 'Shopping', 5015590, 5005590, 10000),
+(67, 4, '2023-06-24', '15:59:00', 'Shopping', 5005590, 4995590, 10000),
+(68, 4, '2023-06-24', '15:59:03', 'Shopping', 4995590, 4985590, 10000),
+(69, 4, '2023-06-24', '15:59:04', 'Shopping', 4985590, 4975590, 10000),
+(70, 4, '2023-06-24', '15:59:05', 'Shopping', 4975590, 4965590, 10000),
+(71, 4, '2023-06-24', '15:59:07', 'Shopping', 4965590, 4955590, 10000);
 
 -- --------------------------------------------------------
 
@@ -574,7 +583,16 @@ INSERT INTO `owner_account_txns` (`id`, `type`, `amount`, `timendate`) VALUES
 (76, 'IN', 3700, '2023-06-20 09:24:40'),
 (77, 'OUT', 3515, '2023-06-20 09:27:57'),
 (78, 'IN', 3700, '2023-06-20 09:49:54'),
-(79, 'OUT', 3515, '2023-06-20 09:50:07');
+(79, 'OUT', 3515, '2023-06-20 09:50:07'),
+(80, 'IN', 10000, '2023-06-24 15:58:21'),
+(81, 'IN', 10000, '2023-06-24 15:58:22'),
+(82, 'IN', 10000, '2023-06-24 15:58:43'),
+(83, 'IN', 10000, '2023-06-24 15:58:56'),
+(84, 'IN', 10000, '2023-06-24 15:59:00'),
+(85, 'IN', 10000, '2023-06-24 15:59:03'),
+(86, 'IN', 10000, '2023-06-24 15:59:04'),
+(87, 'IN', 10000, '2023-06-24 15:59:05'),
+(88, 'IN', 10000, '2023-06-24 15:59:07');
 
 -- --------------------------------------------------------
 
@@ -624,12 +642,13 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`product_id`, `product_name`, `product_image`, `product_price`, `product_add_date`, `product_genre`, `shop`, `quantity_remain`, `product_descr`) VALUES
 (25, 'CoCa Bottle SODA', 'Kick SIde SHop - CoCa Bottle SODA - FRONTIMAGE.png', 1500, '2023-05-06', 5, 5, 100, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (26, 'SONY D70 Photo & Video Camera', 'Gabby Shop - Canon D70 Photo & Video Camera - FRONTIMAGE.png', 350000, '2023-05-06', 1, 4, 100, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
-(27, 'Igihwagari Golden Cooking oil', 'Marina Rama Shop - Igihwagari Golden Cooking oil - FRONTIMAGE.png', 3700, '2023-05-25', 7, 12, 999572, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
+(27, 'Igihwagari Golden Cooking oil', 'Marina Rama Shop - Igihwagari Golden Cooking oil - FRONTIMAGE.png', 3700, '2023-05-25', 7, 12, 999740, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (28, 'SanDisk Memory Card 32GB', 'Marina Rama Shop - SanDisk Memory Card 32GB - FRONTIMAGE.png', 34000, '2023-05-25', 1, 12, 111, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (29, 'Ice Watch - PTC 2023 Version American', 'Marina Rama Shop - Ice Watch - PTC 2023 Version American - FRONTIMAGE.png', 45000, '2023-05-28', 1, 12, 74, 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'),
 (30, 'Anana - Brugali SMJ1 Juice', 'Marina Rama Shop - Anana - Brugali SMJ1 Juice - FRONTIMAGE.png', 350, '2023-06-03', 5, 12, 46, 'Juice made from Anana with 80% Sugar and contains many Vitamins and minerals to be consumed by the human body. This juice is especially made for Children and Pregnant woman as it increaes the concentration of Crbohydrates.'),
 (31, 'Chocolate', 'Bonheur Shop - Chocolate - FRONTIMAGE.png', 1000, '2023-06-04', 5, 14, 88, 'Black Chocolate Made of Sugar'),
-(32, 'coconut', 'Bonheur Shop - coconut - FRONTIMAGE.png', 970, '2023-06-04', 6, 14, 90, 'country:japan\r\nexpr:23/08/2023\r\nmanufacture:yokohama\r\n');
+(32, 'coconut', 'Bonheur Shop - coconut - FRONTIMAGE.png', 970, '2023-06-04', 6, 14, 90, 'country:japan\r\nexpr:23/08/2023\r\nmanufacture:yokohama\r\n'),
+(33, 'iTel KGTel Phone', 'Marina Rama Shop - iTel KGTel Phone - FRONTIMAGE.png', 10000, '2023-06-24', 1, 12, 0, 'Non touchscreen phone without Headphone  ');
 
 -- --------------------------------------------------------
 
@@ -668,7 +687,16 @@ INSERT INTO `products_orders` (`order_id`, `product`, `client`, `product_price`,
 (50, 27, 4, 3700, 5, 18500, '2023-06-20', '08:07:07', 'Delivering', 12),
 (51, 30, 4, 350, 17, 5950, '2023-06-20', '08:09:10', 'Cancelled', 12),
 (52, 27, 4, 3700, 1, 3700, '2023-06-20', '09:24:40', 'Delivered', 12),
-(53, 27, 4, 3700, 1, 3700, '2023-06-20', '09:49:54', 'Delivered', 12);
+(53, 27, 4, 3700, 1, 3700, '2023-06-20', '09:49:54', 'Delivered', 12),
+(54, 33, 4, 10000, 1, 10000, '2023-06-24', '15:58:21', 'Pending', 12),
+(55, 33, 4, 10000, 1, 10000, '2023-06-24', '15:58:22', 'Pending', 12),
+(56, 33, 4, 10000, 1, 10000, '2023-06-24', '15:58:43', 'Pending', 12),
+(57, 33, 4, 10000, 1, 10000, '2023-06-24', '15:58:56', 'Pending', 12),
+(58, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:00', 'Pending', 12),
+(59, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:03', 'Pending', 12),
+(60, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:04', 'Pending', 12),
+(61, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:05', 'Pending', 12),
+(62, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:07', 'Pending', 12);
 
 -- --------------------------------------------------------
 
@@ -776,7 +804,8 @@ INSERT INTO `product_quantity_txns` (`id`, `product`, `txn_type`, `txn_quantity`
 (61, 29, 'OUT', 3, '2023-06-20', '07:59:10'),
 (62, 27, 'OUT', 5, '2023-06-20', '09:19:23'),
 (63, 27, 'OUT', 1, '2023-06-20', '09:27:57'),
-(64, 27, 'OUT', 1, '2023-06-20', '09:50:07');
+(64, 27, 'OUT', 1, '2023-06-20', '09:50:07'),
+(65, 27, 'IN', 168, '2023-06-25', '07:44:08');
 
 -- --------------------------------------------------------
 
@@ -1380,7 +1409,7 @@ ALTER TABLE `buyers_accounts`
 -- AUTO_INCREMENT for table `buyer_money_txns`
 --
 ALTER TABLE `buyer_money_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `buyer_money_txns_complaints`
@@ -1452,7 +1481,7 @@ ALTER TABLE `home_sliding_shops`
 -- AUTO_INCREMENT for table `owner_account_txns`
 --
 ALTER TABLE `owner_account_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
 -- AUTO_INCREMENT for table `payment_methods`
@@ -1464,13 +1493,13 @@ ALTER TABLE `payment_methods`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `products_orders`
 --
 ALTER TABLE `products_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `product_genres`
@@ -1482,7 +1511,7 @@ ALTER TABLE `product_genres`
 -- AUTO_INCREMENT for table `product_quantity_txns`
 --
 ALTER TABLE `product_quantity_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `sellers`
