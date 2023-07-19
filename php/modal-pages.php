@@ -699,6 +699,7 @@
                         </option>
                         <?php
                             $get_couriers = mysqli_query($server,"SELECT * from courier
+                                WHERE  courier_status != 'Fired'
                                 ORDER BY courier_sn ASC 
                             ");
                             while ($datacourier = mysqli_fetch_array($get_couriers)) {

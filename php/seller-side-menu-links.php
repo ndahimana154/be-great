@@ -1,3 +1,11 @@
+<?php
+    SESSION_START();
+    include('connect.php');
+    include('seller-acting-initial-credentials.php');
+    if (!isset($_SESSION['seller_acting-userid'])) {
+        header("location: home.php");
+    }
+?>
 <ul>
     <li>
         <a href="seller-products-list.php">
