@@ -1,0 +1,16 @@
+.co_descr {
+    display: none;
+    padding: 10px;
+}
+@media print {
+    .co_descr .co_name {
+        margin: 8px;
+        font-size: 24px;
+    }
+    .co_descr  img {
+        max-width: 70px;
+    }
+    .shop_det h3 {
+        font-size: 20px;
+    }
+}

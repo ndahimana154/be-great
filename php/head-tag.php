@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="css\member-home-part-div.css">
     <link rel="stylesheet" href="css\seller-select-courier-first.css">
     <link rel="stylesheet" href="css\buyer-end-delivery-modal.css">
+    <link rel="stylesheet" href="css/seller-reports.css">
 
     <!-- Responsiveness regulator -->
     <link rel="stylesheet" href="css\responsiveness-regulator.css">
@@ -76,6 +77,9 @@
     <script src="js\member-view-courier-pyt-methods.js"></script>
     <script src="js\member-delete-courier.js"></script>
     <script src="js\buyer-end-delivery.js"></script>
+    <script src="js\seller-print-selling-hitory.js"></script>
+    <script src="js\seller-print-withdrawing-history.js"></script>
+    <script src="js\seller-print-product-orders.js"></script>
     
     <title>
         BeGreat

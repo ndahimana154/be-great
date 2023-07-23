@@ -1,5 +1,14 @@
 <div class="orders-cont">
-    <div class="orders-box">
+    <div class="ctrl-btns" style="padding: 10px;">
+        <button class="btn btn-success" id="print_product_orders_content_btn">
+            <i class="fa fa-print"></i>
+            Print
+        </button>
+    </div>
+    <div class="orders-box" id="print_product_orders_content">
+        <?php
+            include('co_print_descriptions.php');
+        ?>
         <h2>
             Recent products orders
         </h2>
@@ -40,7 +49,7 @@
                         <th>
                             status
                         </th>
-                        <th>
+                        <th class="to_be_hidden">
                             actions
                         </th>
                     </tr>
@@ -112,7 +121,7 @@
                                 <td>
                                     <?php echo $data_txns['order_status']; ?>
                                 </td>
-                                <td>
+                                <td  class="to_be_hidden">
                                     <?php
                                         if ($data_txns['order_status'] =='Pending') {
                                             ?>

@@ -1,14 +1,21 @@
 <div class="orders-cont">
-    <div class="orders-box">
+    <div class="ctrl-btns" style="padding: 10px;">
+        <button class="btn btn-success" id="print_withdraw_history_btn">
+            <i class="fa fa-print"></i>
+            Print
+        </button>
+        <a href="seller-withdraw.php?back" class="btn btn-success">
+            <i class="fa fa-outdent"></i>
+            Withdraw
+        </a>
+    </div>
+    <div class="orders-box" id="print_withdraw_history_content">
+        <?php
+            include('co_print_descriptions.php');
+        ?>
         <h2>
             Withdrawing history
         </h2>
-        <div class="ctrl-btns" style="padding: 10px;">
-            <a href="seller-withdraw.php?back" class="btn btn-success">
-                <i class="fa fa-outdent"></i>
-                Withdraw
-            </a>
-        </div>
         <div class="table" style="padding: 10px; overflow:auto;">
             <table class="table table-hover table-responsive">
                 <thead class="bg-primary text-white">
@@ -31,7 +38,7 @@
                         <th>
                             Status
                         </th>
-                        <th>
+                        <th class="to_be_hidden">
                             actions
                         </th>
                     </tr>
@@ -82,7 +89,7 @@
                                 <td>
                                     <?php echo $data_txns['status']; ?>
                                 </td>
-                                <td>
+                                <td  class="to_be_hidden">
                                     <a href="seller-send-withdrawing-complaint.php?txnid=<?php echo $data_txns['id'];?>" 
                                         title="Send complaint about this transaction"
                                         class="btn btn-warning">

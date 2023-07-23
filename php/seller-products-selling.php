@@ -1,7 +1,16 @@
 <div class="orders-cont">
-    <div class="orders-box">
+    <div class="ctrls p-3">
+        <button class="btn btn-success" id="selling_history_print_BTN">
+            <i class="fa fa-print"></i>
+            Print
+        </button>
+    </div>
+    <div class="orders-box" id="selling_history_print">
+        <?php
+            include('co_print_descriptions.php');
+        ?>
         <h2>
-            products selling history
+            PRODUCTS SELLING HITORY
         </h2>
         <!-- <div class="ctrl-btns" style="padding: 10px;">
             <a href="sellers-newproduct.php" class="btn btn-success">
@@ -100,6 +109,11 @@
                                 <td>
                                     <?php echo $data_txns['receivedamount']."RWF"; ?>
                                 </td>
+                                <!-- <td>
+                                    <button class="btn">
+                                        <i class="fa fa-invoice"></i>
+                                    </button>
+                                </td> -->
                             </tr>
                             <?php
                         }

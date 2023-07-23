@@ -12,6 +12,8 @@
     include('php\head-tag.php');
     include('php/modal-pages.php');
 ?>
+<head>
+</head>
 <body>
     <div class="main-gate">
         <?php
