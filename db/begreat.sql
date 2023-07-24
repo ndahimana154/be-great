@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2023 at 10:03 AM
+-- Generation Time: Jul 24, 2023 at 11:57 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -362,7 +362,8 @@ INSERT INTO `courier_work_proofs` (`id`, `courier`, `orders`, `amount`, `date`, 
 (2, 000000000004, 49, 3450, '2023-06-20', '07:59:10', 'Delivered'),
 (3, 000000000005, 50, 1506, '2023-06-20', '09:19:24', 'Delivering'),
 (4, 000000000001, 52, 12344, '2023-06-20', '09:27:57', 'Delivered'),
-(5, 000000000005, 53, 22333434, '2023-06-20', '09:50:07', 'Delivered');
+(5, 000000000005, 53, 22333434, '2023-06-20', '09:50:07', 'Delivered'),
+(6, 000000000005, 61, 302932, '2023-07-19', '08:28:13', 'Delivering');
 
 -- --------------------------------------------------------
 
@@ -592,7 +593,8 @@ INSERT INTO `owner_account_txns` (`id`, `type`, `amount`, `timendate`) VALUES
 (85, 'IN', 10000, '2023-06-24 15:59:03'),
 (86, 'IN', 10000, '2023-06-24 15:59:04'),
 (87, 'IN', 10000, '2023-06-24 15:59:05'),
-(88, 'IN', 10000, '2023-06-24 15:59:07');
+(88, 'IN', 10000, '2023-06-24 15:59:07'),
+(89, 'OUT', 9500, '2023-07-19 08:28:12');
 
 -- --------------------------------------------------------
 
@@ -648,7 +650,7 @@ INSERT INTO `products` (`product_id`, `product_name`, `product_image`, `product_
 (30, 'Anana - Brugali SMJ1 Juice', 'Marina Rama Shop - Anana - Brugali SMJ1 Juice - FRONTIMAGE.png', 350, '2023-06-03', 5, 12, 46, 'Juice made from Anana with 80% Sugar and contains many Vitamins and minerals to be consumed by the human body. This juice is especially made for Children and Pregnant woman as it increaes the concentration of Crbohydrates.'),
 (31, 'Chocolate', 'Bonheur Shop - Chocolate - FRONTIMAGE.png', 1000, '2023-06-04', 5, 14, 88, 'Black Chocolate Made of Sugar'),
 (32, 'coconut', 'Bonheur Shop - coconut - FRONTIMAGE.png', 970, '2023-06-04', 6, 14, 90, 'country:japan\r\nexpr:23/08/2023\r\nmanufacture:yokohama\r\n'),
-(33, 'iTel KGTel Phone', 'Marina Rama Shop - iTel KGTel Phone - FRONTIMAGE.png', 10000, '2023-06-24', 1, 12, 0, 'Non touchscreen phone without Headphone  ');
+(33, 'iTel KGTel Phone', 'Marina Rama Shop - iTel KGTel Phone - FRONTIMAGE.png', 10000, '2023-06-24', 1, 12, 23038, 'Non touchscreen phone without Headphone  ');
 
 -- --------------------------------------------------------
 
@@ -695,7 +697,7 @@ INSERT INTO `products_orders` (`order_id`, `product`, `client`, `product_price`,
 (58, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:00', 'Pending', 12),
 (59, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:03', 'Pending', 12),
 (60, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:04', 'Pending', 12),
-(61, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:05', 'Pending', 12),
+(61, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:05', 'Delivering', 12),
 (62, 33, 4, 10000, 1, 10000, '2023-06-24', '15:59:07', 'Pending', 12);
 
 -- --------------------------------------------------------
@@ -805,7 +807,9 @@ INSERT INTO `product_quantity_txns` (`id`, `product`, `txn_type`, `txn_quantity`
 (62, 27, 'OUT', 5, '2023-06-20', '09:19:23'),
 (63, 27, 'OUT', 1, '2023-06-20', '09:27:57'),
 (64, 27, 'OUT', 1, '2023-06-20', '09:50:07'),
-(65, 27, 'IN', 168, '2023-06-25', '07:44:08');
+(65, 27, 'IN', 168, '2023-06-25', '07:44:08'),
+(66, 33, 'IN', 23039, '2023-07-19', '08:27:57'),
+(67, 33, 'OUT', 1, '2023-07-19', '08:28:12');
 
 -- --------------------------------------------------------
 
@@ -931,7 +935,8 @@ INSERT INTO `sellers_products_selling` (`id`, `product`, `seller`, `buyer`, `pro
 (5, 29, 4, 4, 3, 45000, 135000, 128250, '2023-06-20', '07:59:10'),
 (6, 27, 4, 4, 5, 3700, 18500, 17575, '2023-06-20', '09:19:24'),
 (7, 27, 4, 4, 1, 3700, 3700, 3515, '2023-06-20', '09:27:57'),
-(8, 27, 4, 4, 1, 3700, 3700, 3515, '2023-06-20', '09:50:07');
+(8, 27, 4, 4, 1, 3700, 3700, 3515, '2023-06-20', '09:50:07'),
+(9, 33, 4, 4, 1, 10000, 10000, 9500, '2023-07-19', '08:28:13');
 
 -- --------------------------------------------------------
 
@@ -1007,7 +1012,7 @@ CREATE TABLE `seller_accounts` (
 --
 
 INSERT INTO `seller_accounts` (`id`, `seller`, `balance`) VALUES
-(1, 4, 517833),
+(1, 4, 527333),
 (2, 3, 0),
 (3, 6, 900);
 
@@ -1064,7 +1069,8 @@ INSERT INTO `seller_money_txns` (`id`, `seller`, `txn_type`, `oldacc`, `new_acc`
 (30, 4, 'IN', 503228, 520803, '2023-06-20', '09:19:23'),
 (31, 4, 'IN', 520803, 524318, '2023-06-20', '09:27:57'),
 (32, 4, 'IN', 524318, 527833, '2023-06-20', '09:50:07'),
-(33, 4, 'OUT', 527833, 517833, '2023-06-20', '12:12:53');
+(33, 4, 'OUT', 527833, 517833, '2023-06-20', '12:12:53'),
+(34, 4, 'IN', 517833, 527333, '2023-07-19', '08:28:12');
 
 -- --------------------------------------------------------
 
@@ -1119,7 +1125,7 @@ INSERT INTO `shops` (`shop_id`, `shop_logo`, `shop_name`, `shop_district`, `shop
 (8, 'Logo - A Sony Company Shop.png', 'A Sony Company Shop', 'Musanze', 'Nkotsi', 'Bikara', '2023-05-06', '10:04:10', 'Trial period'),
 (9, 'Logo - Animal Products SH.png', 'Animal Products SH', 'Karongi', 'Mubuga', 'Ku mubuga', '2023-02-01', '10:06:11', 'Trial period'),
 (10, 'null', 'Hirwa Shoes Shop', 'Gasabo', 'Batsinda', 'Nduba, hafi yibiyede', '2023-05-25', '12:12:46', 'Running'),
-(12, 'null', 'Marina Rama Shop', 'Musanze', 'Nkotsi', 'Nyakinama mu midugudu', '2023-05-25', '17:36:43', 'Running'),
+(12, 'Marina rama shop.png', 'Marina Rama Shop', 'Musanze', 'Nkotsi', 'Nyakinama mu midugudu', '2023-05-25', '17:36:43', 'Running'),
 (13, 'null', 'Obote Store', 'null', 'null', 'null', '2023-06-03', '16:45:11', 'Stopped'),
 (14, 'null', 'Bonheur Shop', 'null', 'null', 'null', '2023-06-04', '08:52:31', 'Trial period'),
 (15, 'null', 'jiojweiodjiojio', 'null', 'null', 'null', '2023-06-06', '20:25:01', 'Trial period'),
@@ -1457,7 +1463,7 @@ ALTER TABLE `courier_txn_in`
 -- AUTO_INCREMENT for table `courier_work_proofs`
 --
 ALTER TABLE `courier_work_proofs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `co_members`
@@ -1481,7 +1487,7 @@ ALTER TABLE `home_sliding_shops`
 -- AUTO_INCREMENT for table `owner_account_txns`
 --
 ALTER TABLE `owner_account_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT for table `payment_methods`
@@ -1511,7 +1517,7 @@ ALTER TABLE `product_genres`
 -- AUTO_INCREMENT for table `product_quantity_txns`
 --
 ALTER TABLE `product_quantity_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `sellers`
@@ -1535,7 +1541,7 @@ ALTER TABLE `sellers_payment_methods`
 -- AUTO_INCREMENT for table `sellers_products_selling`
 --
 ALTER TABLE `sellers_products_selling`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `sellers_to_shops`
@@ -1559,7 +1565,7 @@ ALTER TABLE `seller_accounts`
 -- AUTO_INCREMENT for table `seller_money_txns`
 --
 ALTER TABLE `seller_money_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `seller_withdraws_complaints`
