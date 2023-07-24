@@ -1,14 +1,18 @@
 <div class="orders-cont">
-    <div class="orders-box">
+    <div class="ctrl-btns" style="padding: 10px;">
+        <button class="btn btn-success" id="print_product_list_BTN">
+            <i class="fa fa-print"></i>
+            Print
+        </button>
+        <a href="sellers-newproduct.php" class="btn btn-success">
+            <i class="fa fa-plus-circle"></i>
+            new product
+        </a>
+    </div>
+    <div class="orders-box" id="print_product_list_Content">
         <h2>
             Products list
         </h2>
-        <div class="ctrl-btns" style="padding: 10px;">
-            <a href="sellers-newproduct.php" class="btn btn-success">
-                <i class="fa fa-plus-circle"></i>
-                new product
-            </a>
-        </div>
         <div class="table" style="padding: 10px; overflow:auto;">
             <table class="table table-hover table-responsive">
                 <thead class="bg-primary text-white">
@@ -34,7 +38,7 @@
                         <th>
                             Remaining quantity
                         </th>
-                        <th>
+                        <th class="to_be_hidden">
                             actions
                         </th>
                     </tr>
@@ -86,7 +90,7 @@
                                 <td>
                                     <?php echo $data_txns['quantity_remain']; ?>
                                 </td>
-                                <td>
+                                <td class="to_be_hidden">
                                     <a href="images/products/Frontimages/<?php echo $data_txns['product_image'] ?>" 
                                         title="View image <?php echo $data_txns['product_name']; ?>" 
                                         target="_blank" 

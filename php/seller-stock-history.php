@@ -1,12 +1,17 @@
 <div class="orders-cont">
-    <div class="orders-box">
+    <div class="ctrl-btns" style="padding: 10px;">
+       <button class="btn btn-success" id="seller_print_stock_history_BTN">
+            <i class="fa fa-print"></i>
+            Print
+       </button>  
+    </div>
+    <div class="orders-box"  id="seller_print_stock_history_Content">
+        <?php
+            include('co_print_descriptions.php');
+        ?>
         <h2>
             Stock history
         </h2>
-        <div class="ctrl-btns" style="padding: 10px;">
-       
-            
-        </div>
         <div class="table" style="padding: 10px; overflow:auto;">
             <table class="table table-hover table-responsive">
                 <thead class="bg-primary text-white">

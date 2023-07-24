@@ -5,7 +5,7 @@ $('document').ready(function() {
         })
         var contentToPrint = $('#print_product_orders_content').html()
         var newWindow = window.open(",'_blank'")
-        newWindow.document.write('<html><body>'+ contentToPrint + '</body></html>')
+        newWindow.document.write('<html><head><title>Print document</title></head><body>'+ contentToPrint + '</body></html>')
         newWindow.document.close()
         newWindow.print()
     })
