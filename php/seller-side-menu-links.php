@@ -50,6 +50,13 @@
     </li>
     <hr>
     <li>
+        <a href="seller-reports-form.php">
+            <i class="fa fa-file-pdf"></i>
+            Documents
+        </a>
+    </li>
+    <hr>
+    <li>
         <a href="logout.php?seller_out=<?php echo $seller_acting_userid; ?>">
             <i class="fa fa-sign-out-alt"></i>
             Logout

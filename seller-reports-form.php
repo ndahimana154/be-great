@@ -22,7 +22,7 @@
         <div class="remaining">
             <?php
                 include('php/seller-sub-nav.php');
-               include('php\seller-reports.php');
+               include('php\seller-reports-form.php');
                 include('php/developer-footer.php');
             ?>
         </div>
