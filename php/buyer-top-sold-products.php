@@ -12,6 +12,7 @@
                 p.shop, COUNT(po.product) AS num_orders
                 FROM products p
                 INNER JOIN products_orders po ON p.product_id = po.product
+                WHERE quantity_remain > 0
                 GROUP BY p.product_id
                 ORDER BY num_orders DESC
                 LIMIT 5;
