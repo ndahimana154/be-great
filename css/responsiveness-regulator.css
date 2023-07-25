@@ -32,4 +32,11 @@
     .signupform-box .signup-cont {
         width: 80vw;
     }
+    .home-part1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .home-part1 .left {
+        display: none;
+    }
 }
