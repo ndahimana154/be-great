@@ -4,10 +4,19 @@
 ?>
 <div class="orders-cont">
     <div class="orders-box">
-        <h2>
-            Recent orders
-        </h2>
-        <div class="table">
+        <div class="p-3">
+            <button class="btn btn-success" id="print_transactions_BTN">
+                <i class="fa fa-print"></i>
+                Print
+            </button>
+        </div>
+        <div class=""   id="print_transactions_contents">
+            <?php
+                include('co_buyer_print_descriptions.php');
+            ?>
+            <h2>
+                Recent orders
+            </h2>
             <table class="table table-hover table-responsive">
                 <thead class="bg-primary text-white">
                     <tr>
@@ -32,7 +41,7 @@
                         <th>
                             status
                         </th>
-                        <th>
+                        <th class="to_be_hidden">
                             actions
                         </th>
                     </tr>
@@ -89,7 +98,7 @@
                                 <td>
                                     <?php echo $data_orders['order_status'] ?>
                                 </td>
-                                <td>
+                                <td class="to_be_hidden">
                                     <?php
                                         if ($data_orders['order_status'] == 'Pending') {
                                             ?>

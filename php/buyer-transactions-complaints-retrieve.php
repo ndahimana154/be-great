@@ -9,20 +9,23 @@
                 <i class="fa fa-print"></i>
                 Print
             </button>
+            <a href="buyer-transactions.php" class="btn btn-success">
+                Transactions
+            </a>
             <a href="buyer-deposit.php" class="btn btn-success">
                 Deposit money
             </a>
-            <a href="buyer-transactions-complaints.php" class="btn btn-success">
+            <button class="btn btn-success">
                 <i class="fa fa-eye"></i>
                 View complaints
-            </a>
+            </button>
         </div>
         <div class=""  id="print_transactions_contents">
             <?php
                 include('co_buyer_print_descriptions.php');
             ?>
             <h2>
-                Account transactions
+                Transactions complaints
             </h2>
             <table class="table table-hover table-responsive">
                 <thead class="bg-primary text-white">
@@ -35,31 +38,28 @@
                         </th>
                       
                         <th>
-                            Txn type
+                            Txn id
                         </th>
                         <th>
-                            Txn amount
+                            Complaint
                         </th>
                         <th>
-                            Old balance
+                            Response
                         </th>
-                        <th>
-                            New balance
-                        </th>
-                        <th class="to_be_hidden">
+                        <!-- <th class="to_be_hidden">
                             actions
-                        </th>
+                        </th> -->
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                         $get_txns = mysqli_query($server,"SELECT *
-                            FROM buyer_money_txns
+                            FROM buyer_money_txns_complaints
                             WHERE 
                             buyer = '$acting_userid'
                             ORDER BY 
-                            txndate DESC,
-                            txntime DESC                      
+                            date DESC,
+                            time DESC                      
                         ");
                         if (mysqli_num_rows($get_txns) < 1) {
                             ?>
@@ -81,27 +81,24 @@
                                 </td>
                                 <td>
                                     <?php 
-                                        echo $data_txns['txndate']." ".$data_txns['txntime'] 
+                                        echo $data_txns['date']." ".$data_txns['time'] 
                                     
                                     ?>
                                 </td>
                                 <td>
-                                    <?php echo $data_txns['txntype'] ?>
+                                    <?php echo $data_txns['txnid'] ?>
                                 </td>
                                 <td>
-                                    <?php echo $data_txns['amount']."RWF" ?>
+                                    <?php echo $data_txns['complaint']; ?>
                                 </td>
                                 <td>
-                                    <?php echo $data_txns['oldacc']."RWF" ?>
+                                    <?php echo $data_txns['response']; ?>
                                 </td>
-                                <td>
-                                    <?php echo $data_txns['newacc']."RWF" ?>
-                                </td>
-                                <td class="to_be_hidden">
+                                <!-- <td class="to_be_hidden">
                                     <a href="buyer-send-txn-complaint.php?txnid=<?php echo $data_txns['id'] ?>" class="btn btn-warning">
                                         <i class="fa fa-question"></i>
                                     </a>
-                                </td>
+                                </td> -->
                             </tr>
                             <?php
                         }
