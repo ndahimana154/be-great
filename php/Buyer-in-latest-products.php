@@ -12,7 +12,7 @@
                     ORDER BY 
                     product_add_date DESC,
                     product_name ASC
-                    LIMIT 15
+                    LIMIT 20
                 ";
                 $query_latest = mysqli_query($server,$sql_latest);
                 if (mysqli_num_rows($query_latest) < 1) {
