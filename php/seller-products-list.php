@@ -10,6 +10,9 @@
         </a>
     </div>
     <div class="orders-box" id="print_product_list_Content">
+        <?php
+            include('co_print_descriptions.php');
+        ?>
         <h2>
             Products list
         </h2>
