@@ -32,13 +32,4 @@
     .signupform-box .signup-cont {
         width: 80vw;
     }
-    .sub-nav {
-        margin: 0;
-    }
-    .sub-nav .menu-nav {
-        width: 90%;
-    }
-    .sub-nav .menu-nav  .nav-links ul li .search input {
-        width: 10px;
-    }
 }
