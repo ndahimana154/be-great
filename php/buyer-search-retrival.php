@@ -59,6 +59,11 @@
                                                         ?>
                                                     </a>
                                                 </div>
+                                                <p style="font-weight: 600;">
+                                                    <?php
+                                                        echo $data_latest['product_descr'];
+                                                    ?>
+                                                </p>
                                                 <div class="price">
                                                     RWF
                                                     <?php
