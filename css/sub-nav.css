@@ -3,7 +3,7 @@
     margin-top: 10px;
 }
 .sub-nav .menu-nav {
-    width: 70%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -39,7 +39,7 @@
     flex-wrap: nowrap;
     padding: 7px;
     margin: auto;
-    width: 400px;
+    width: 90%;
 }
 .sub-nav .menu-nav  .nav-links ul li .search input {
     flex: 1;

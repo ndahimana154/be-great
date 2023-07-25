@@ -1,3 +1,8 @@
+<?php
+    SESSION_START();
+    include('connect.php');
+    include('buyer-acting_initial-credentials.php');
+?>
 <ul>
     <!-- <hr> -->
     <li>
@@ -8,6 +13,15 @@
     <hr>
     <li>
         <a href="buyer-orders.php">
+        <?php 
+            $get_num = mysqli_query($server,"SELECT * from products_orders 
+                WHERE 
+                client = '$acting_userid'
+                AND 
+                order_status = 'Pending'
+            ");
+            echo mysqli_num_rows($get_num);
+        ?>
             Recent orders
         </a>
     </li>    
