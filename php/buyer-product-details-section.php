@@ -47,6 +47,11 @@
                                             Date added:
                                         </b> <?php echo $data_product['product_add_date'] ?>
                                     </div>
+                                    <div class="location">
+                                        <b>
+                                        Quantity remaining:
+                                        </b> <?php echo $data_product['quantity_remain'] ?>
+                                    </div>
                                   
                                 </div>
                                 <div class="right">
