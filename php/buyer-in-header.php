@@ -17,7 +17,7 @@
                 <div class="left">
                     <b>
                     <?php
-                        echo "Balance: ".$actingbalance."RWF";
+                        echo $actingbalance."RWF";
                     ?>
                     </b>
                 </div>

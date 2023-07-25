@@ -1,3 +1,9 @@
+<form action="buyer-search-results.php" method="get" class="search">
+    <input type="search" name="searchField" placeholder="Search....">
+    <button class="searchBtn" type="submit" name="SearchBTN">
+        <i class="fa fa-search"></i>
+    </button>
+</form>
 <div class="topcategories">
     <h1>
         Top categories
