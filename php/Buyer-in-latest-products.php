@@ -8,6 +8,7 @@
         <div class="latestcont">
             <?php
                 $sql_latest="SELECT * from products 
+                    WHERE quantity_remain > 0
                     ORDER BY 
                     product_add_date DESC,
                     product_name ASC
