@@ -10,7 +10,7 @@
             <?php
                 while ($data_latest=mysqli_fetch_array($get_allproducts)) {
                     ?>
-                    <div class="product-box">
+                    <div class="product-box flex-4product_box">
                         <img src="images/products/Frontimages/<?php echo $data_latest['product_image']; ?>" alt="">
                         <div class="details">
                             <div class="name">
