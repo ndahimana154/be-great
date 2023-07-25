@@ -82,6 +82,7 @@
     <script src="js\seller-print-product-orders.js"></script>
     <script src="js\seller-print-stock-history.js"></script>
     <script src="js\seller-print-products-list.js"></script>
+    <script src="js\buyer-print-transactions.js"></script>
     
     <title>
         BeGreat

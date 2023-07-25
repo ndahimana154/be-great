@@ -4,10 +4,11 @@
 ?>
 <div class="orders-cont">
     <div class="orders-box">
-        <h2>
-            Account transactions
-        </h2>
         <div class="btn-ctrls" style="padding: 10px;">
+            <button class="btn btn-success" id="print_transactions_BTN">
+                <i class="fa fa-print"></i>
+                Print
+            </button>
             <a href="buyer-deposit.php" class="btn btn-success">
                 Deposit money
             </a>
@@ -16,7 +17,13 @@
                 View complaints
             </button>
         </div>
-        <div class="table">
+        <div class=""  id="print_transactions_contents">
+            <?php
+                include('co_buyer_print_descriptions.php');
+            ?>
+            <h2>
+                Account transactions
+            </h2>
             <table class="table table-hover table-responsive">
                 <thead class="bg-primary text-white">
                     <tr>
@@ -39,7 +46,7 @@
                         <th>
                             New balance
                         </th>
-                        <th>
+                        <th class="to_be_hidden">
                             actions
                         </th>
                     </tr>
@@ -90,7 +97,7 @@
                                 <td>
                                     <?php echo $data_txns['newacc']."RWF" ?>
                                 </td>
-                                <td>
+                                <td class="to_be_hidden">
                                     <a href="buyer-send-txn-complaint.php?txnid=<?php echo $data_txns['id'] ?>" class="btn btn-warning">
                                         <i class="fa fa-question"></i>
                                     </a>
