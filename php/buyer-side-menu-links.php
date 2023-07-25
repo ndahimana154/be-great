@@ -1,5 +1,5 @@
 <ul>
-    <hr>
+    <!-- <hr> -->
     <li>
         <a href="buyer-transactions.php">
             Transactions
