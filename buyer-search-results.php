@@ -11,7 +11,7 @@
 <?php  
     include('php\head-tag.php');
 ?>
-<body>
+<body>  
     <?php
         include('php/modal-pages.php')
     ?>

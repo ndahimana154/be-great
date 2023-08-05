@@ -1,5 +1,5 @@
 <div class="sub-nav">
-    <div class="menu-nav">
+    <div class="menu-nav" style="display: flex;flex-direction: row;>
         <div class="nav-links">
             <ul>
                 <li class="cart-li p-3 text-primary" 
@@ -25,26 +25,6 @@
                     </form>
                 </li> -->
             </ul>
-        </div>
-        <div class="profile-menu" style="padding: 10px">
-            <?php 
-                if ($member_acting_profilepic == 'Not set yet') {
-                    ?>
-                    <a class="btn btn-primary"
-                        href="member-new-profile-picture.php">
-                        <i class="fa fa-plus-circle"></i> new profile picture
-                    </a>
-                    <?php
-                }
-                else {
-                    ?>
-                    <button>
-                        <img src="images/members/profile_images/<?php echo $member_acting_profilepic; ?>" alt="">
-                    </button>
-                    <?php
-                }
-            ?>
-            
-        </div>
+                    </div>
     </div>
 </div>

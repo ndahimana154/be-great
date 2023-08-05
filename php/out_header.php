@@ -18,9 +18,9 @@
                     value="<?php if (isset($_GET['searchField'])) {
                         echo $_GET['searchField'];
                         } ?>" placeholder="Search....">
-                <button class="searchBtn" type="submit" name="submitoutsearch">
-                    Search
-                </button>
+                <!-- <button class="searchBtn" type="submit" name="submitoutsearch">
+                    Search 
+                </button> -->
             </form>
             <div class="logBTNz">
                 <button class="logBTN" id="LoginBTN">

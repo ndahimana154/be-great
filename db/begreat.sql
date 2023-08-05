@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2023 at 11:57 AM
+-- Generation Time: Aug 05, 2023 at 12:30 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -66,7 +66,7 @@ CREATE TABLE `buyers_accounts` (
 --
 
 INSERT INTO `buyers_accounts` (`buyer`, `balance`, `acc_id`) VALUES
-(4, 4955590, 1),
+(4, 4963350, 1),
 (3, 0, 2),
 (5, 0, 3),
 (6, 30000, 4);
@@ -163,7 +163,8 @@ INSERT INTO `buyer_money_txns` (`id`, `buyer`, `txndate`, `txntime`, `txntype`, 
 (68, 4, '2023-06-24', '15:59:03', 'Shopping', 4995590, 4985590, 10000),
 (69, 4, '2023-06-24', '15:59:04', 'Shopping', 4985590, 4975590, 10000),
 (70, 4, '2023-06-24', '15:59:05', 'Shopping', 4975590, 4965590, 10000),
-(71, 4, '2023-06-24', '15:59:07', 'Shopping', 4965590, 4955590, 10000);
+(71, 4, '2023-06-24', '15:59:07', 'Shopping', 4965590, 4955590, 10000),
+(72, 4, '2023-07-25', '19:39:01', 'Cancel Shopping', 4955590, 4963350, 7760);
 
 -- --------------------------------------------------------
 
@@ -213,7 +214,8 @@ INSERT INTO `buyer_payment_methods` (`id`, `buyer`, `method`, `method_digits`, `
 (2, 4, 2, '4rewio4389ufdiof', '2023-06-04', '06:40:05', 'Deleted'),
 (3, 4, 3, 'gbgffdreregdfgdfgafd', '2023-06-04', '07:19:43', 'Deleted'),
 (4, 4, 5, 'csffdfdfddfbfdv ', '2023-06-04', '07:20:19', 'Unverfied'),
-(5, 6, 1, '078839283', '2023-06-04', '09:04:58', 'Verified');
+(5, 6, 1, '078839283', '2023-06-04', '09:04:58', 'Verified'),
+(6, 4, 3, '235654456454', '2023-07-27', '06:59:05', 'Unverfied');
 
 -- --------------------------------------------------------
 
@@ -484,9 +486,10 @@ CREATE TABLE `home_sliding_shops` (
 --
 
 INSERT INTO `home_sliding_shops` (`id`, `shop`, `sliding_message`, `sliding_image`, `sliding_from`, `sliding_until`, `sliding_status`) VALUES
-(24, 7, 'Hub of soft drinkings. We serve you a huge amount of non-alcoholic drinks, Feel free to order yours.', '9aaa511fb48afae2d1f2fd28d5efd9fa.png', '2023-06-16 22:01:16', '2023-07-06 23:01', 'Sliding'),
+(24, 7, 'Hub of soft drinkings. We serve you a huge amount of non-alcoholic drinks, Feel free to order yours.', '9aaa511fb48afae2d1f2fd28d5efd9fa.png', '2023-06-16 22:01:16', '2023-07-06 23:01', 'Not sliding'),
 (25, 10, 'Gret shop, new ones only', 'e2bb5e6f86716969c19d0be69327c8e7.png', '2023-06-17 14:34:54', '2023-07-05 15:34', 'Sliding'),
-(26, 5, 'New products are available!', '384a815d55029a54b3ae7606aea7eab7.png', '2023-06-17 15:05:00', '2023-06-27 16:04', 'Sliding');
+(26, 5, 'New products are available!', '384a815d55029a54b3ae7606aea7eab7.png', '2023-06-17 15:05:00', '2023-06-27 16:04', 'Sliding'),
+(27, 5, 'Welcome again', '3333ae9246223db48b513a02c759b948.png', '2023-08-05 13:12:02', '2023-08-03 13:11', 'Sliding');
 
 -- --------------------------------------------------------
 
@@ -594,7 +597,8 @@ INSERT INTO `owner_account_txns` (`id`, `type`, `amount`, `timendate`) VALUES
 (86, 'IN', 10000, '2023-06-24 15:59:04'),
 (87, 'IN', 10000, '2023-06-24 15:59:05'),
 (88, 'IN', 10000, '2023-06-24 15:59:07'),
-(89, 'OUT', 9500, '2023-07-19 08:28:12');
+(89, 'OUT', 9500, '2023-07-19 08:28:12'),
+(90, 'OUT', 7760, '2023-07-25 19:39:01');
 
 -- --------------------------------------------------------
 
@@ -650,7 +654,8 @@ INSERT INTO `products` (`product_id`, `product_name`, `product_image`, `product_
 (30, 'Anana - Brugali SMJ1 Juice', 'Marina Rama Shop - Anana - Brugali SMJ1 Juice - FRONTIMAGE.png', 350, '2023-06-03', 5, 12, 46, 'Juice made from Anana with 80% Sugar and contains many Vitamins and minerals to be consumed by the human body. This juice is especially made for Children and Pregnant woman as it increaes the concentration of Crbohydrates.'),
 (31, 'Chocolate', 'Bonheur Shop - Chocolate - FRONTIMAGE.png', 1000, '2023-06-04', 5, 14, 88, 'Black Chocolate Made of Sugar'),
 (32, 'coconut', 'Bonheur Shop - coconut - FRONTIMAGE.png', 970, '2023-06-04', 6, 14, 90, 'country:japan\r\nexpr:23/08/2023\r\nmanufacture:yokohama\r\n'),
-(33, 'iTel KGTel Phone', 'Marina Rama Shop - iTel KGTel Phone - FRONTIMAGE.png', 10000, '2023-06-24', 1, 12, 23038, 'Non touchscreen phone without Headphone  ');
+(33, 'iTel KGTel Phone', 'Marina Rama Shop - iTel KGTel Phone - FRONTIMAGE.png', 10000, '2023-06-24', 1, 12, 0, 'Non touchscreen phone without Headphone  '),
+(34, 'Camera Gimbal ZX Fengyu 4', 'Marina Rama Shop - Camera Gimbal ZX Fengyu 4 - FRONTIMAGE.png', 39000, '2023-07-25', 1, 12, 19, 'Wirelessly connected with 4 side buttons and links to camera with USB Cable');
 
 -- --------------------------------------------------------
 
@@ -683,7 +688,7 @@ INSERT INTO `products_orders` (`order_id`, `product`, `client`, `product_price`,
 (44, 28, 4, 34000, 1, 34000, '2023-06-06', '13:09:40', 'Delivering', 12),
 (45, 30, 4, 350, 1, 350, '2023-06-06', '13:09:48', 'Cancelled', 12),
 (46, 30, 4, 350, 1, 350, '2023-06-06', '13:09:49', 'Delivering', 12),
-(47, 32, 4, 970, 8, 7760, '2023-06-20', '07:54:03', 'Pending', 14),
+(47, 32, 4, 970, 8, 7760, '2023-06-20', '07:54:03', 'Cancelled', 14),
 (48, 29, 4, 45000, 3, 135000, '2023-06-20', '07:54:30', 'Delivered', 12),
 (49, 29, 4, 45000, 3, 135000, '2023-06-20', '07:54:31', 'Delivered', 12),
 (50, 27, 4, 3700, 5, 18500, '2023-06-20', '08:07:07', 'Delivering', 12),
@@ -809,7 +814,9 @@ INSERT INTO `product_quantity_txns` (`id`, `product`, `txn_type`, `txn_quantity`
 (64, 27, 'OUT', 1, '2023-06-20', '09:50:07'),
 (65, 27, 'IN', 168, '2023-06-25', '07:44:08'),
 (66, 33, 'IN', 23039, '2023-07-19', '08:27:57'),
-(67, 33, 'OUT', 1, '2023-07-19', '08:28:12');
+(67, 33, 'OUT', 1, '2023-07-19', '08:28:12'),
+(68, 34, 'IN', 19, '2023-07-25', '17:58:59'),
+(69, 34, 'IN', 19, '2023-07-25', '18:05:29');
 
 -- --------------------------------------------------------
 
@@ -1415,7 +1422,7 @@ ALTER TABLE `buyers_accounts`
 -- AUTO_INCREMENT for table `buyer_money_txns`
 --
 ALTER TABLE `buyer_money_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `buyer_money_txns_complaints`
@@ -1427,7 +1434,7 @@ ALTER TABLE `buyer_money_txns_complaints`
 -- AUTO_INCREMENT for table `buyer_payment_methods`
 --
 ALTER TABLE `buyer_payment_methods`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `cart_draft`
@@ -1481,13 +1488,13 @@ ALTER TABLE `co_members_types`
 -- AUTO_INCREMENT for table `home_sliding_shops`
 --
 ALTER TABLE `home_sliding_shops`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `owner_account_txns`
 --
 ALTER TABLE `owner_account_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `payment_methods`
@@ -1499,7 +1506,7 @@ ALTER TABLE `payment_methods`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `products_orders`
@@ -1517,7 +1524,7 @@ ALTER TABLE `product_genres`
 -- AUTO_INCREMENT for table `product_quantity_txns`
 --
 ALTER TABLE `product_quantity_txns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `sellers`

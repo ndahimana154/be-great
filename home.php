@@ -6,10 +6,15 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <!-- Add the Bootstrap CSS link here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
 <body>
     <?php
         include('php/modal-pages.php')
     ?>
+    
     <div class="main-gate">
         <?php
             include('php/out_header.php');

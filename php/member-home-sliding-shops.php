@@ -84,6 +84,15 @@
                                     <?php echo $data_txns['sliding_status']; ?>
                                 </td>
                                 <td>
+                                    <?php
+                                        if ($data_txns['sliding_status'] == 'Sliding') {
+                                            ?>
+                                            <a href="member-end-home-sliding-shops.php?end=<?php echo $data_txns['id'] ?>" class="btn btn-danger">
+                                                <i class="fa fa-window-close"></i>
+                                            </a>
+                                            <?php
+                                        }
+                                    ?>
                                     <a href="images/shops/home-sliding/<?php echo $data_txns['sliding_image'] ?>" class="btn btn-warning">
                                         <i class="fa fa-external-link-alt"></i>
                                     </a>
