@@ -1,8 +1,8 @@
-<div class="latestproducts">
-    <h1>
+<div class="">
+    <h1 class="h1 text-primary">
         Top sold 
     </h1>
-    <div class="latestcont">
+    <div style="display: flex;flex-direction: row;flex-wrap: wrap;">
         <?php
             $sql_latest="SELECT 
                 p.product_id, p.product_name, 
@@ -20,7 +20,7 @@
             $query_latest = mysqli_query($server,$sql_latest);
             if (mysqli_num_rows($query_latest) < 1) {
                 ?>
-                <div class="product-box">
+                <div style="width: 250px">
                     <div class="details">
                         <a href="">
                             No products found
@@ -32,11 +32,11 @@
             }
             while ($data_latest=mysqli_fetch_array($query_latest)) {
                 ?>
-                <div class="product-box">
-                    <img src="images/products/Frontimages/<?php echo $data_latest['product_image']; ?>" alt="">
-                    <div class="details">
+                <div style="width: 250px;margin: auto;border-radius: 10px;border: 1px solid gray;margin-top: 10px">
+                    <img style="width: 100%;border-top-left-radius: 10px;border-top-right-radius: 10px;" src="images/products/Frontimages/<?php echo $data_latest['product_image']; ?>" alt="">
+                    <div class="p-2">
                         <div class="name">
-                            <a href="buyer-product-details.php?product=<?php echo $data_latest['product_id']; ?>">
+                            <a class="h3 text-success" style="text-decoration:none;" href="buyer-product-details.php?product=<?php echo $data_latest['product_id']; ?>">
                                 <?php
                                     echo $data_latest['product_name'];
                                 ?>
@@ -57,13 +57,13 @@
                                     ?>
                                 </p>
                             </div>
-                            <div class="price">
+                            <div class="h4">
                                 <?php
                                     echo $data_latest['product_price']."RWF";
                                 ?>
                             </div>
                         </div>
-                        <button class="shopBTN" value="<?php echo $data_latest['product_id']; ?>">
+                        <button class="shopBTN btn btn-primary" value="<?php echo $data_latest['product_id']; ?>">
                             <i class="fa fa-cart-plus"></i>
                             Deliver
                         </button>

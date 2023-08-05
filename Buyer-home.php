@@ -23,18 +23,14 @@
             <?php
                 include("php\buyer-home-sliding-imgs.php");
             ?>
-            <div class="home-part1" style="
-                display: flex;flex-direction:row;
-                flex-wrap: wrap;
-                ">
-                <div class="left" style="flex:1">
+            <div>
+                <!-- <div class="left" style="width: 400px;"> -->
                     <?php
-                        include('php/buyer-product_category.php');
+                        // include('php/buyer-product_category.php');
                     ?>
-                </div>
-                <div class="center" style="flex:3;justify-contents:center;align-items:center;">
+                <!-- </div> -->
+                <div class="center" style="flex: 4;">
                     <?php
-                        include('php\buyer-home-sliding-images.php');
                         include('php/Buyer-in-latest-products.php');
                     ?>
                 </div>

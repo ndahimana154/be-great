@@ -14,7 +14,7 @@
                 ");
             while ($data_slides=mysqli_fetch_array($get_home_sliding)) {
                 ?>
-                <div class="probox" style="width: 300px;
+                <div class="probox" style="width: 400px;
                     margin: 10px;border: 1px solid gray;
                     background: #fff;border-radius: 10px;margin:auto;margin-top: 10px;">
                     <img width="100%" style="border-top-left-radius: 10px;border-top-right-radius: 10px" src="images\shops\home-sliding\<?php echo $data_slides['sliding_image'] ?>" alt="">

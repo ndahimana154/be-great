@@ -1,11 +1,8 @@
-<div class="latestproducts">
-    <!-- <div class="leftlatest">
-    </div> -->
     <div class="rightlatest">
-        <h1>
+        <h1 class="h1 text-primary">
             Latest products
         </h1>
-        <div class="latestcont">
+        <div class="" style="display: flex; flex-direction: row; flex-wrap: wrap;">
             <?php
                 $sql_latest="SELECT * from products 
                     WHERE quantity_remain > 0
@@ -17,7 +14,7 @@
                 $query_latest = mysqli_query($server,$sql_latest);
                 if (mysqli_num_rows($query_latest) < 1) {
                     ?>
-                    <div class="product-box">
+                    <div class="" style="width: 300px;">
                         <div class="details">
                             <a href="">
                                 No products found
@@ -28,11 +25,12 @@
                 }
                 while ($data_latest=mysqli_fetch_array($query_latest)) {
                     ?>
-                    <div class="product-box flex-4product_box">
-                        <img src="images/products/Frontimages/<?php echo $data_latest['product_image']; ?>" alt="">
-                        <div class="details">
-                            <div class="name">
-                                <a href="buyer-product-details.php?product=<?php echo $data_latest['product_id']; ?>">
+                    <div style="width: 300px;margin: auto;border-radius: 10px;margin-top: 10px;" class="bg-light">
+                        <img src="images/products/Frontimages/<?php echo $data_latest['product_image']; ?>" 
+                            width="100%;"style="border-top-left-radius: 10px;border-top-right-radius: 10px;" alt="">
+                        <div class="p-2">
+                            <div class="">
+                                <a class="h3 text-success" style="text-decoration:none" href="buyer-product-details.php?product=<?php echo $data_latest['product_id']; ?>">
                                     <?php
                                         echo $data_latest['product_name'];
                                     ?>
@@ -60,7 +58,7 @@
                                     ?>
                                 </div>
                             </div>
-                            <button class="shopBTN" value="<?php echo $data_latest['product_id']; ?>">
+                            <button class="shopBTN btn btn-primary" value="<?php echo $data_latest['product_id']; ?>">
                                 <i class="fa fa-cart-plus"></i>
                                 Deliver
                             </button>
@@ -74,4 +72,3 @@
             </div>
         </div>
     </div>
-</div>
