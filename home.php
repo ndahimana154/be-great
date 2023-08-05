@@ -20,13 +20,12 @@
             include('php/out_header.php');
         ?>
         <div class="remaining">
-            <div class="home-slideing"
+            <div class="home-slideimg"
                 style="display:flex;
                 flex-direction:row;">
-                <?php
-                    // include('php/product_category.php');
-                    // include('php\home-sliding-images.php');
-                ?>
+               <?php
+                    include("php/out-home-sliding-imgs.php");
+               ?>
             </div>
             <div class="home-part1" style="
                 display: flex;flex-direction:row;
