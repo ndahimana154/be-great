@@ -20,7 +20,9 @@
             include('php/buyer-in-header.php');
         ?>
         <div class="remaining">
-          
+            <?php
+                include("php\buyer-home-sliding-imgs.php");
+            ?>
             <div class="home-part1" style="
                 display: flex;flex-direction:row;
                 flex-wrap: wrap;
