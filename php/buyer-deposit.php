@@ -71,7 +71,7 @@
                                 $trxn_amount = (int) $data_check['transaction_amount'];
                                 $newbalance = $actingbalance + $trxn_amount;
                                 $insert_record = mysqli_query($server,"INSERT into buyer_money_txns
-                                    values(null,'$acting_userid','$trxn_date','$trxn_time','Deposit',$actingbalance,$newbalance)
+                                    values(null,'$acting_userid','$trxn_date','$trxn_time','Deposit',$actingbalance,$newbalance,$trxn_amount)
                                 ");
                                 $update_balance = mysqli_query($server,"UPDATE buyers_accounts
                                     SET balance = '$newbalance'

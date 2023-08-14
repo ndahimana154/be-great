@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2023 at 12:30 PM
+-- Generation Time: Aug 14, 2023 at 06:46 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -388,7 +388,7 @@ CREATE TABLE `co_members` (
 --
 
 INSERT INTO `co_members` (`id`, `Fname`, `Lname`, `Email`, `Phone`, `Type`, `Status`) VALUES
-(000001, 'Ndahimana', 'Bonheur', 'ndahimana154@gmail.com', 0722893974, 1, 'Online'),
+(000001, 'Ndahimana', 'Bonheur', 'ndahimana154@gmail.com', 0722893974, 1, 'Inactive'),
 (000003, 'Tuyishime', 'Aimable', 'tuyishimeaimable@gmail.com', 0785073726, 2, 'Inactive'),
 (000004, 'Tsinda', 'Cyimana', 'tsinda@gmail.com', 0786142964, 3, 'Inactive');
 
