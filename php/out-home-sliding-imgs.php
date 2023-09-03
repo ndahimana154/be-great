@@ -1,3 +1,4 @@
+
 <div class="div">
     <!-- <h2>
         Home sliding images
@@ -15,7 +16,7 @@
             while ($data_slides=mysqli_fetch_array($get_home_sliding)) {
                 ?>
                 <div class="probox" style="width: 300px;
-                    margin: 10px;border: 1px solid gray;
+                    margin: 10px;border: 1px solid gray;co
                     background: #fff;border-radius: 10px;margin:auto;margin-top: 10px;">
                     <img width="100%" style="border-top-left-radius: 10px;border-top-right-radius: 10px" src="images\shops\home-sliding\<?php echo $data_slides['sliding_image'] ?>" alt="">
                     <div class="descccc p-2">
@@ -40,3 +41,10 @@
         </div>
     </div>
 </div>
+<style>
+    /* Custom CSS for hero section */
+    #hero {
+        position: relative;
+        overflow: hidden;
+    }
+</style>

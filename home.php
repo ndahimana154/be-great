@@ -12,12 +12,13 @@
 </head>
 <body>
     <?php
-        include('php/modal-pages.php')
+        include('php/modal-pages.php');
     ?>
     
     <div class="main-gate">
         <?php
             include('php/out_header.php');
+            include("php/hero-test.php");
         ?>
         <div class="remaining">
             <?php
