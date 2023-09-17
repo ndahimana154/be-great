@@ -5,17 +5,6 @@
     .main-header {
         /* display: none; */
     }
-    .main-header .m-hSection {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .main-header .m-hSection .logo a {
-        font-size: 18px;
-    }
-    .main-header .m-hSection .search input {
-        flex: 1;
-    }
     .remaining .topsoldnshops {
         display: flex;
         flex-direction: column;

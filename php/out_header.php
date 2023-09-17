@@ -1,69 +1,32 @@
-<div class="main-header">
-    <div class="m-hSection">
-        <div class="left">
-            <div class="menu-links" style="padding:10px">
-                <!-- <button id="menu-BTN">
-                    <i class="fa fa-bars"></i>
-                </button> -->
-            </div>
-            <div class="logo">
-                <a href="home.php">
-                    BeGreat
-                </a>
-            </div>
-        </div>
-        <div class="right">
-            <form action="search-results.php" method="GET" class="search">
-                <input type="search" name="searchField" 
-                    value="<?php if (isset($_GET['searchField'])) {
-                        echo $_GET['searchField'];
-                        } ?>" placeholder="Search....">
-                <!-- <button class="searchBtn" type="submit" name="submitoutsearch">
-                    Search 
-                </button> -->
-            </form>
-            <div class="logBTNz">
-                <button class="logBTN" id="LoginBTN">
-                    Login
-                </button>
-                /
-                <button class="logBTN" id="signupBTN">
-                    Signup
-                </button> 
-            </div>
-        </div>
-        <!-- <button class="cart">
-            <span>0</span>
-            <i class="fa fa-shopping-cart"></i>
-        </button> -->
+<header>
+    <div class="logo">
+        <a href="home.php">
+            <img src="images\Defaults\be-great logo.png" alt="Be Great Logo">
+        </a>
     </div>
-    <!-- <div id="menulinksBox">
-        <div class="menu-box" id="menu-box">
-            <ul> -->
-                <!-- <li>
-                    <a href="">
-                        Browse
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        About us
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Contact us
-                    </a>
-                </li> -->
-                <!-- <li>
-                    <a href="">
-                        Browse
-                    </a>
-                </li> -->
-            <!-- </ul>
-            <button id="closeMenuBTN">
-                <i class="fa fa-window-close"></i>
+    <div class="nav">
+        <form action="search-results.php" method="GET" class="form-inline" autocomplete="off">
+                <input class="form-control" type="search" name="searchField" value="<?php if (isset($_GET['searchField'])) {
+                    echo $_GET['searchField'];
+                } ?>" placeholder="Search..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+        </form>
+        <div class="logz-btn">
+            <button id="LoginBTN">
+                <i class="fa fa-user"></i>
+                <span>
+                    Login
+                </span>
+            </button>
+            <button id="signupBTN">
+                <i class="fa fa-user-plus"></i>
+                <span>
+                    Signup
+                </span>
             </button>
         </div>
-    </div> -->
-</div>
+    </div>
+</header>
+<div class="height-opt" style="height: 55px"></div>

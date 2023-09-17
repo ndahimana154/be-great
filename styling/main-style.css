@@ -1,0 +1,85 @@
+* {
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #212529;
+}
+
+header {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 45px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+header .logo {
+    flex: 1;
+    padding: 5px;
+}
+header .logo img {
+    width: 150px;
+}
+header .nav {
+    flex: 2;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 5px;
+}
+header .nav form {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+header .nav form input {
+    width: 250px;
+    border: 1px solid #ff6c00;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: 0;
+    color: #212529;
+}
+header .nav form button {
+    padding: 8px;
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #ff6c00;
+    color: #fff;
+    margin-left: -10px;
+}
+header .nav .logz-btn {
+    padding-right: 30px;
+    margin-right: 10px;
+}
+header .nav .logz-btn button {
+    background: #0a99d6;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+}
+@media (max-width: 700px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+@media (max-width: 510px) {
+    header .nav form input {
+        width: 70%;
+    }
+    header .nav .logz-btn button span {
+        display: none;
+    }
+}
