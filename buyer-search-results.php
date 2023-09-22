@@ -21,7 +21,7 @@
         ?>
         <div class="remaining">
             <?php
-                include('php/sub-nav.php');
+                // include('php/sub-nav.php');
                 include('php\buyer-search-retrival.php');
                 // If the results set is less than 1 display the latest products
                 if (mysqli_num_rows($query_latest) < 1) {

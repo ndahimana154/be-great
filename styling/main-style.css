@@ -99,6 +99,10 @@ header .nav .logz-btn button {
     border-radius: 5px;
     color: #fff;
 }
+header .balance {
+    padding: 10px;
+    color: #ff6c00;
+}
 /* Latest Products */
 .latest-products {
     width: 100vw;
