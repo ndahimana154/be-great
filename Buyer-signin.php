@@ -21,16 +21,14 @@
         <?php
             include('php/out_header.php');
         ?>
-        <div class="remaining">
-            <div class="signupform-box">
-                <div class="signup-cont">
+        <div class="buyer-sign-cont" style="">
+            <div class="buyer-sign-wrapper">
+                <div class="sign-form-cont">
                     <div class="header">
                         <h1>
+                            
                             Buyer - Signin
                         </h1>
-                        <a href="">
-                            <i class="fa fa-window-close"></i>
-                        </a>
                     </div>
                     <div class="form-results">
                         <?php
@@ -63,10 +61,10 @@
                                         }
                                         $_SESSION['acting_userid'] = $acting;
                                         ?>
-                                        <p class="succed">
+                                        <div class="succed">
                                             Congrats! Signin succed. 
-                                            <a href="Buyer-home.php">go home</a>
-                                        </p>
+                                            <a href="Buyer-home.php?welcome">go home</a>
+                                        </div>
                                         <?php
                                         // header("location: Buyer-home.php");
                                     }
@@ -74,7 +72,6 @@
                             }
                         ?>
                     </div>
-
                     <form class="sign-box" action="" method="POST"  enctype="multipart/form-data">
                         <p>
                             Email address
@@ -88,16 +85,16 @@
                         <p>
                             <input type="password" class="text-box" name="password"  placeholder="Type...">
                         </p>
-                        <div class="btnz">
+                        <p>
                             <button type="submit" name="signupbtn" class="signup-Btn">
                                 <i class="fa fa-sign-in-alt"></i>
                                 Signin
                             </button>
-                            <button type="reset" class="clear-Btn">
+                            <!-- <button type="reset" class="clear-Btn">
                                 <i class="fa fa-window-close"></i>
                                 Clear form
-                            </button>
-                        </div>
+                            </button> -->
+                        </p>
                     </form>
                 </div>
             </div>

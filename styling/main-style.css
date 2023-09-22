@@ -6,12 +6,35 @@
     text-decoration: none;
     overflow-x: hidden;
 }
+button {
+    cursor: pointer ;
+}
 h1 {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 10px;
+}
+.form-results {
+    /* padding: ; */
+}
+.form-results div {
+    padding: 5px;
+    border-radius: 4px;
+    color: #fff;
+    width: 86%;
+    margin: 5px;
+}
+.form-results .failed {
+    background: rgb(212, 63, 63);
+}
+.form-results .succed {
+    background: rgb(1, 138, 127);
+}
+.form-results .succed a {
+    color: #fff;
+    text-decoration: underline;
 }
 body {
     background: #212529;
@@ -232,6 +255,106 @@ header .nav .logz-btn button {
 .hot-pro .hot-row .hot-box img {
     width: 100%;
 }
+
+
+/* Buyer Sign in */
+.buyer-sign-cont {
+    height: 100vh;
+    background: url('./../images/Defaults/Buyer-sign-in-form-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.buyer-sign-cont .buyer-sign-wrapper {
+    height: 100vh;
+    background: #21252978;
+}
+.buyer-sign-cont .buyer-sign-wrapper .sign-form-cont {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #3b4146b0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.buyer-sign-cont .buyer-sign-wrapper .sign-form-cont form p {
+    margin: 5px;
+    color: #fff;
+    width: 90%;
+}
+.buyer-sign-cont .buyer-sign-wrapper .sign-form-cont form p input {
+    width: 95%;
+    border: 2px solid #0a99d6;
+    background: transparent;
+    color: #fff;
+}
+.buyer-sign-cont .buyer-sign-wrapper .sign-form-cont form p button {
+    color: #fff;
+    padding: 5px;
+    border: 0;
+    float: right;
+    border-radius: 5px;
+    margin-right: 2%;
+    background: #ff6c00;
+}
+
+
+
+/* Modals */
+/* Select sign in account modal */
+button.close-modal {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+button.close-modal i {
+    color: #d33030;
+}
+button.cancel-modal {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    background: rgba(0, 0, 0, 0.173);
+    cursor: pointer;
+    font-weight: 700;
+}
+#s-in-modal .sign-in-type {
+    margin: auto;
+    margin-top: 30px;
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+}
+/* #s-t-modal .signup-type .s-t-cont {} */
+#s-in-modal .sign-in-type .s-in-cont .header {
+    padding: 10px;
+}
+#s-in-modal .sign-in-type .s-in-cont .header h2 {
+    flex: 2;
+    font-size: 20px;
+    color: #ff6c00;
+}
+#s-in-modal .sign-in-type .s-in-cont  .s-in-body {
+    padding: 10px;
+}
+#s-in-modal .sign-in-type .s-in-cont  .s-in-body p {
+    color: #3b4146;
+}
+#s-in-modal .sign-in-type .s-in-cont  .s-in-body .b-cont {
+    padding: 10px;
+}
+#s-in-modal .sign-in-type .s-in-cont  .s-in-body .b-cont a {
+    background: #ff6c00;
+    padding: 7px;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+/* Responsivenes */
 @media (max-width: 700px) {
     header {
         display: flex;
@@ -264,6 +387,9 @@ header .nav .logz-btn button {
         width: 100vw;
     }
     .slide-box {
+        width: 90%;
+    }
+    .buyer-sign-cont .buyer-sign-wrapper .sign-form-cont {
         width: 90%;
     }
 }

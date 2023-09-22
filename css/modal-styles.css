@@ -11,19 +11,11 @@
 #s-in-modal {
     display: none;
 }
-#s-t-modal .signup-type,
-#s-in-modal .sign-in-type {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    background: #fff;
-    border-radius: 10px;
+#s-t-modal .signup-type {
+    
 }
-#s-t-modal .signup-type .s-t-cont,
-#s-in-modal .sign-in-type .s-in-cont {
-    padding: 10px;
+#s-t-modal .signup-type .s-t-cont {
+    /* padding: 10px; */
 }
 #s-t-modal .signup-type .s-t-cont .header,
 #s-in-modal .sign-in-type .s-in-cont .header {
@@ -31,11 +23,10 @@
     flex-direction: row;
     flex-wrap: nowrap;
 }
-#s-t-modal .signup-type .s-t-cont .header h2,
-#s-in-modal .sign-in-type .s-in-cont .header h2 {
-    flex: 2;
+#s-t-modal .signup-type .s-t-cont .header h2 {
+    /* flex: 2;
     font-size: 20px;
-    color: #007ff5;
+    color: #ff6c00; */
 }
 #s-t-modal .signup-type .s-t-cont .header #close-s-t-btn,
 #s-in-modal .sign-in-type .s-in-cont .header #close-s-in-btn {
@@ -47,35 +38,21 @@
 #s-in-modal .sign-in-type .s-in-cont .header #close-s-in-btn i {
     color: #d33030;
 }
-#s-t-modal .signup-type .s-t-cont .s-t-body,
-#s-in-modal .sign-in-type .s-in-cont  .s-in-body {
-    padding: 10px;
+#s-t-modal .signup-type .s-t-cont .s-t-body {
+    /* padding: 10px; */
 }
-#s-t-modal .signup-type .s-t-cont .s-t-body p,
-#s-in-modal .sign-in-type .s-in-cont  .s-in-body p {
-    font-weight: 900;
+#s-t-modal .signup-type .s-t-cont .s-t-body p {
+    /* font-weight: 900; */
 }
-#s-t-modal .signup-type .s-t-cont .s-t-body .b-cont,
-#s-in-modal .sign-in-type .s-in-cont  .s-in-body .b-cont {
+#s-t-modal .signup-type .s-t-cont .s-t-body .b-cont {
     margin: 10px;
 }
-#s-t-modal .signup-type .s-t-cont .s-t-body .b-cont a,
-#s-in-modal .sign-in-type .s-in-cont  .s-in-body .b-cont a {
-    background: #800080;
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 5px;
-    color: #fff;
-    text-decoration: none;
+#s-t-modal .signup-type .s-t-cont .s-t-body .b-cont a {
+    
 }
 #s-t-modal .signup-type #cancel-s-t-btn,
 #s-in-modal .sign-in-type #cancel-s-in-btn {
-    width: 100%;
-    padding: 10px;
-    border: 0;
-    background: rgba(0, 0, 0, 0.173);
-    cursor: pointer;
-    font-weight: 700;
+    
     /* color: #fff; */
 }
 

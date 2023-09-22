@@ -9,12 +9,10 @@ $('document').ready(function () {
         $('#s-in-modal').css({
             "display":"none"
         })
-        location.reload()
     })
     $('#cancel-s-in-btn').click(function() {
         $('#s-in-modal').css({
             "display":"none"
         })
-        location.reload()
     })
 })

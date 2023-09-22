@@ -6,7 +6,7 @@
         <h2>
             Account type.
         </h2>
-        <button id="close-s-in-btn">
+        <button class="close-modal" id="close-s-in-btn">
             <i class="fa fa-window-close"></i>
         </button>
     </div>
@@ -28,7 +28,7 @@
         </div>
     </div>
 </div>
-<button id="cancel-s-in-btn">
+<button class="cancel-modal" id="cancel-s-in-btn">
     <i class="fa fa-window-close"></i>
     Cancel
 </button>
