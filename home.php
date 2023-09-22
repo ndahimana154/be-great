@@ -17,6 +17,8 @@
 <body>
     <?php
         include('php/out_header.php');
+        include('php/hero.php');
+        include('php/Latest-products.php');
     ?>
     <!-- <div class="hero">
         <div class="hero-box">
@@ -33,123 +35,33 @@
         </div>
     </div> -->
     <div class="main-gate">
-        <div class="hero-section">
-            <div class="row">
-                <!-- First Column - Sliding Images -->
-                <div class="col-md-6">
-                    <div class="h-100"> <!-- Add the 'h-100' class for equal height -->
-                        <div id="hero-carousel" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <!-- Slide 1 -->
-                                <div class="carousel-item active">
-                                    <img src="https://via.placeholder.com/900x600" class="d-block w-100" alt="Image 1">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>Shop Name 1</h3>
-                                        <p>Shop Description 1</p>
-                                        <a href="#" class="btn btn-primary">
-                                            <i class="fa fa-shopping-cart"></i> Visit Shop
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Slide 2 -->
-                                <div class="carousel-item">
-                                    <img src="https://via.placeholder.com/800x600" class="d-block w-100" alt="Image 2">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>Shop Name 2</h3>
-                                        <p>Shop Description 2</p>
-                                        <a href="#" class="btn btn-primary">
-                                            <i class="fa fa-shopping-cart"></i> Visit Shop
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Slide 3 (Add more slides as needed) -->
-                                <div class="carousel-item">
-                                    <img src="https://via.placeholder.com/800x600" class="d-block w-100" alt="Image 3">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h3>Shop Name 3</h3>
-                                        <p>Shop Description 3</p>
-                                        <a href="#" class="btn btn-primary">
-                                            <i class="fa fa-shopping-cart"></i> Visit Shop
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Add more slides with the same structure as above -->
-                            </div>
-                            <a class="carousel-control-prev" href="#hero-carousel" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#hero-carousel" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                
-                <!-- Second Column - Most Trending Products -->
-                <div class="col-md-2">
-                    <div class="card h-100"> <!-- Add the 'h-100' class for equal height -->
-                        <div class="trending-products">
-                            <h2>Most Trending Products</h2>
-                            <div class="card">
-                                <!-- Product 1 content here -->
-                            </div>
-                            <div class="card">
-                                <!-- Product 2 content here -->
-                            </div>
-                            <!-- Add more product cards with placeholder images and contents as needed -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Third Column - Categories -->
-                <div class="col-md-4">
-                    <div class="card h-100"> <!-- Add the 'h-100' class for equal height -->
-                        <div class="categories">
-                            <h2>Categories</h2>
-                            <div class="card">
-                                <!-- Category 1 content here -->
-                            </div>
-                            <div class="card">
-                                <!-- Category 2 content here -->
-                            </div>
-                            <!-- Add more category cards with placeholder images and contents as needed -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
 
         <div class="remaining">
             <?php
                 // include("php/out-home-sliding-imgs.php");
                 // include('php\home-sliding-images.php');
             ?>
-            <div class="home-part1" style="
+            <!-- <div class="home-part1" style="
                 display: flex;flex-direction:row;
                 flex-wrap: wrap;
                 ">
                 <div class="left" style="flex:1">
                     <?php
-                        include('php/product_category.php');
+                        // include('php/product_category.php');
 
                     ?>
-                </div>
-                <div class="center" style="flex:3;justify-contents:center;align-items:center;">
+                </div> -->
+                <!-- <div class="center" style="flex:3;justify-contents:center;align-items:center;"> -->
                     <?php
-                        include('php/Latest-products.php');
+                        // include('php/Latest-products.php');
                     ?>
                 </div>
-                <div class="right" style="flex: 1;">
+                <!-- <div class="right" style="flex: 1;"> -->
                     <?php
-                        include('php/home-top-shops.php');
+                        // include('php/home-top-shops.php');
                     ?>
-                </div>
+                <!-- </div> -->
             </div>
             <?php
                 // include('php/top-shops.php');
