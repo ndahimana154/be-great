@@ -11,26 +11,27 @@
 <?php  
     include('php\head-tag.php');
 ?>
+<head>
+    <!-- Font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styling/main-style.css">
+</head>
 <body>  
     <?php
-        include('php/modal-pages.php')
+        include('php/modal-pages.php');
+        include('php/buyer-in-header.php');
     ?>
-    <div class="main-gate">
+    <div class="remaining">
         <?php
-            include('php/buyer-in-header.php');
+            // include('php/sub-nav.php');
+            include('php\buyer-search-retrival.php');
+            // If the results set is less than 1 display the latest products
+            if (mysqli_num_rows($query_latest) < 1) {
+                include('php/Buyer-in-latest-products.php');
+            }
+            include('php/big-footer.php'); 
+            include('php/developer-footer.php');
         ?>
-        <div class="remaining">
-            <?php
-                // include('php/sub-nav.php');
-                include('php\buyer-search-retrival.php');
-                // If the results set is less than 1 display the latest products
-                if (mysqli_num_rows($query_latest) < 1) {
-                    include('php/Buyer-in-latest-products.php');
-                }
-                include('php/big-footer.php'); 
-                include('php/developer-footer.php');
-            ?>
-        </div>
     </div>
 </body>
 </html>
