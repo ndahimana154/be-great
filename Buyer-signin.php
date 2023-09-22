@@ -86,10 +86,6 @@
                             <i class="fa fa-sign-in-alt"></i>
                             Signin
                         </button>
-                        <!-- <button type="reset" class="clear-Btn">
-                            <i class="fa fa-window-close"></i>
-                            Clear form
-                        </button> -->
                     </p>
                 </form>
             </div>

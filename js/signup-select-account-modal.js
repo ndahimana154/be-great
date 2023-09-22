@@ -9,18 +9,16 @@ $('document').ready(function () {
     //     $(this).css({
     //         "display":"none"
     //     })
-    //     location.reload()
     // })
     $('#close-s-t-btn').click(function() {
         $('#s-t-modal').css({
             "display":"none"
         })
-        location.reload()
+        // location.reload()
     })
     $('#cancel-s-t-btn').click(function() {
         $('#s-t-modal').css({
             "display":"none"
         })
-        location.reload()
     })
 })

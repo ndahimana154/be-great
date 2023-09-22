@@ -25,7 +25,7 @@
         </div>
     </div>
 </div>
-<button id="cancel-s-t-btn">
+<button class="cancel-modal" id="cancel-s-t-btn">
     <i class="fa fa-window-close"></i>
     Cancel
 </button>
