@@ -14,7 +14,6 @@ $('document').ready(function () {
         $('#s-t-modal').css({
             "display":"none"
         })
-        // location.reload()
     })
     $('#cancel-s-t-btn').click(function() {
         $('#s-t-modal').css({
