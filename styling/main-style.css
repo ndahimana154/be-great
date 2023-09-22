@@ -271,10 +271,8 @@ header .nav .logz-btn button {
 }
 .buyer-sign-cont .buyer-sign-wrapper .sign-form-cont {
     width: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    margin: auto;
+    margin-top: 40px;
     background: #3b4146b0;
     padding: 10px;
     border-radius: 5px;
