@@ -32,7 +32,6 @@
     </div>
     <div class="remaining">
         <?php
-            include("php\buyer-home-sliding-imgs.php");
         ?>
         <div>
             <!-- <div class="left" style="width: 400px;"> -->
