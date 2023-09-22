@@ -9,6 +9,11 @@
 <?php  
     include('php\head-tag.php');
 ?>
+<head>
+    <!-- Font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styling/main-style.css">
+</head>
 <body>
     <?php
         include('php/modal-pages.php')
@@ -17,16 +22,13 @@
         <?php
             include('php/out_header.php');
         ?>
-        <div class="remaining">
-            <div class="signupform-box">
-                <div class="signup-cont">
+        <div class="buyer-sign-cont">
+            <div class="buyer-sign-wrapper">
+                <div class="sign-form-cont">
                     <div class="header">
                         <h1>
                             Member - Signin
                         </h1>
-                        <a href="">
-                            <i class="fa fa-window-close"></i>
-                        </a>
                     </div>
                     <div class="form-results">
                         <?php
@@ -67,10 +69,10 @@
                                             WHERE id = '$acting';
                                         ");
                                         ?>
-                                        <p class="succed">
-                                            Congrats! Signin succed. Click 
-                                            <a href="Member-home.php">here</a> to go home
-                                        </p>
+                                        <div class="succed">
+                                            Congrats! Signin succed.
+                                            <a href="Member-home.php?welcome">Go home</a>
+                                        </div>
                                         <?php
                                         // header("location: Buyer-home.php");
                                     }
@@ -92,16 +94,12 @@
                         <p>
                             <input type="password" class="text-box" name="password"  placeholder="Type...">
                         </p>
-                        <div class="btnz">
+                        <p>
                             <button type="submit" name="signupbtn" class="signup-Btn">
                                 <i class="fa fa-sign-in-alt"></i>
                                 Signin
                             </button>
-                            <button type="reset" class="clear-Btn">
-                                <i class="fa fa-window-close"></i>
-                                Clear form
-                            </button>
-                        </div>
+                        </p>
                     </form>
                 </div>
             </div>

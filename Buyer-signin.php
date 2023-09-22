@@ -23,7 +23,6 @@
             <div class="sign-form-cont">
                 <div class="header">
                     <h1>
-                        
                         Buyer - Signin
                     </h1>
                 </div>
