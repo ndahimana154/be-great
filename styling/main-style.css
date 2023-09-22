@@ -301,8 +301,43 @@ header .balance {
     margin-right: 2%;
     background: #ff6c00;
 }
-
-
+/* Shops sections */
+.shop-section {
+    width: 90%;
+    margin: auto;
+}
+.shop-section .shop-cont {
+    margin-top: 10px;
+}
+.shop-section .shop-cont .header {
+    display: flex;
+}
+.shop-section .shop-cont .header img {
+    width: 60px;
+    border-radius: 10px;
+}
+.shop-section .shop-cont .details {
+    margin-top: 10px;
+}
+.shop-section .shop-cont .details h2 {
+    display: flex;
+}
+.shop-section .shop-cont .details h2 img {
+    width: 40px;
+}
+.shop-section .shop-cont .details h2 span {
+    color: #0a99d6;
+    margin-top: 10px;
+}
+.shop-section .shop-cont .details .loc {
+    padding: 10px;
+    color: #bababa;
+}
+/* Shop by categoriex */
+.categories {
+    width: 90%;
+    margin: auto;
+}
 
 /* Modals */
 /* Select sign in account modal */

@@ -164,23 +164,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
-.remaining .latestproducts {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* background: var(--simple-headerBG); */
-}
-.remaining .latestproducts .leftlatest {
-    flex: 1;
-}
-.remaining .latestproducts .rightlatest {
-    flex: 5;
-}
-.remaining .latestproducts .latestcont{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 
 
 

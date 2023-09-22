@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/sub-nav.css">
     <link rel="stylesheet" href="css/top-shops.css">
     <link rel="stylesheet" href="css/deliver-form.css">  
-    <link rel="stylesheet" href="css\buyer-view-shops.css"> 
     <link rel="stylesheet" href="css\dev-footer.css"> 
     <link rel="stylesheet" href="css/buyersearch.css">
     <link rel="stylesheet" href="css/member-home-part-div.css">
