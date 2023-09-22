@@ -1,5 +1,8 @@
-<div class="latestproducts">
-    <div class="latestcont">
+<div class="hot-pro">
+    <h1>
+        ON-HOT DEALS
+    </h1>
+    <div class="hot-row">
         <?php
             $sql_latest="SELECT 
                 p.product_id, p.product_name, 
@@ -11,12 +14,12 @@
                 INNER JOIN products_orders po ON p.product_id = po.product
                 GROUP BY p.product_id
                 ORDER BY num_orders DESC
-                LIMIT 15;
+                LIMIT 3;
             ";
             $query_latest = mysqli_query($server,$sql_latest);
             if (mysqli_num_rows($query_latest) < 1) {
                 ?>
-                <div class="product-box">
+                <div class="hot-box">
                     <div class="details">
                         <a href="">
                             No products found
@@ -28,31 +31,27 @@
             }
             while ($data_latest=mysqli_fetch_array($query_latest)) {
                 ?>
-                <div class="product-box">
+                <div class="hot-box">
                     <img src="images/products/Frontimages/<?php echo $data_latest['product_image']; ?>" alt="">
-                    <div class="details">
-                        <div class="name">
-                            <a href="buyer-product-details.php?product=<?php echo $data_latest['product_id']; ?>">
+                    <div class="hot-info">
+                        <a href="buyer-product-details.php?product=<?php echo $data_latest['product_id']; ?>" class="hot-name">
+                            <?php
+                                echo $data_latest['product_name'];
+                            ?>
+                        </a>
+                        <div class="hot-shop">
+                            <a href="view-shops.php?shop=<?php echo $data_latest['shop'];?>" class="shop">
                                 <?php
-                                    echo $data_latest['product_name'];
+                                    $shop_id = $data_latest['shop'];
+                                    $getshop = mysqli_fetch_array(mysqli_query($server,"SELECT * from shops WHERE shop_id='$shop_id'"));
+                                    echo $getshop['shop_name'];
                                 ?>
                             </a>
-                        </div>
-                        <div class="prinshop">
-                            <div class="shop">
-                                <a href="view-shops.php?shop=<?php echo $data_latest['shop'];?>">
-                                    <?php
-                                        $shop_id = $data_latest['shop'];
-                                        $getshop = mysqli_fetch_array(mysqli_query($server,"SELECT * from shops WHERE shop_id='$shop_id'"));
-                                        echo $getshop['shop_name'];
-                                    ?>
-                                </a>
-                                <p>
-                                    <?php
-                                        echo $data_latest['product_descr']
-                                    ?>
-                                </p>
-                            </div>
+                            <p class="desc">
+                                <?php
+                                    echo $data_latest['product_descr']
+                                ?>
+                            </p>
                             <div class="price">
                                 RWF
                                 <?php
@@ -61,15 +60,7 @@
                             </div>
                         </div>
                         <button class="deliverout" 
-                            value="<?php echo $data_latest['product_id']; ?>"
-                            style="width: 100%;
-                                background: var(--main-actingcolor);
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 0;
-                                color: var(--main-white);
-                                cursor: pointer;
-                                margin-top: 10px;">
+                            value="<?php echo $data_latest['product_id']; ?>">
                             <i class="fa fa-cart-plus"></i>
                             Deliver
                         </button>

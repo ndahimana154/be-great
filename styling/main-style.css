@@ -127,10 +127,11 @@ header .nav .logz-btn button {
     width: 100vw;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 /* Hero categories */
 .hero-cate {
-    width: 400px;
+    flex: 1;
 }
 .hero-cate .cate-row {
     display: flex;
@@ -154,7 +155,7 @@ header .nav .logz-btn button {
     margin-left: 5px;
 }
 .home-slide {
-    width: 1000px;
+    flex: 2;
 }
 .home-slide .slide-row {
     display: flex;
@@ -162,7 +163,7 @@ header .nav .logz-btn button {
     flex-wrap: wrap;
 }
 .home-slide .slide-row .slide-box {
-    width: 500px;
+    width: 95%;
     display: flex;
     flex-wrap: nowrap;
     margin: 10px;
@@ -188,6 +189,48 @@ header .nav .logz-btn button {
     border-radius: 5px;
     color: #fff;
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+.hot-pro {
+    flex: 2;
+}
+.hot-pro .hot-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.hot-pro .hot-row .hot-box {
+    width: 150px;
+    margin: 10px;
+    border-radius: 5px;
+    background: #3b4146;
+}
+.hot-pro .hot-row .hot-box .hot-info {
+    padding: 5px;
+}
+.hot-pro .hot-row .hot-box .hot-info .hot-name {
+    color: #fff;
+}
+.hot-pro .hot-row .hot-box .hot-info .hot-shop .shop {
+    color: #ff6c00;
+}
+.hot-pro .hot-row .hot-box .hot-info .hot-shop .desc {
+    color: #bababa;
+}
+.hot-pro .hot-row .hot-box .hot-info .hot-shop .price {
+    color: #bababa;
+}
+.hot-pro .hot-row .hot-box .hot-info button {
+    color: #fff;
+    background: #ff6c00;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+}
+.hot-pro .hot-row .hot-box img {
+    width: 100%;
 }
 @media (max-width: 700px) {
     header {
