@@ -40,7 +40,7 @@
                             ?>
                         </a>
                         <div class="hot-shop">
-                            <a href="view-shops.php?shop=<?php echo $data_latest['shop'];?>" class="shop">
+                            <a href="Buyer-view-shops.php?shop=<?php echo $data_latest['shop'];?>" class="shop">
                                 <?php
                                     $shop_id = $data_latest['shop'];
                                     $getshop = mysqli_fetch_array(mysqli_query($server,"SELECT * from shops WHERE shop_id='$shop_id'"));

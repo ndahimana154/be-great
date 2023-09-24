@@ -26,34 +26,13 @@
         <div class="right">
             <?php
                 include('php/hero.php');
-                include('php/Latest-products.php');           
+                include('php/buyer-Latest-products.php');           
+            ?>
+            <?php
+                include('php/big-footer.php'); 
+                include('php/developer-footer.php');
             ?>
         </div>
-    </div>
-    <div class="remaining">
-        <?php
-        ?>
-        <div>
-            <!-- <div class="left" style="width: 400px;"> -->
-                <?php
-                    // include('php/buyer-product_category.php');
-                ?>
-            <!-- </div> -->
-            <div class="center" style="flex: 4;">
-                <?php
-                    include('php/Buyer-in-latest-products.php');
-                ?>
-            </div>
-            <div class="right" style="flex: 1;">
-                <?php
-                    include('php/buyer-top-sold-products.php');
-                ?>
-            </div>
-        </div>
-        <?php
-            include('php/big-footer.php'); 
-            include('php/developer-footer.php');
-        ?>
     </div>
 </body>
 </html>

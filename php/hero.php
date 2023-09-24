@@ -4,7 +4,6 @@
             include('php\buyer-product_category.php');
             include("php\buyer-home-sliding-images.php");
             include('php\buyer-top-sold-products.php');
-            
         }
         else {
             include('product_category.php');

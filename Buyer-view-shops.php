@@ -114,7 +114,6 @@
                                                 </a>
                                             </div>
                                             <div class="prinshop">
-                                                </div>
                                                 <p>
                                                     <?php
                                                         echo $data_latest['product_descr'];
