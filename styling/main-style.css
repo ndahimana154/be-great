@@ -358,7 +358,8 @@ button.cancel-modal {
     font-weight: 700;
 }
 #s-in-modal .sign-in-type,
-#s-t-modal .signup-type {
+#s-t-modal .signup-type, 
+.sign-in-type {
     margin: auto;
     margin-top: 30px;
     width: 400px;
@@ -367,29 +368,38 @@ button.cancel-modal {
 }
 /* #s-t-modal .signup-type .s-t-cont {} */
 #s-in-modal .sign-in-type .s-in-cont .header,
-#s-t-modal .signup-type .s-t-cont .header {
+#s-t-modal .signup-type .s-t-cont .header,
+.s-in-cont .header {
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 #s-in-modal .sign-in-type .s-in-cont .header h2,
-#s-t-modal .signup-type .s-t-cont .header h2 {
+#s-t-modal .signup-type .s-t-cont .header h2,
+.s-in-cont .header h2 {
     flex: 2;
     font-size: 20px;
     color: #ff6c00;
 }
 #s-in-modal .sign-in-type .s-in-cont  .s-in-body,
-#s-t-modal .signup-type .s-t-cont .s-t-body {
+#s-t-modal .signup-type .s-t-cont .s-t-body,
+.s-in-cont .s-in-body {
     padding: 10px;
 }
 #s-in-modal .sign-in-type .s-in-cont  .s-in-body p,
-#s-t-modal .signup-type .s-t-cont .s-t-body p {
+#s-t-modal .signup-type .s-t-cont .s-t-body p,
+.s-in-cont p {
     color: #3b4146;
 }
 #s-in-modal .sign-in-type .s-in-cont  .s-in-body .b-cont,
-#s-t-modal .signup-type .s-t-cont .s-t-body .b-cont {
+#s-t-modal .signup-type .s-t-cont .s-t-body .b-cont,
+.s-in-cont .b-cont {
     padding: 10px;
 }
 #s-in-modal .sign-in-type .s-in-cont  .s-in-body .b-cont a,
-#s-t-modal .signup-type .s-t-cont .s-t-body .b-cont a {
+#s-t-modal .signup-type .s-t-cont .s-t-body .b-cont a,
+.s-in-cont .b-cont a {
     background: #ff6c00;
     padding: 7px;
     margin-right: 10px;

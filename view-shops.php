@@ -138,9 +138,6 @@
                                     <?php
                                 }
                             ?>
-                            <div class="products-box">
-                                <img src="" alt="">
-                            </div>
                         </div>
                     </div>
                 </div>

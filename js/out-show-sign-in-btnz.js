@@ -4,10 +4,14 @@ $('document').ready(function() {
             "display": 'block'
         })
     })
-    $('.canceldeli').click(function() {
+    $('#canceldeli').click(function() {
         $('.outdelivermodal').css({
             "display": 'none'
         })
-        location.reload()
     })
-})
+    $('#cancel-deliveroutBTN').click(function() {
+        $('.outdelivermodal').css({
+            "display": 'none'
+        })
+    })
+}) 

@@ -137,21 +137,8 @@
     position: fixed;
     display: none;
 }
-.deliver-cont-mod {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    background: #fff;
-    border-radius: 10px;
-}
-.del-box .header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-.del-box .header h2 {
+
+/* .del-box .header h2 {
     flex: 2;
     color: #007ff5;
     font-size: 20px;
@@ -185,7 +172,7 @@
 .outLoginBTN {
     background: #007ff5;
 }
-
+ */
 
 
 

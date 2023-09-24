@@ -73,21 +73,22 @@
 
 <!-- The signed out deliver modal -->
 <div class="outdelivermodal">
-    <di class="deliver-cont-mod">
-        <div class="del-box">
+    <div class="sign-in-type">
+        <div class="s-in-cont">
             <div class="header">
                 <h2>
                     Login first
                 </h2>
-                <button class="canceldeli">
+                <button class="close-modal" id="canceldeli">
                     <i class="fa fa-window-close"></i>
                 </button>
             </div>
-            <div class="deliv-content">
-                <div class="aa">
+            <hr>
+            <div class="s-in-body">
+                <p>
                     Please login first or create a buyer account for more!
-                </div>
-                <div class="btndel">
+                </p>
+                <div class="b-cont">
                     <a href="Buyer-signin.php" class="btn outLoginBTN">
                         Login
                     </a>
@@ -96,8 +97,12 @@
                     </a>
                 </div>
             </div>
+            <button class="cancel-modal" id="cancel-deliveroutBTN">
+                <i class="fa fa-window-close"></i>
+                Cancel
+            </button>
         </div>
-    </di>
+    </div>
 </div>
 
 
