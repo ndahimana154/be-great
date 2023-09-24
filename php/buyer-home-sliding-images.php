@@ -8,7 +8,7 @@
                 home_sliding_shops,shops
                 WHERE shops.shop_id = home_sliding_shops.shop
                 AND home_sliding_shops.sliding_status = 'Sliding'
-                -- AND home_sliding_shops.sliding_until > now()
+                AND home_sliding_shops.sliding_until > now()
             ");
             if (mysqli_num_rows($getsliding) < 1) {
             
