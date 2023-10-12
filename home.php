@@ -19,57 +19,9 @@
         include('php/out_header.php');
         include('php/hero.php');
         include('php/Latest-products.php');
+        include('php/big-footer.php'); 
+        include('php/developer-footer.php');
     ?>
-    <!-- <div class="hero">
-        <div class="hero-box">
-            <img src="images/products/Frontimages/Marina Rama Shop - Camera Gimbal ZX Fengyu 4 - FRONTIMAGE.png" alt="">
-            <h2>
-                Camera Gimbal ZXF103
-            </h2>
-            <p>
-                <span class="desc">
-                    Shop description: 
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam obcaecati dolor adipisci corrupti alias nulla, quam error esse fugiat architecto eligendi iusto eius in magni pariatur soluta itaque eaque doloribus.
-                </span>
-            </p>
-        </div>
-    </div> -->
-    <div class="main-gate">
-     
-
-        <div class="remaining">
-            <?php
-                // include("php/out-home-sliding-imgs.php");
-                // include('php\home-sliding-images.php');
-            ?>
-            <!-- <div class="home-part1" style="
-                display: flex;flex-direction:row;
-                flex-wrap: wrap;
-                ">
-                <div class="left" style="flex:1">
-                    <?php
-                        // include('php/product_category.php');
-
-                    ?>
-                </div> -->
-                <!-- <div class="center" style="flex:3;justify-contents:center;align-items:center;"> -->
-                    <?php
-                        // include('php/Latest-products.php');
-                    ?>
-                </div>
-                <!-- <div class="right" style="flex: 1;"> -->
-                    <?php
-                        // include('php/home-top-shops.php');
-                    ?>
-                <!-- </div> -->
-            </div>
-            <?php
-                // include('php/top-shops.php');
-                include('php/big-footer.php'); 
-                include('php/developer-footer.php');
-            ?>
-        </div>
-    </div>
      <!-- Include jQuery and Bootstrap JS -->
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <script src="js\jquery-3.6.0.js"></script> -->

@@ -22,8 +22,12 @@
         include('php/buyer-in-header.php');
     ?>
     <div class="low-container">
-        <div class="left"></div>
-        <div class="right">
+        <div class="top">
+            <?php
+                include('php/buyer-side-menu-links.php');
+            ?>
+        </div>
+        <div class="bottom">
             <?php
                 include('php/hero.php');
                 include('php/buyer-Latest-products.php');           

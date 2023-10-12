@@ -406,6 +406,14 @@ button.cancel-modal {
     border-radius: 5px;
     color: #fff;
 }
+
+
+/* Buyer Side menu */
+.low-container {
+    display: flex;
+    flex-direction: row;
+}
+
 /* Responsivenes */
 @media (max-width: 700px) {
     header {

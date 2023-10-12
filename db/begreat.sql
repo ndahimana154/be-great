@@ -638,7 +638,7 @@ CREATE TABLE `products` (
   `product_genre` int(11) NOT NULL,
   `shop` int(11) NOT NULL,
   `quantity_remain` int(11) NOT NULL DEFAULT 0,
-  `product_descr` text NOT NULL DEFAULT 'Product description is not yet added but we hope to add them in the updates or by editing the product editing fetures.'
+  `product_descr` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
